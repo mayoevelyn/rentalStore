@@ -1,27 +1,9 @@
-//-----------------------------------------------------------------------------
-// Title:            User class
-// Files:            user.h
-//-----------------------------------------------------------------------------
-// User class: A user has an id number, a first name, last name, history, and
-// items borrowed.
-//  Includes the following functions:
-//  -- get first name
-//  -- get last name
-//  -- get ID number
-//  -- display history
-//  -- display borrowed items
-//  -- add media to borrowed
-//  -- remove media from borrowed
-//  -- return if something is borrowed
-//-----------------------------------------------------------------------------
-
 #ifndef _USER_H
 #define _USER_H
 
 #include <fstream>   // file reading
 #include <iostream>  // file reading
-#include <list>      // list of borrowed items
-#include <queue>     // history queue
+#include <vector>      // list of borrowed items
 #include <string>    // any strings used
 
 #include "media.h"         // media object
@@ -36,9 +18,12 @@ public:
    ~User();             // destructor
 
    void setData(ifstream&);
+   void setID(string);
+   void setFirstName(string);
+   void setLastname(string);
 
    // get functions
-   int getID();
+   string getID();
    string getFirstName();
    string getLastName();
 
@@ -52,16 +37,13 @@ public:
    // display
    void displayHistory();
    void displayBorrowed();
-   
-   // has item or not?
-   bool hasMedia(const Media*&) const;
 
 private:
-   int id;                       // 4 digit ID
+   string id;                    // 4 digit ID
    string lastname;              // last name
    string firstname;             // first name
-   list<Media>* borrowed;
-   queue<Transaction>* history;
+   vector<Media> borrowed;
+   vector<Transaction> history;
 };
 
 
