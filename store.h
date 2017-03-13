@@ -1,19 +1,3 @@
-//-----------------------------------------------------------------------------
-// Title:            Store Class
-// Files:            store.h
-//-----------------------------------------------------------------------------
-// Store class: makes a store. Can add users, transactions, and items.
-//  Includes the following functions:
-//  -- add users from a file
-//  -- add transactions from a file
-//  -- add items to inventory from a file
-//  -- retrieve item
-//  -- retrieve user
-//  -- display all store information
-//  -- display users
-//  -- display inventory
-//-----------------------------------------------------------------------------
-
 #ifndef STORE_H
 #define STORE_H
 
@@ -21,6 +5,7 @@
 #include "media.h"
 #include "user.h"
 #include "transaction.h"
+#include "inventory.h"
 
 
 class Store {
@@ -47,7 +32,7 @@ public:
 
 private:
    HashTable<User>* users;
-   BST<Media>* inventory;
-   queue<Transaction>* transactions;
+   Inventory inventory;
+   queue<Transaction> transactions;
 };
 #endif
