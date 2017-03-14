@@ -6,7 +6,7 @@
 #include "drama.h"
 
 class DVDFactory
-{
+{ 
 public:
 	static DVD* makeDVD(const char type);
 };

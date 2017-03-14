@@ -20,6 +20,9 @@ public:
 	// processes extra info into release year
 	void processInfo();
 
+	// display
+	virtual void display();
+
 	// operator overloads
 	virtual bool operator==(const DVD& rhs) const;
 	virtual bool operator!=(const DVD& rhs) const;

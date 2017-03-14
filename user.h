@@ -18,18 +18,11 @@ public:
    ~User();             // destructor
 
    void setData(ifstream&);
-   void setID(string);
-   void setFirstName(string);
-   void setLastname(string);
 
    // get functions
    string getID();
    string getFirstName();
    string getLastName();
-
-   // adding and removing media by quantity
-   void removeFromInventory(Media, int);
-   void addToInventory(Media, int); 
 
    // changing history
    void addToHistory(Transaction);

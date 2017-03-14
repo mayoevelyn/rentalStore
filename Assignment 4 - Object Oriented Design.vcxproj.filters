@@ -33,6 +33,15 @@
     <ClCompile Include="dvdfactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="user.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="store.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transactionfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borrow.h">
@@ -50,9 +59,6 @@
     <ClInclude Include="dvd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hashtable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="history.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -65,19 +71,28 @@
     <ClInclude Include="return.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="store.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="transaction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="transactionFactory.h">
+    <ClInclude Include="dvdfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hashtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="store.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="user.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dvdfactory.h">
+    <ClInclude Include="bintree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mediafactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transactionfactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -14,11 +14,11 @@ using namespace std;
 
 class DVD : public Media {
 public:
-	// constructor
-	DVD(char dvdType = ' ', int stock = 0, string director = "", string title = "",  
-	string extraInfo = "");
 	// virtual destructor to deal with strings
 	virtual ~DVD();
+
+	// display function
+	virtual void display();
 
 	// operator overloads
 	virtual bool operator==(const DVD& rhs) const = 0;

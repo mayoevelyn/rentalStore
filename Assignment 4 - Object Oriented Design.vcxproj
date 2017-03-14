@@ -116,8 +116,12 @@
     <ClCompile Include="dvd.cpp" />
     <ClCompile Include="dvdfactory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="store.cpp" />
+    <ClCompile Include="transactionfactory.cpp" />
+    <ClCompile Include="user.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bintree.h" />
     <ClInclude Include="borrow.h" />
     <ClInclude Include="classic.h" />
     <ClInclude Include="comedy.h" />
@@ -128,10 +132,11 @@
     <ClInclude Include="history.h" />
     <ClInclude Include="inventory.h" />
     <ClInclude Include="media.h" />
+    <ClInclude Include="mediafactory.h" />
     <ClInclude Include="return.h" />
     <ClInclude Include="store.h" />
     <ClInclude Include="transaction.h" />
-    <ClInclude Include="transactionFactory.h" />
+    <ClInclude Include="transactionfactory.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>
   <ItemGroup>
