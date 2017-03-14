@@ -28,15 +28,15 @@ void Store::buildInventory(ifstream& mediaInfile) {
 	}
 }
 
-void Store::buildUsers(std::ifstream&) {
+void Store::buildUsers(ifstream& infile) {
 	User* ptr;
-	char mediaType;
+
 	for (;;) {
-		if (mediaInfile.eof) break;	// stop reading if end of file
-
-		bool success = inventory->insert(ptr);
+		if (infile.eof) break;	// stop reading if end of file
+		ptr = new User;
+		ptr->setData(infile);
+		bool success = users->insert(ptr);
 		if (!success) delete ptr;
-
 	}
 }
 
@@ -49,20 +49,15 @@ void Store::applyTransactions(ifstream& infile) {
 	getline(infile, transData);
 
 	while(!infile.eof()) {
-		t = TransactionFactory.makeTransaction(transType);
+		t = transFactory.makeTransaction(transType);
 		if (t) {
-			t->setData(transData);
+			t->setData(transData, users*, );
 		}
-		myList.append(p);
 	}
 }
 
 void Store::addMedia(Media* toAdd) {
 
-}
-
-void Store::applyTransactions()
-{
 }
 
 void Store::display() const {

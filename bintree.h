@@ -11,7 +11,7 @@
 // the tree can have up to two children. Greater objects will be stored on
 // the right and lesser ojects on the left of any object.
 // 
-// This binary search tree can be used to find NodeData objects,
+// This binary search tree can be used to find T objects,
 // display them either as a tree or in order, empty out itself, empty its 
 // data into a sorted array, or build a tree from a sorted array.
 //----------------------------------------------------------------------------
@@ -42,12 +42,11 @@ private:
 
    // helper functions
    void makeEmptyHelper(Node*&);
-   Node* insertHelper(Node*, NodeData*, bool&);
-   void retrieveHelper(const NodeData&, NodeData*&, Node*, bool&) const;
-   void getHeightHelper(const Node*, const NodeData&, int&) const;
+   Node* insertHelper(Node*, T*, bool&);
+   void retrieveHelper(const T&, T*&, Node*, bool&) const;
+   void getHeightHelper(const Node*, const T&, int&) const;
    void copyHelper(Node*&, Node*);
    void isEqualHelper(Node*, Node*, bool&) const;
-   void sideways(Node*, int) const;
    int branchHeight(const Node*) const;
 
 
@@ -64,10 +63,9 @@ public:
    ~BinTree();				      // destructor
    
    // public functions
-   bool insert(NodeData*);
-   bool retrieve(const NodeData&, NodeData*&) const;
-   int getHeight(const NodeData&) const;
-   void displaySideways() const;
+   bool insert(T*);
+   bool retrieve(const T&, T*&) const;
+   int getHeight(const T&) const;
 
    void makeEmpty();			//	empties the tree, deletes nodes
 
@@ -113,21 +111,21 @@ BinTree::~BinTree() {
 }
 
 //--------------------------------- insert -----------------------------------
-// Inserts the given NodeData object into the tree. Returns true if 
+// Inserts the given T object into the tree. Returns true if 
 // successfully inserted. It is not inserted if an equivalent object already
 // exists in the tree.
 //----------------------------------------------------------------------------
 // Precondition: toInsert is not NULL.
 //----------------------------------------------------------------------------
 template <typename T>
-bool BinTree::insert(NodeData* toInsert) {
+bool BinTree::insert(T* toInsert) {
 	bool success = true;
 	root = insertHelper(root, toInsert, success);
 	return success;
 }
 
 //------------------------------ insertHelper --------------------------------
-// The recursive helper function of insert. Takes in a node, the Nodedata
+// The recursive helper function of insert. Takes in a node, the T
 // toInsert, and a reference to bool success for successful insertion.
 // If the node is NULL, creates a new node with the given data. If not, 
 // and if the node data is equal to toinsert, does not insert anything and 
@@ -136,7 +134,7 @@ bool BinTree::insert(NodeData* toInsert) {
 // Precondition: See insert.
 //----------------------------------------------------------------------------
 template <typename T>
-BinTree::Node* BinTree::insertHelper(Node* node, NodeData* toInsert, bool& 
+BinTree::Node* BinTree::insertHelper(Node* node, T* toInsert, bool& 
 	success) {
 	//if node is null, add the object
 	if (node == NULL) {
@@ -147,39 +145,37 @@ BinTree::Node* BinTree::insertHelper(Node* node, NodeData* toInsert, bool&
 	}
 
 	// if the object is greater than current, go right
-	else if (*toInsert > *node->data) node->right = insertHelper(node->right,
-		toInsert, success);
+	else if (*toInsert > *node->data)
+		node->right = insertHelper(node->right, toInsert, success);
 	// if the object is less than current, go left
-	else if (*toInsert < *node->data) node->left = insertHelper(node->left, 
-		toInsert, success);
-	else {
-		success = false;
-	}
+	else if (*toInsert < *node->data)
+		node->left = insertHelper(node->left, toInsert, success);
+	else success = false;
 	return node;
 }
 
 //-------------------------------- retrieve ----------------------------------
-// Retrieves the NodeData object equal to the parameter toGet and sets 
-// toSet to the NodeData. The value of toSet is unreliable if the object 
+// Retrieves the T object equal to the parameter toGet and sets 
+// toSet to the T. The value of toSet is unreliable if the object 
 // is not found.
 //----------------------------------------------------------------------------
 // Precondition: Assumes toGet is initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-bool BinTree::retrieve(const NodeData& toGet, NodeData*& toSet) const {
+bool BinTree::retrieve(const T& toGet, T*& toSet) const {
 	bool success = false;
 	retrieveHelper(toGet, toSet, root, success);
 	return success;
 }
 
 //----------------------------- retrieveHelper -------------------------------
-// Recursive function for retrieve. Takes in the reference to the NodeData 
+// Recursive function for retrieve. Takes in the reference to the T 
 // toGet, and the pointer that the retrieved object will be set to.
 //----------------------------------------------------------------------------
 // Precondition: 
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::retrieveHelper(const NodeData& toGet, NodeData*& toSet,
+void BinTree::retrieveHelper(const T& toGet, T*& toSet,
 	Node* node, bool& success) const {
 	if (node != NULL) {
 
@@ -198,14 +194,14 @@ void BinTree::retrieveHelper(const NodeData& toGet, NodeData*& toSet,
 }
 
 //-------------------------------- getHeight ---------------------------------
-// Finds the height of the given NodeData. The height of a node at a leaf is 
+// Finds the height of the given T. The height of a node at a leaf is 
 // 1, height of a node at the next level is 2, and so on.  
 // The height of a value not found is zero. 
 //----------------------------------------------------------------------------
 // Precondition: Assumes heightOf is initialized. 
 //----------------------------------------------------------------------------
 template <typename T>
-int BinTree::getHeight(const NodeData& heightOf) const {
+int BinTree::getHeight(const T& heightOf) const {
 	int height = 0;
 	if (root == NULL) return 0;
 	getHeightHelper(root, heightOf, height);
@@ -219,7 +215,7 @@ int BinTree::getHeight(const NodeData& heightOf) const {
 // Precondition: None.
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::getHeightHelper(const Node* node, const NodeData& heightOf,
+void BinTree::getHeightHelper(const Node* node, const T& heightOf,
 	int& height) const {
 	if (node != NULL) {
 		if (*node->data == heightOf) {
@@ -253,38 +249,6 @@ int BinTree::branchHeight(const Node* node) const {
 
 		int currentHeight = ((leftlvl > rightlvl) ? leftlvl : rightlvl);
 		return currentHeight + 1;
-	}
-}
-
-//------------------------- displaySideways ---------------------------------
-// Displays a binary tree as though you are viewing it from the side;
-// hard coded displaying to standard output.
-//----------------------------------------------------------------------------
-// Precondition: None.
-//----------------------------------------------------------------------------
-template <typename T>
-void BinTree::displaySideways() const {
-	sideways(root, 0);
-}
-
-//---------------------------- Sideways -------------------------------------
-// Helper method for displaySideways.
-//----------------------------------------------------------------------------
-// Precondition: None.
-//----------------------------------------------------------------------------
-template <typename T>
-void BinTree::sideways(Node* current, int level) const {
-	if (current != NULL) {
-		level++;
-		sideways(current->right, level);
-
-		// indent for readability, 4 spaces per depth level 
-		for (int i = level; i >= 0; i--) {
-			cout << "    ";
-		}
-
-		cout << *current->data << endl;        // display information of object
-		sideways(current->left, level);
 	}
 }
 
@@ -343,7 +307,7 @@ template <typename T>
 void BinTree::copyHelper(Node*& thisNode, Node* otherNode) {
 	if (otherNode != NULL) {
 		thisNode = new Node;
-		thisNode->data = new NodeData(*otherNode->data);
+		thisNode->data = new T(*otherNode->data);
 		thisNode->left = NULL;
 		thisNode->right = NULL;
 		copyHelper(thisNode->left, otherNode->left);

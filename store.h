@@ -34,6 +34,10 @@ public:
 
 private:
 	string storeName;
-	HashTable<User>* users;
-	BinTree<Media>* inventory;
+	HashTable<User> users;
+	BinTree<Classic> classicInven;
+	BinTree<Comedy> comedyInven;
+	BinTree<Drama> dramaInven;
+	TransactionFactory transFactory;
+};
 #endif

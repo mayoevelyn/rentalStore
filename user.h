@@ -32,7 +32,7 @@ public:
    void displayBorrowed();
 
 private:
-   string id;                    // 4 digit ID
+   int id;                    // 4 digit ID
    string lastname;              // last name
    string firstname;             // first name
    vector<Media> borrowed;
