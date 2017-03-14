@@ -8,13 +8,14 @@
 
 #include "user.h"
 #include "media.h"
+#include "hashtable.h"
+#include "bintree.h"
 #include <string>
 using namespace std;
 
 class Transaction
 {
 public:
-	
 	// constructor
 	Transaction();
 	
@@ -26,7 +27,8 @@ public:
 	
 private:
 	string transData;
-	HashTable<User>
+	HashTable<User>* users;
+
 };
 
 #endif
