@@ -1,24 +1,30 @@
-//------------------------------------------------------------------------------
-// BinTree
-//------------------------------------------------------------------------------
-// This is a Binary Search Tree that will store many objects. Greater objects
-// will be stored on the right and lesser ojects on the left. 
+// ----------------------------- BinTree.cpp ---------------------------------
+// Kay Phan CSS 343 
+// Created 1/22/2017
+// Last Modified 1/29/2017
+//----------------------------------------------------------------------------
+// Purpose:
+//
+// The .cpp file for the BinTree class.
+//
+// This is a Binary Search Tree that will store many objects. Each Node in
+// the tree can have up to two children. Greater objects will be stored on
+// the right and lesser ojects on the left of any object.
 // 
 // This binary search tree can be used to find NodeData objects,
 // display them either as a tree or in order, empty out itself, empty its 
 // data into a sorted array, or build a tree from a sorted array.
-// 
-// 
+//----------------------------------------------------------------------------
 
+// the .h file for this class
 #include "bintree.h"
 
 //----------------------------- Constructor ----------------------------------
-// Creates an empty binary search tree.
+// Creates an empty binary search tree with a NULL root.
 //----------------------------------------------------------------------------
 // Precondition: None.
 //----------------------------------------------------------------------------
 BinTree::BinTree() {
-   size = 0;
    root = NULL;
 }
 
@@ -29,12 +35,11 @@ BinTree::BinTree() {
 //----------------------------------------------------------------------------
 BinTree::BinTree(const BinTree& toCopy) {
    root = NULL;
-   size = 0;
    *this = toCopy;
 }
 
 //----------------------------- Destructor -----------------------------------
-// Deletes the binary search tree and all its data.
+// Deletes the binary search tree and all its data, sets the root to NULL.
 //----------------------------------------------------------------------------
 // Precondition: None.
 //----------------------------------------------------------------------------
@@ -44,8 +49,9 @@ BinTree::~BinTree() {
 }
 
 //--------------------------------- insert -----------------------------------
-// Inserts a NodeData object into the tree. Returns true if successfully 
-// inserted. It is not inserted if the tru
+// Inserts the given NodeData object into the tree. Returns true if 
+// successfully inserted. It is not inserted if an equivalent object already
+// exists in the tree.
 //----------------------------------------------------------------------------
 // Precondition: toInsert is not NULL.
 //----------------------------------------------------------------------------
@@ -56,9 +62,13 @@ bool BinTree::insert(NodeData* toInsert) {
 }
 
 //------------------------------ insertHelper --------------------------------
-// The recursive al
+// The recursive helper function of insert. Takes in a node, the Nodedata
+// toInsert, and a reference to bool success for successful insertion.
+// If the node is NULL, creates a new node with the given data. If not, 
+// and if the node data is equal to toinsert, does not insert anything and 
+// sets success to false. Else, recurses.
 //----------------------------------------------------------------------------
-// Precondition: 
+// Precondition: See insert.
 //----------------------------------------------------------------------------
 BinTree::Node* BinTree::insertHelper(Node* node, NodeData* toInsert, bool& success) { 
    //if node is null, add the object
@@ -67,7 +77,6 @@ BinTree::Node* BinTree::insertHelper(Node* node, NodeData* toInsert, bool& succe
       node->data = toInsert;
       node->left = NULL;
       node->right = NULL;
-      size++;
    }
 
    // if the object is greater than current, go right
@@ -81,9 +90,11 @@ BinTree::Node* BinTree::insertHelper(Node* node, NodeData* toInsert, bool& succe
 }
 
 //-------------------------------- retrieve ----------------------------------
-// 
+// Retrieves the NodeData object equal to the parameter toGet and sets 
+// toSet to the NodeData. The value of toSet is unreliable if the object 
+// is not found.
 //----------------------------------------------------------------------------
-// Precondition: 
+// Precondition: Assumes toGet is initialized.
 //----------------------------------------------------------------------------
 bool BinTree::retrieve(const NodeData& toGet, NodeData*& toSet) const {
    bool success = false;
@@ -92,17 +103,22 @@ bool BinTree::retrieve(const NodeData& toGet, NodeData*& toSet) const {
 }
 
 //----------------------------- retrieveHelper -------------------------------
-// Recursive function for retrieve.
+// Recursive function for retrieve. Takes in the reference to the NodeData 
+// toGet, and the pointer that the retrieved object will be set to.
 //----------------------------------------------------------------------------
 // Precondition: 
 //----------------------------------------------------------------------------
 void BinTree::retrieveHelper(const NodeData& toGet, NodeData*& toSet, 
    Node* node, bool& success) const {
    if (node != NULL) {
+
+      // recurses if node's data is not equal to toGet
       if (*node->data != toGet) {
          retrieveHelper(toGet, toSet, node->left, success);
          retrieveHelper(toGet, toSet, node->right, success);
       }
+      
+      //if found, sets toSet as the node's data, and retrieve is true
       else {
          toSet = node->data;
          success = true;
@@ -111,37 +127,67 @@ void BinTree::retrieveHelper(const NodeData& toGet, NodeData*& toSet,
 }
 
 //-------------------------------- getHeight ---------------------------------
-// 
+// Finds the height of the given NodeData. The height of a node at a leaf is 
+// 1, height of a node at the next level is 2, and so on.  
+// The height of a value not found is zero. 
 //----------------------------------------------------------------------------
-// Precondition: 
+// Precondition: Assumes heightOf is initialized. 
 //----------------------------------------------------------------------------
 int BinTree::getHeight(const NodeData& heightOf) const {
    int height = 0;
-   getHeightHelper(root, heightOf, height, 0);
+   if (root == NULL) return 0;
+   getHeightHelper(root, heightOf, height);
    return height;
 }
 
 //----------------------------- getHeightHelper ------------------------------
-// Recursive helper function for getHeight.
+// Recursive helper function for getHeight. Takes in a node, the object to
+// find the height to, a reference to the height, and the current height.
 //----------------------------------------------------------------------------
-// Precondition: 
+// Precondition: None.
 //----------------------------------------------------------------------------
 void BinTree::getHeightHelper(const Node* node, const NodeData& heightOf,
-   int& height, int lvl) const {
+   int& height) const {
    if (node != NULL) {
-      if (*node->data == heightOf) height = lvl;
-      else {
-         getHeightHelper(node->left, heightOf, height, lvl + 1);
-         getHeightHelper(node->left, heightOf, height, lvl + 1);
+      if (*node->data == heightOf) {
+         height = branchHeight(node) + 1;
+         return;
       }
+      else {
+         getHeightHelper(node->left, heightOf, height);
+         getHeightHelper(node->left, heightOf, height);
+      }
+   }
+}
+
+//------------------------------ branchHeight --------------------------------
+// Recursive function that returns the height of the tallest branch in the
+// tree. Used to assist getHeightHelper.
+//----------------------------------------------------------------------------
+// Precondition: None.
+//----------------------------------------------------------------------------
+int BinTree::branchHeight(const Node* node) const {
+   if (node == NULL)
+      return 0;
+   else
+   {
+      /* compute the depth of each subtree */
+      int leftlvl = branchHeight(node->left);
+      int rightlvl = branchHeight(node->right);
+
+      /* use the larger one */
+
+      int currentHeight = ((leftlvl > rightlvl) ? leftlvl : rightlvl);
+      return currentHeight + 1;
    }
 }
 
 //------------------------- displaySideways ---------------------------------
 // Displays a binary tree as though you are viewing it from the side;
 // hard coded displaying to standard output.
-// Preconditions: NONE
-// Postconditions: BinTree remains unchanged.
+//----------------------------------------------------------------------------
+// Precondition: None.
+//----------------------------------------------------------------------------
 void BinTree::displaySideways() const {
    sideways(root, 0);
 }
@@ -173,12 +219,11 @@ void BinTree::sideways(Node* current, int level) const {
 //----------------------------------------------------------------------------
 void BinTree::makeEmpty() {
    makeEmptyHelper(root);
-   size = 0;
 }
 
 //---------------------------- makeEmptyHelper -------------------------------
-// The recursive helper function for makeEmpty. If the passed node is not
-// null, recurses left, then right, then deletes the data and the node.
+// The recursive helper function for makeEmpty. Deletes the node and its data,
+// then recurses.
 //----------------------------------------------------------------------------
 // Precondition: None.
 //----------------------------------------------------------------------------
@@ -203,7 +248,7 @@ void BinTree::makeEmptyHelper(Node*& node) {
 // Precondition: Assumes that the toCopy parameter is initialized.
 //----------------------------------------------------------------------------
 
-BinTree BinTree::operator=(const BinTree& toCopy) {
+BinTree& BinTree::operator=(const BinTree& toCopy) {
    makeEmpty();
    copyHelper(root, toCopy.root);
    return *this;
@@ -218,8 +263,8 @@ BinTree BinTree::operator=(const BinTree& toCopy) {
 //----------------------------------------------------------------------------
 void BinTree::copyHelper(Node*& thisNode, Node* otherNode) {
    if (otherNode != NULL) {
-      Node* thisNode = new Node;
-      *thisNode->data = NodeData(*otherNode->data);
+      thisNode = new Node;
+      thisNode->data = new NodeData(*otherNode->data);
       thisNode->left = NULL;
       thisNode->right = NULL;
       copyHelper(thisNode->left, otherNode->left);
@@ -244,22 +289,30 @@ bool BinTree::operator==(const BinTree& toCompare) const {
 }
 
 //----------------------------- isEqualHelper --------------------------------
-//
+// Recursive helper function for isEqual. Sets the boolean to false if the
+// the current node does not have an equivalent counterpart in the other tree.
 //----------------------------------------------------------------------------
 // Precondition: 
 //----------------------------------------------------------------------------
 void BinTree::isEqualHelper(Node* node, Node* otherNode,
    bool& isEqual) const {
+   // does not recurse further if both are null
    if (node == NULL && otherNode == NULL) return;
+
+   // if one node is NULL and not the other, then trees are not equal
    else if ((node == NULL && otherNode != NULL) || (node != NULL && 
       otherNode == NULL)) {
       isEqual = false;
       return;
    }
+   
+   // if nodes do not have equal data, then trees are not equal
    else if (*node->data != *otherNode->data) {
       isEqual = false;
       return;
    }
+   
+   // if nodes are equal, recurse
    else if (*node->data == *otherNode->data) {
       isEqualHelper(node->left, otherNode->left, isEqual);
       isEqualHelper(node->left, otherNode->left, isEqual);
@@ -306,7 +359,8 @@ void outputHelper(ostream& output, BinTree::Node* node) {
  }
 
 //------------------------------ bstreeToArray -------------------------------
-// Recursive helper method for the output operator <<. 
+// Takes in a NodeData* array of size 100, all set to NULL and fills it with
+// NodeData objects from the tree in order, emptying the tree.
 //----------------------------------------------------------------------------
 // Precondition: Assumes valueArray is a dynamic array and the number of nodes
 // is not greater than 100. All values of valueArray is NULL.
@@ -317,7 +371,9 @@ void BinTree::bstreeToArray(NodeData* valueArray[]) {
 }
 
 //--------------------------- bstreeToArrayHelper ----------------------------
-// Recursive helper method for bstreeToArray function. 
+// Recursive helper method for bstreeToArray function, a reference to the int
+// index which is incremented with each addition to the array.
+// Deletes the node once its NodeData is transferred to the array.
 //----------------------------------------------------------------------------
 // Precondition: None.
 //----------------------------------------------------------------------------
@@ -329,10 +385,16 @@ void BinTree::bstreeToArrayHelper(int& index, NodeData* valueArray[], Node*& nod
       bstreeToArrayHelper(index, valueArray, node->right);
       delete node;
       node = NULL;
-      size--;
    }
 }
 
+//------------------------------ arrayToBSTree -------------------------------
+// Takes in a sorted array of NodeData* and builds a BinTree with it, emptying
+// out the array to all NULL.
+//----------------------------------------------------------------------------
+// Precondition: valueArray is initialized, with non-occupied pointers set to
+// NULL.
+//----------------------------------------------------------------------------
 void BinTree::arrayToBSTree(NodeData* valueArray[]) {
    int arraySize = 0;
    while (valueArray[arraySize] != NULL) {
@@ -342,9 +404,12 @@ void BinTree::arrayToBSTree(NodeData* valueArray[]) {
 }
 
 //--------------------------- arraytoBSTreeHelper ----------------------------
-// Recursive helper method for the output operator <<. 
+// Recursive helper method for arrayToBSTree. Takes in integers low and high
+// which represent indeces of the passed valueArray.
+// This uses the formula which computes (low + high) / 2 to find the index 
+// of the value to add.
 //----------------------------------------------------------------------------
-// Precondition: Assumes valueArray is a dynamic array.
+// Precondition: Assumes valueArray is initialized.
 //----------------------------------------------------------------------------
 void BinTree::arrayToBSTreeHelper(int low, int high, NodeData* valueArray[]) {
    int index = (low + high) / 2;
