@@ -9,7 +9,7 @@ public:
 	HashTable(const HashTable&);
 	~HashTable();
 	
-	void insert(T*); 
+	void insert(T*);
 	void remove(const T*&);
 	void remove(int);
 	T* retrieve(int);

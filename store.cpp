@@ -15,12 +15,11 @@ Store::~Store() {
 	
 }
 
-void Store::buildInventory(ifstream& mediaInfile) {
-	Media* ptr;
-	char mediaType;
-	for (;;) {
-		if (mediaInfile.eof) break;	// stop reading if end of file
-		mediaInfile >> mediaType;
+void Store::buildInventory(ifstream& infile) {
+	DVD* ptr;
+	char dvdType;
+	while(!infile.eof()) {
+		infile >> dvdType;
 		
 		bool success = inventory->insert(ptr);
 		if (!success) delete ptr;
@@ -45,10 +44,9 @@ void Store::applyTransactions(ifstream& infile) {
 	string transData;
 	Transaction* t;
 
-	infile >> transType;
-	getline(infile, transData);
-
 	while(!infile.eof()) {
+		infile >> transType;
+		getline(infile, transData);
 		t = transFactory.makeTransaction(transType);
 		if (t) {
 			t->setData(transData, users*, );

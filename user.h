@@ -13,30 +13,30 @@ using namespace std;
 
 class User {
 public:
-   User();              // constructor
-   User(const User&);   // copy constructor
-   ~User();             // destructor
+	User();              // constructor
+	User(const User&);   // copy constructor
+	~User();             // destructor
 
-   void setData(ifstream&);
+	void setData(ifstream&);
 
-   // get functions
-   string getID();
-   string getFirstName();
-   string getLastName();
+	// get functions
+	string getID();
+	string getFirstName();
+	string getLastName();
 
-   // changing history
-   void addToHistory(Transaction);
+	// changing history
+	void addToHistory(Transaction);
 
-   // display
-   void displayHistory();
-   void displayBorrowed();
+	// display
+	void displayHistory();
+	void displayBorrowed();
 
 private:
-   int id;                    // 4 digit ID
-   string lastname;              // last name
-   string firstname;             // first name
-   vector<Media> borrowed;
-   vector<Transaction> history;
+	int id;                    // 4 digit ID
+	string lastname;              // last name
+	string firstname;             // first name
+	vector<Media> borrowed;
+	vector<Transaction> history;
 };
 
 

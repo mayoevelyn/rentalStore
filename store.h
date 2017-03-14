@@ -1,12 +1,14 @@
 #ifndef STORE_H
 #define STORE_H
 
-#include "hashtable.h"
-#include "media.h"
-#include "user.h"
 #include "transaction.h"
-#include "bintree.h"
 #include "transactionfactory.h"
+#include "hashtable.h"
+#include "user.h"
+#include "bintree.h"
+#include "media.h"
+#include "dvd.h"
+#include "dvdfactory.h"
 #include <string>
 
 using namespace std;

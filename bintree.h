@@ -30,49 +30,49 @@ class BinTree {
 // all private functions and data members
 private:
 
-   //private Node struct
-   struct Node {
+	//private Node struct
+	struct Node {
 	  T* data;
-      Node* left;
-      Node* right;
-   };
-   
-   // private data member
-   Node* root; // pointer to the root Node
+		Node* left;
+		Node* right;
+	};
+	
+	// private data member
+	Node* root; // pointer to the root Node
 
-   // helper functions
-   void makeEmptyHelper(Node*&);
-   Node* insertHelper(Node*, T*, bool&);
-   void retrieveHelper(const T&, T*&, Node*, bool&) const;
-   void getHeightHelper(const Node*, const T&, int&) const;
-   void copyHelper(Node*&, Node*);
-   void isEqualHelper(Node*, Node*, bool&) const;
-   int branchHeight(const Node*) const;
+	// helper functions
+	void makeEmptyHelper(Node*&);
+	Node* insertHelper(Node*, T*, bool&);
+	void retrieveHelper(const T&, T*&, Node*, bool&) const;
+	void getHeightHelper(const Node*, const T&, int&) const;
+	void copyHelper(Node*&, Node*);
+	void isEqualHelper(Node*, Node*, bool&) const;
+	int branchHeight(const Node*) const;
 
 
 // public and friend functions
 public:
 
-   // friend output operator
-   friend ostream& operator<<(ostream&, BinTree&);
-   friend void outputHelper(ostream&, Node*);
+	// friend output operator
+	friend ostream& operator<<(ostream&, BinTree&);
+	friend void outputHelper(ostream&, Node*);
 
-   // constructors
-   BinTree();				      // default constructor
-   BinTree(const BinTree&);   // copy constructor
-   ~BinTree();				      // destructor
-   
-   // public functions
-   bool insert(T*);
-   bool retrieve(const T&, T*&) const;
-   int getHeight(const T&) const;
+	// constructors
+	BinTree();				      // default constructor
+	BinTree(const BinTree&);   // copy constructor
+	~BinTree();				      // destructor
+	
+	// public functions
+	bool insert(T*);
+	bool retrieve(const T&, T*&) const;
+	int getHeight(const T&) const;
 
-   void makeEmpty();			//	empties the tree, deletes nodes
+	void makeEmpty();			//	empties the tree, deletes nodes
 
-   // overwritten operators
-   BinTree& operator=(const BinTree&);
-   bool operator==(const BinTree&) const;
-   bool operator!=(const BinTree&) const;
+	// overwritten operators
+	BinTree& operator=(const BinTree&);
+	bool operator==(const BinTree&) const;
+	bool operator!=(const BinTree&) const;
 
 
 };

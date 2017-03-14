@@ -14,19 +14,19 @@ using namespace std;
 class Transaction
 {
 public:
-   
-   // constructor
-   Transaction();
-   
-   // destructor
-   virtual ~Transaction();
-   
-   void setData(string transData);
-   virtual bool execute();
-   
+	
+	// constructor
+	Transaction();
+	
+	// destructor
+	virtual ~Transaction();
+	
+	void setData(string transData);
+	virtual bool execute();
+	
 private:
-   string transData;
-   HashTable
+	string transData;
+	HashTable<User>
 };
 
 #endif
