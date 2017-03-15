@@ -1,7 +1,4 @@
-//-----------------------------------------------------------------------------
-// Title:            Drama class
-// Files:            drama.h
-//-----------------------------------------------------------------------------
+//-----------------------------------drama.h-----------------------------------
 // Drama class: Implements a DVD that is drama type movie.
 //  Inherits from DVD
 //  Includes the following functions:
@@ -13,6 +10,7 @@
 #include <sstream>
 #include <string>
 #include "dvd.h"
+
 using namespace std;
 
 class Drama : public DVD {
@@ -20,7 +18,21 @@ public:
 	// processes extra info into release year
 	void processInfo(string extraInfo);
 
-	// comparison operator
+    // getters
+    virtual char getDvdType() const;
+    virtual int getStock() const;
+    virtual string getDirector() const;
+    virtual string getTitle() const;
+    int getReleaseYear() const;
+
+    // setters
+    void setDirector(string newDirector);
+    void setTitle(string newTitle);
+
+    // display
+    virtual void display() const;
+
+    // comparison operators
 	bool operator==(const DVD& rhs) const;
 	bool operator!=(const DVD& rhs) const;
 	bool operator<(const DVD& rhs) const;

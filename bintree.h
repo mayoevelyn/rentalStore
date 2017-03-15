@@ -16,8 +16,8 @@
 // data into a sorted array, or build a tree from a sorted array.
 //----------------------------------------------------------------------------
 
-#ifndef BinTree_H
-#define BinTree_H
+#ifndef BINTREE_H
+#define BINTREE_H
 
 // for output capabilities
 #include <iostream>
@@ -27,52 +27,50 @@ using namespace std;
 template <typename T>
 class BinTree {
 
-// all private functions and data members
-private:
+    struct Node;        // forward declare the struct
 
-	//private Node struct
-	struct Node {
-	  T* data;
-		Node* left;
-		Node* right;
-	};
-	
-	// private data member
-	Node* root; // pointer to the root Node
-
-	// helper functions
-	void makeEmptyHelper(Node*&);
-	Node* insertHelper(Node*, T*, bool&);
-	void retrieveHelper(const T&, T*&, Node*, bool&) const;
-	void getHeightHelper(const Node*, const T&, int&) const;
-	void copyHelper(Node*&, Node*);
-	void isEqualHelper(Node*, Node*, bool&) const;
-	int branchHeight(const Node*) const;
-
-
-// public and friend functions
 public:
+    // constructors
+    BinTree();				   // default constructor
+    BinTree(const BinTree&);   // copy constructor
+    ~BinTree();				   // destructor
 
-	// friend output operator
-	friend ostream& operator<<(ostream&, BinTree&);
-	friend void outputHelper(ostream&, Node*);
+                                  // public functions
+    bool insert(T*);
+    bool retrieve(const T&, T*&) const;
+    int getHeight(const T&) const;
 
-	// constructors
-	BinTree();				      // default constructor
-	BinTree(const BinTree&);   // copy constructor
-	~BinTree();				      // destructor
-	
-	// public functions
-	bool insert(T*);
-	bool retrieve(const T&, T*&) const;
-	int getHeight(const T&) const;
+    void makeEmpty();			//	empties the tree, deletes nodes
 
-	void makeEmpty();			//	empties the tree, deletes nodes
+                                // overwritten operators
+    BinTree& operator=(const BinTree&);
+    bool operator==(const BinTree&) const;
+    bool operator!=(const BinTree&) const;
 
-	// overwritten operators
-	BinTree& operator=(const BinTree&);
-	bool operator==(const BinTree&) const;
-	bool operator!=(const BinTree&) const;
+    // display function
+    void displayTree() const;
+
+    // all private functions and data members
+private:
+    //private Node struct
+    struct Node {
+        T* data;
+        Node* left;
+        Node* right;
+    };
+
+    // private data member
+    Node* root; // pointer to the root Node
+
+    // helper functions
+    void makeEmptyHelper(Node*&);
+    Node* insertHelper(Node*, T*, bool&);
+    void retrieveHelper(const T&, T*&, Node*, bool&) const;
+    void getHeightHelper(const Node*, const T&, int&) const;
+    void copyHelper(Node*&, Node*);
+    void isEqualHelper(Node*, Node*, bool&) const;
+    int branchHeight(const Node*) const;
+    void displayTreeHelper(Node*) const;
 
 
 };
@@ -241,11 +239,11 @@ int BinTree::branchHeight(const Node* node) const {
 		return 0;
 	else
 	{
-		/* compute the depth of each subtree */
+		// compute the depth of each subtree 
 		int leftlvl = branchHeight(node->left);
 		int rightlvl = branchHeight(node->right);
 
-		/* use the larger one */
+		//use the larger one 
 
 		int currentHeight = ((leftlvl > rightlvl) ? leftlvl : rightlvl);
 		return currentHeight + 1;
@@ -380,16 +378,15 @@ bool BinTree::operator!=(const BinTree& toCompare) const {
 	return (isEqual == false);
 }
 
+
 //------------------------------ Operator << ---------------------------------
 // Outputs all the data of the tree in the tree in order.
 //----------------------------------------------------------------------------
 // Precondition: Assumes ostream output and toOutput are initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-ostream& operator<<(ostream& output, BinTree& toOutput) {
-	outputHelper(output, toOutput.root);
-	output << endl;
-	return output;
+void BinTree::displayTree() const {
+	displayTreeHelper(root);
 }
 
 //------------------------------ outputHelper --------------------------------
@@ -398,10 +395,11 @@ ostream& operator<<(ostream& output, BinTree& toOutput) {
 // Precondition: Assumes ostream output and toOutput are initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-void outputHelper(ostream& output, BinTree::Node* node) {
+void BinTree::displayTreeHelper(Node* node) const {
 	if (node != NULL) {
-		outputHelper(output, node->left);
-		output << *node->data << " ";
+		displayTreeHelper(node->left);
+        node->data.display();
+        cout << endl;
 		outputHelper(output, node->right);
 	}
 }

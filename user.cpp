@@ -5,57 +5,86 @@
 
 #include "user.h"
 
+//--------------------------------Constructor---------------------------------
+// Creates a user. Sets default valules. 
+//----------------------------------------------------------------------------
 User::User() {
     id = -1;
     lastname = "";
     firstname = "";
 }
 
+//----------------------------Copy Constructor--------------------------------
+// Creates a user. Sets default valules. 
+//----------------------------------------------------------------------------
 User::User(const User& other) {
     id = other.id;
     lastname = other.lastname;
     firstname = other.firstname;
 }
 
+//---------------------------------Destructor---------------------------------
+// Destruts user.
+//----------------------------------------------------------------------------
 User::~User() {
 }
 
+//----------------------------------setdata-----------------------------------
+// Allows an input stream to set id, last name, then first name.
+//----------------------------------------------------------------------------
 void User::setData(ifstream& input) {
     input >> id >> lastname >> firstname;
 }
 
-
+//----------------------------------setID-------------------------------------
+// Sets user id to parameter.
+//----------------------------------------------------------------------------
 void User::setID(int idToSet) {
     id = idToSet;
 }
 
-// get functions
+//----------------------------------getID-------------------------------------
+// Returns user id.
+//----------------------------------------------------------------------------
 int User::getID() const {
     return id;
 }
 
+//--------------------------------getFirstName--------------------------------
+// Returns first name.
+//----------------------------------------------------------------------------
 string User::getFirstName() const {
     return firstname;
 }
 
+//--------------------------------getLastName---------------------------------
+// Returns last name.
+//----------------------------------------------------------------------------
 string User::getLastName() const {
     return lastname;
 }
 
+//--------------------------------addToHistory--------------------------------
+// Adds transaction to history.
+//----------------------------------------------------------------------------
 void User::addToHistory(Transaction transact) {
     history.push_back(transact);
 }
 
-void User::removeFromInventory(Media* toRemove) {
-    if (hasMedia(toRemove)) {
-        history.erase(*toRemove);
+//----------------------------removeFromInventory-----------------------------
+// Removes DVD from inventory. Only removes if it is actually borrowed.
+//----------------------------------------------------------------------------
+void User::removeFromInventory(DVD* toRemove) {
+    if (hasDVD(toRemove)) {
+        borrowed.erase(*toRemove);
     }
 }
 
-void User::addToInventory(Media* toAdd) {
-    if (!hasMedia(toAdd)) {
-        history.push_back(*toAdd);
-    }
+//----------------------------removeFromInventory-----------------------------
+// Adds DVD to inventory.
+//----------------------------------------------------------------------------
+void User::addToInventory(DVD* toAdd) {
+    borrowed.push_back(*toAdd);
 }
 
 void User::displayHistory() const {
@@ -69,7 +98,7 @@ void User::displayHistory() const {
     }
 }
 
-bool User::hasMedia(Media* toFind) const {
+bool User::hasDVD(DVD* toFind) const {
     bool contains = false;
     for (int i = 0; i < borrowed.size; i++) {
         if (borrowed[i] == *toFind) contains = true;
@@ -80,6 +109,10 @@ bool User::hasMedia(Media* toFind) const {
 bool User::operator==(const User& rhs) const {
     if (id == rhs.id) return true;
     return false;
+}
+
+bool User::operator!=(const User& rhs) const {
+    return (*this == rhs) == false;
 }
 
 bool User::operator>(const User& rhs) const {

@@ -11,7 +11,6 @@
 #include <vector>      // list of borrowed items
 #include <string>    // any strings used
 
-#include "media.h"
 #include "dvd.h"
 #include "comedy.h"
 #include "drama.h"
@@ -39,9 +38,9 @@ public:
    // sets ID for a dummy user
    void setID(int idToSet);
 
-   // adding and removing media by quantity
-   void removeFromInventory(Media* toRemvove);
-   void addToInventory(Media* toAdd); 
+   // adding and removing DVD by quantity
+   void removeFromInventory(DVD* toRemvove);
+   void addToInventory(DVD* toAdd); 
 
    // changing history
    void addToHistory(Transaction transact);
@@ -49,19 +48,21 @@ public:
    // display
    void displayHistory() const;
 
-   // if has media or not
-   bool hasMedia(Media* toFind) const;
+   // if has DVD or not
+   bool hasDVD(DVD* toFind) const;
 
    // boolean operators
    bool operator==(const User& rhs) const;
+   bool operator!=(const User& rhs) const;
    bool operator>(const User& rhs) const;
    bool operator<(const User& rhs) const;
 
 private:
-   int id;                    // 4 digit ID
-   string lastname;              // last name
-   string firstname;             // first name
-   vector<Media> borrowed;
-   vector<Transaction> history;
+   int id;                      // user id
+   string lastname;             // last name
+   string firstname;            // first name
+   vector<DVD> borrowed;        // all borrowed materials
+   vector<Transaction> history; // all transactions of the user
 };
+
 #endif

@@ -21,7 +21,6 @@ public:
 	
 	// destructor
 	virtual ~Transaction();
-	
 	void setData(string transData);
 	virtual bool execute();
 	

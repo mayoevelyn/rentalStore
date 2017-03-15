@@ -7,9 +7,17 @@
 #ifndef HISTORY_H
 #define HISTORY_H
 
+#include "transaction.h"
+
+class Store;
+
 class History : public Transaction {
 public:
-   bool executeTransaction();          // displays user's transaction history
+    History();
+    ~History();
+    virtual bool execute();          // displays user's transaction history
+    bool setCustomer(Store*);
+    virtual void display();
 };
 
 #endif 

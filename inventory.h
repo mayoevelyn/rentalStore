@@ -7,9 +7,12 @@
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
+#include "transaction.h"
+
 class Inventory : public Transaction {
 public:
-   bool executeTransaction();       // displays store's inventory
+    virtual bool execute();       // displays store's inventory
+    
+    virtual void display();
 };
-
 #endif

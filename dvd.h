@@ -8,17 +8,25 @@
 #ifndef DVD_H
 #define DVD_H
 
-#include "media.h"
 #include <string>
+#include <iostream>
+
 using namespace std;
 
-class DVD : public Media {
+class DVD {
 public:
 	// virtual destructor to deal with strings
+    DVD(char dvdType);
 	virtual ~DVD();
 
 	// display function
-	virtual void display();
+	virtual void display() const = 0;
+
+    // getters for director, title, stock, and type
+    virtual char getDvdType() const = 0;
+    virtual int getStock() const = 0;
+    virtual string getDirector() const = 0;
+    virtual string getTitle() const = 0;
 
 	// operator overloads
 	virtual bool operator==(const DVD& rhs) const = 0;
@@ -33,5 +41,5 @@ protected:
 	string title;		// title of the DVD
 	string extraInfo;	// trailing information from an DVD input line
 };
-
 #endif
+
