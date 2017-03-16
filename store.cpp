@@ -17,16 +17,22 @@ Store::~Store() {
 void Store::buildInventory(ifstream& infile) {
 	DVD* ptr;
 	char dvdType;
+	string str;
 
 	// while there is still data
 	while(!infile.eof()) {
-		infile >> dvdType;
-		
+		// extracts the first char for dvdType
+		getline(infile, str, ',');
+		dvdType = str[0];
+
 		// use factory to create appropriate DVD type
 		ptr = dvdFactory.makeDVD(dvdType);
 
+		// get the rest of the line to pass into DVD setData
+		getline(infile, str);
+
 		// set the DVD data
-		ptr->setData(infile);
+		ptr->setData(str);
 
 		// sort the dvd into the correct tree
 		switch (dvdType) {
