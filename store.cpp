@@ -21,7 +21,14 @@ void Store::buildInventory(ifstream& infile) {
 	// while there is still data
 	while(!infile.eof()) {
 		infile >> dvdType;
+		
+		// use factory to create appropriate DVD type
 		ptr = dvdFactory.makeDVD(dvdType);
+
+		// set the DVD data
+		ptr->setData(infile);
+
+		// sort the dvd into the correct tree
 		switch (dvdType) {
 		case 'F': comedyInven->insert(ptr);
 			break;
@@ -32,7 +39,6 @@ void Store::buildInventory(ifstream& infile) {
 		default:
 			cout << "Invalid movie type" << endl;
 		}
-
 	}
 }
 
