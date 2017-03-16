@@ -2,8 +2,7 @@
 
 // Constructor for the store.
 Store::Store() {
-	inventory = NULL;
-	users = NULL;
+
 }
 
 // Creates a store based on the given store.
@@ -18,11 +17,21 @@ Store::~Store() {
 void Store::buildInventory(ifstream& infile) {
 	DVD* ptr;
 	char dvdType;
+
+	// while there is still data
 	while(!infile.eof()) {
 		infile >> dvdType;
-		
-		bool success = inventory->insert(ptr);
-		if (!success) delete ptr;
+		ptr = dvdFactory.makeDVD(dvdType);
+		switch (dvdType) {
+		case 'F': comedyInven->insert(ptr);
+			break;
+		case 'D': dramaInven->insert(ptr);
+			break;
+		case 'C': classicInven->insert(ptr);
+			break;
+		default:
+			cout << "Invalid movie type" << endl;
+		}
 
 	}
 }

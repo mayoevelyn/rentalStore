@@ -9,6 +9,7 @@
 #include "media.h"
 #include "dvd.h"
 #include "dvdfactory.h"
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -36,10 +37,11 @@ public:
 
 private:
 	string storeName;
-	HashTable<User> users;
-	BinTree<Classic> classicInven;
-	BinTree<Comedy> comedyInven;
-	BinTree<Drama> dramaInven;
+	HashTable<User*>* users;
+	BinTree<DVD>* classicInven;
+	BinTree<DVD>* comedyInven;
+	BinTree<DVD>* dramaInven;
+	DVDFactory dvdFactory;
 	TransactionFactory transFactory;
 };
 #endif
