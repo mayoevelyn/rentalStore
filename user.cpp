@@ -32,8 +32,11 @@ User::~User() {
 //----------------------------------setdata-----------------------------------
 // Allows an input stream to set id, last name, then first name.
 //----------------------------------------------------------------------------
-void User::setData(ifstream& input) {
-    input >> id >> lastname >> firstname;
+void User::setData(string data) {
+	// change param string into sstream
+	stringstream stream(data);
+	// set the data
+	stream >> id >> lastname >> firstname;
 }
 
 //----------------------------------setID-------------------------------------

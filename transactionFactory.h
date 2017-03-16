@@ -7,9 +7,8 @@
 
 #include "transaction.h"
 
-class TransactionFactory() {
+class TransactionFactory {
 public:
-   
    // factory method to create instances of different subclasses of
    // Transaction object
    static Transaction* makeTransaction(char action);

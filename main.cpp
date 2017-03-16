@@ -7,11 +7,8 @@
 #include "store.h"
 
 int main() {
-   
-   // creates the Store object by passing user, movie, and transaction files
-   Store movieRentalStore("data4movies.txt", "data4commands.txt",
-                  "data4customers.txt");
-   
-   // applies the transaction of the store
-   movieRentalStore.applyTransactions();
+	// creates the Store object by passing user, movie, and transaction files
+	Store store;
+	ifstream infile("data4movies.txt");
+	store.buildInventory(infile);
 }
