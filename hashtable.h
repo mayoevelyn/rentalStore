@@ -30,7 +30,7 @@ public:
     ~HashTable();
 
 
-    void insert(T* toInsert, int key);   // inserts object based on key
+    bool insert(T* toInsert, int key);   // inserts object based on key
     void remove(int key);                // removes object based on key
     bool retrieve(T*& toSet, int key);
 };
@@ -64,14 +64,15 @@ HashTable<T>::~HashTable() {
 
 //-------------------------------------insert-----------------------------------
 // Inserts a T object into the table based on the key. Rehashes to a new key
-// if occupied.
+// if occupied. Returns false if key already exists.
 //-----------------------------------------------------------------------------
 template <typename T>
-void HashTable<T>::insert(T* toInsert, int key) {
+bool HashTable<T>::insert(T* toInsert, int key) {
     int d = 1;
     int index = key % TABLESIZE;
     for (;;) {
         if (objectsArray[index] == NULL) break;
+        if (ojbectsArray[index]->key == key) return false;
         index = (key + d) % TABLESIZE;
         d++;
     }
