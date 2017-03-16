@@ -123,7 +123,8 @@ bool Classic::operator==(const DVD & rhs) const {
 	// dynamic cast parent class to child class
 	const Classic* rhsCasted = dynamic_cast<const Classic*>(&rhs);
 	// true if the movie's director and title is the same
-	return (director == rhsCasted->director && title == rhsCasted->title);
+	return (majorActor == rhsCasted->majorActor && releaseMonth 
+		== rhsCasted->releaseMonth && releaseYear == rhsCasted->releaseYear);
 }
 
 bool Classic::operator!=(const DVD & rhs) const {

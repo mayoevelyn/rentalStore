@@ -105,7 +105,7 @@ void Store::applyTransactions(ifstream& infile) {
 		}
 		stream >> searchTerm;
 		d->setTransData(searchTerm);
-		// then omg what
+
 		t->setData(users, classicInven, comedyInven, dramaInven)
 	}
 }
