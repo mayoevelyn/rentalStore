@@ -69,7 +69,8 @@ void Store::buildUsers(ifstream& infile) {
 void Store::applyTransactions(ifstream& infile) {
 	Transaction* t;
 	User* u;
-	DVD* d;
+	DVD* dummyDVD;
+	DVD* dvd;
 	char transType;
 	int userID;
 	char mediaType;
@@ -98,15 +99,31 @@ void Store::applyTransactions(ifstream& infile) {
 			break;
 		}
 		stream >> dvdType;
-		d = dvdFactory.makeDVD(dvdType);
-		if (d == NULL) {
+		dummyDVD = dvdFactory.makeDVD(dvdType);
+		if (dummyDVD == NULL) {
 			cout << "Invalid movie type" << dvdType << endl;
 			break;
 		}
 		stream >> searchTerm;
 		d->setTransData(searchTerm);
+		// search the dvd from the correct tree
+		switch (dvdType) {
+		case 'F': comedyInven->retrieve(*dummyDVD, dvd);
+			break;
+		case 'D': dramaInven->retrieve(*dummyDVD, dvd);
+			break;
+		case 'C': classicInven->retrieve(*dummyDVD, dvd);
+			break;
+		default:
+			cout << "Invalid movie type " << dvdType << endl;
+		}
+		if (dvd == NULL) {
+			cout << "Movie does not exist" << dvdType << endl;
+			break;
+		}
 
-		t->setData(users, classicInven, comedyInven, dramaInven)
+
+		t->setData()
 	}
 }
 
