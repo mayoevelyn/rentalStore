@@ -67,16 +67,16 @@ void Store::buildUsers(ifstream& infile) {
 }
 
 void Store::applyTransactions(ifstream& infile) {
-	Transaction* t;
-	User* u;
-	DVD* dummyDVD;
-	DVD* dvd;
-	char transType;
-	int userID;
-	char mediaType;
-	char dvdType;
-	string searchTerm;
-	string str;
+	Transaction* t = NULL;
+	User* u = NULL;
+	DVD* dummyDVD = NULL;
+	DVD* dvd = NULL;
+	char transType = ' ';
+	int userID = 0;
+	char mediaType = ' ';
+	char dvdType = ' ';
+	string searchTerm = "";
+	string str = "";
 
 	while(!infile.eof()) {
 		getline(infile, str);
@@ -87,43 +87,46 @@ void Store::applyTransactions(ifstream& infile) {
 			cout << "Invalid transaction type" << transType << endl;
 			break;
 		}
-		stream >> userID;
-		users->retrieve(u, userID);
-		if (u == NULL) {
-			cout << "User " << userID << " does not exist" << endl;
-			break;
-		}
-		stream >> mediaType;
-		if (mediaType != 'D') {
-			cout << "Invalid media type" << mediaType << endl;
-			break;
-		}
-		stream >> dvdType;
-		dummyDVD = dvdFactory.makeDVD(dvdType);
-		if (dummyDVD == NULL) {
-			cout << "Invalid movie type" << dvdType << endl;
-			break;
-		}
-		stream >> searchTerm;
-		dummyDVD->setTransData(searchTerm);
-		// search the dvd from the correct tree
-		switch (dvdType) {
-		case 'F': comedyInven->retrieve(*dummyDVD, dvd);
-			break;
-		case 'D': dramaInven->retrieve(*dummyDVD, dvd);
-			break;
-		case 'C': classicInven->retrieve(*dummyDVD, dvd);
-			break;
-		default:
-			cout << "Invalid movie type " << dvdType << endl;
-		}
-		if (dvd == NULL) {
-			cout << "Movie does not exist" << dvdType << endl;
-			break;
+		if (transType != 'I') {
+			stream >> userID;
+			users->retrieve(u, userID);
+			if (u == NULL) {
+				cout << "User " << userID << " does not exist" << endl;
+				break;
+			}
+			if (transType != 'H') {
+				stream >> mediaType;
+				if (mediaType != 'D') {
+					cout << "Invalid media type" << mediaType << endl;
+					break;
+				}
+				stream >> dvdType;
+				dummyDVD = dvdFactory.makeDVD(dvdType);
+				if (dummyDVD == NULL) {
+					cout << "Invalid movie type" << dvdType << endl;
+					break;
+				}
+				stream >> searchTerm;
+				dummyDVD->setTransData(searchTerm);
+				// search the dvd from the correct tree
+				switch (dvdType) {
+				case 'F': comedyInven->retrieve(*dummyDVD, dvd);
+					break;
+				case 'D': dramaInven->retrieve(*dummyDVD, dvd);
+					break;
+				case 'C': classicInven->retrieve(*dummyDVD, dvd);
+					break;
+				default:
+					cout << "Invalid movie type " << dvdType << endl;
+				}
+				if (dvd == NULL) {
+					cout << "Movie does not exist" << dvdType << endl;
+					break;
+				}
+			}
 		}
 
-
-		t->setData()
+		t->setData(u, dvd);
 	}
 }
 

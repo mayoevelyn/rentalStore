@@ -11,6 +11,7 @@
 
 class Store;
 class User;
+class DVD;
 
 using namespace std;
 
@@ -20,10 +21,12 @@ public:
 	virtual ~Transaction();
 	virtual void execute() = 0;
     virtual void display() = 0;
-	virtual void setData(string data) = 0;
+	void setData(User* user, DVD* dvd);
 	
 protected:
 	char transType;
+	User* user;
+	DVD* dvd;
 	Store* store;
 };
 
