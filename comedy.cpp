@@ -7,8 +7,8 @@
 
 #include "comedy.h"
 
-//-------------------------------processInfo-----------------------------------
-// Takes in a string and sets it as the release year.
+//---------------------------------setData-------------------------------------
+// Takes in a string and sets data.
 //-----------------------------------------------------------------------------
 void Comedy::setData(string data) {
 	// change param string into sstream

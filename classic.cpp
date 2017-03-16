@@ -1,5 +1,8 @@
 #include "classic.h"
 
+//---------------------------------setData-------------------------------------
+// Takes in a string and sets data.
+//-----------------------------------------------------------------------------
 void Classic::setData(string data) {
 	// change param string into sstream
 	stringstream stream(data);
@@ -22,6 +25,78 @@ void Classic::setData(string data) {
 
 	// set major actor's name
 	majorActor = firstName + " " + lastName;
+}
+
+//----------------------------------getDvdType---------------------------------
+// Returns the DVD type.
+//-----------------------------------------------------------------------------
+char Classic::getDvdType() const {
+    return dvdType;
+}
+
+//----------------------------------getStock-----------------------------------
+// Returns the stock amount.
+//-----------------------------------------------------------------------------
+int Classic::getStock() const {
+    return stock;
+}
+
+//----------------------------------getDirector--------------------------------
+// Returns the director.
+//-----------------------------------------------------------------------------
+string Classic::getDirector() const {
+    return director;
+}
+
+//----------------------------------getTitle-----------------------------------
+// Returns the title.
+//-----------------------------------------------------------------------------
+string Classic::getTitle() const {
+    return title;
+}
+
+//-------------------------------getReleaseYear--------------------------------
+// Returns the releaseYear.
+//-----------------------------------------------------------------------------
+int Classic::getReleaseYear() const {
+    return releaseYear;
+}
+
+//-------------------------------getReleaseYear--------------------------------
+// Returns the releaseMonth.
+//-----------------------------------------------------------------------------
+int Classic::getReleaseMonth() const {
+    return releaseMonth;
+}
+
+//-------------------------------setReleaseYear--------------------------------
+// Sets the releaseYear to the parameter
+//-----------------------------------------------------------------------------
+void Classic::setReleaseMonth(int newReleaseMonth) {
+    releaseMonth = newReleaseMonth;
+}
+
+//-------------------------------setReleaseYear--------------------------------
+// Sets the releaseYear to the parameter.
+//-----------------------------------------------------------------------------
+void Classic::setReleaseYear(int newReleaseYear) {
+    releaseYear = newReleaseYear;
+}
+
+//-------------------------------setMajorActor---------------------------------
+// Sets the majorActor to the parameter.
+//-----------------------------------------------------------------------------
+void Classic::setMajorActor(string newMajorActor) {
+    majorActor = newMajorActor;
+}
+
+//----------------------------------display------------------------------------
+// Displays the following, each separated by commas:
+// Dvd type, stock, director, title, release year
+//-----------------------------------------------------------------------------
+void Classic::display() const {
+    cout << dvdType << ", " << stock << ", " << director << ", " << title
+        << ", " << majorActor << " " << releaseMonth << " " << releaseYear;
 }
 
 bool Classic::operator==(const DVD & rhs) const {

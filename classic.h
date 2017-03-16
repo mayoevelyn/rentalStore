@@ -23,8 +23,20 @@ public:
 	// sets the data for the DVD
 	virtual void setData(string data);
 
+    virtual char getDvdType() const;
+    virtual int getStock() const;
+    virtual string getDirector() const;
+    virtual string getTitle() const;
+    int getReleaseYear() const;
+    int getReleaseMonth() const;
+
+    // setters
+    void setReleaseYear(int newReleaseYear);
+    void setReleaseMonth(int newReleaseMonth);
+    void setMajorActor(string newMajorActor);
+
 	// display
-	virtual void display();
+	virtual void display() const;
 
 	// operator overloads
 	virtual bool operator==(const DVD& rhs) const;
