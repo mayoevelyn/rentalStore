@@ -100,7 +100,7 @@ bool Comedy::operator==(const DVD & rhs) const {
 	return (releaseYear == rhsCasted->releaseYear && title == rhsCasted->title);
 }
 
-//-------------------------------operator==------------------------------------
+//-------------------------------operator!=------------------------------------
 // Returns true if rhs doesn't have the same title and release year.
 //-----------------------------------------------------------------------------
 bool Comedy::operator!=(const DVD & rhs) const {
@@ -108,7 +108,7 @@ bool Comedy::operator!=(const DVD & rhs) const {
 	return !(*this == rhs);
 }
 
-//-------------------------------operator==------------------------------------
+//-------------------------------operator<-------------------------------------
 // Returns true if title is alphanumerically less than rhs' title. If they have
 // the same title, returns true if year is less than rhs' year.
 //-----------------------------------------------------------------------------
@@ -126,7 +126,7 @@ bool Comedy::operator<(const DVD & rhs) const {
 	return false;
 }
 
-//-------------------------------operator==------------------------------------
+//-------------------------------operator>-------------------------------------
 // Returns true if title is alphanumerically less than rhs' title. If they have
 // the same title, returns true if year is less than rhs' year.
 //-----------------------------------------------------------------------------

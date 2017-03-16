@@ -101,13 +101,12 @@ void Classic::setMajorActor(string newMajorActor) {
 void Classic::display() const {
     cout << dvdType << ", " << stock << ", " << director << ", " << title
         << ", " << majorActor << " " << releaseMonth << " " << releaseYear;
-=======
-void Classic::display()
-{
-	cout << dvdType << stock << director << title << majorActor << releaseMonth << releaseYear << endl;
->>>>>>> a19171376175ec33f2f547b2f18236d09d02fed6
 }
 
+//----------------------------------display------------------------------------
+// Displays the following, each separated by commas:
+// Dvd type, stock, director, title, release year
+//-----------------------------------------------------------------------------
 bool Classic::operator==(const DVD & rhs) const {
 	// dynamic cast parent class to child class
 	const Classic* rhsCasted = dynamic_cast<const Classic*>(&rhs);
