@@ -16,6 +16,9 @@ void Comedy::setData(string data) {
 	// container to be reused for holding data
 	string str;
 
+	// set dvdType
+	getline(stream, str, ',');
+	dvdType = str[0];
 	// set stock
 	getline(stream, str, ',');
 	stock = stoi(str);
