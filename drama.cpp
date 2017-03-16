@@ -31,6 +31,21 @@ void Drama::setData(string data) {
 	stream >> releaseYear;
 }
 
+void Drama::setTransData(string data)
+{
+	// change param string into sstream
+	stringstream stream(data);
+	// container to be reused for holding data
+	string str;
+
+	// set director
+	getline(stream, str, ',');
+	director = str;
+	// set title
+	getline(stream, str, ',');
+	title = str;
+}
+
 //----------------------------------getDvdType---------------------------------
 // Returns the DVD type.
 //-----------------------------------------------------------------------------

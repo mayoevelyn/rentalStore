@@ -32,6 +32,20 @@ void Comedy::setData(string data) {
 	stream >> releaseYear;
 }
 
+void Comedy::setTransData(string data)
+{
+	// change param string into sstream
+	stringstream stream(data);
+	// container to be reused for holding data
+	string str;
+
+	// set title
+	getline(stream, str, ',');
+	title = str;
+	// sets the release year
+	stream >> releaseYear;
+}
+
 //----------------------------------getDvdType---------------------------------
 // Returns the DVD type.
 //-----------------------------------------------------------------------------

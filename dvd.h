@@ -19,6 +19,8 @@ public:
 
 	// set data function
 	virtual void setData(string data) = 0;
+	// set trans data function
+	virtual void setTransData(string data) = 0;
 	// display function
 	virtual void display() const = 0;
 

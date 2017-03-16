@@ -22,6 +22,8 @@ class Classic : public DVD {
 public:
 	// sets the data for the DVD
 	virtual void setData(string data);
+	// set trans data function
+	virtual void setTransData(string data);
 
     virtual char getDvdType() const;
     virtual int getStock() const;

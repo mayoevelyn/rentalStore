@@ -19,6 +19,8 @@ class Comedy : public DVD {
 public:
     // sets the data for the DVD
 	virtual void setData(string data);
+	// set trans data function
+	virtual void setTransData(string data);
 
     // getters
     virtual char getDvdType() const;

@@ -30,6 +30,19 @@ void Classic::setData(string data) {
 	majorActor = firstName + " " + lastName;
 }
 
+void Classic::setTransData(string data)
+{
+	// change param string into sstream
+	stringstream stream(data);
+
+	// process the stream into containers and release date
+	string firstName, lastName;
+	stream >> firstName >> lastName >> releaseMonth >> releaseYear;
+
+	// set major actor's name
+	majorActor = firstName + " " + lastName;
+}
+
 //----------------------------------getDvdType---------------------------------
 // Returns the DVD type.
 //-----------------------------------------------------------------------------

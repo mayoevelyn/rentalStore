@@ -69,6 +69,7 @@ void Store::buildUsers(ifstream& infile) {
 void Store::applyTransactions(ifstream& infile) {
 	Transaction* t;
 	User* u;
+	DVD* d;
 	char transType;
 	int userID;
 	char mediaType;
@@ -96,7 +97,14 @@ void Store::applyTransactions(ifstream& infile) {
 			cout << "Invalid media type" << mediaType << endl;
 			break;
 		}
+		stream >> dvdType;
+		d = dvdFactory.makeDVD(dvdType);
+		if (d == NULL) {
+			cout << "Invalid movie type" << dvdType << endl;
+			break;
+		}
 		stream >> searchTerm;
+		d->setTransData(searchTerm);
 		// then omg what
 		t->setData(users, classicInven, comedyInven, dramaInven)
 	}
