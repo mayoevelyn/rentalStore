@@ -29,5 +29,5 @@ bool History::setCustomer(User* custom) {
 }
 
 bool History::display() {
-    cout << "H " << 
+    cout << "H ";
 }

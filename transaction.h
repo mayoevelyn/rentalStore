@@ -11,10 +11,12 @@
 #include "hashtable.h"
 #include "bintree.h"
 #include <string>
+
+class Store;
+
 using namespace std;
 
-class Transaction
-{
+class Transaction {
 public:
 	// constructor
 	Transaction();
@@ -26,8 +28,7 @@ public:
 	
 private:
 	string transData;
-	HashTable<User>* users;
-
+	Store* store;
 };
 
 #endif

@@ -1,19 +1,10 @@
 // ------------------------------- BinTree.h ---------------------------------
-// Kay Phan CSS 343 
-// Created 1/22/2017
-// Last Modified 3/13/2017
-//----------------------------------------------------------------------------
-// Purpose:
-//
-// The .h file for the BinTree class.
-//
 // This is a Binary Search Tree that will store many objects. Each Node in
 // the tree can have up to two children. Greater objects will be stored on
 // the right and lesser ojects on the left of any object.
 // 
-// This binary search tree can be used to find T objects,
-// display them either as a tree or in order, empty out itself, empty its 
-// data into a sorted array, or build a tree from a sorted array.
+// This binary search tree can be used to find T objects and
+// display them either as a tree or in order.
 //----------------------------------------------------------------------------
 
 #ifndef BINTREE_H
@@ -43,7 +34,7 @@ public:
     void makeEmpty();			//	empties the tree, deletes nodes
 
                                 // overwritten operators
-    BinTree& operator=(const BinTree&);
+    const BinTree& operator=(const BinTree&);
     bool operator==(const BinTree&) const;
     bool operator!=(const BinTree&) const;
 
@@ -82,7 +73,7 @@ private:
 // Precondition: None.
 //----------------------------------------------------------------------------
 template <typename T>
-BinTree::BinTree() {
+BinTree<T>::BinTree() {
 	root = NULL;
 }
 
@@ -92,7 +83,7 @@ BinTree::BinTree() {
 // Precondition: Assumes that the toCopy parameter is initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-BinTree::BinTree(const BinTree& toCopy) {
+BinTree<T>::BinTree(const BinTree& toCopy) {
 	root = NULL;
 	*this = toCopy;
 }
@@ -103,7 +94,7 @@ BinTree::BinTree(const BinTree& toCopy) {
 // Precondition: None.
 //----------------------------------------------------------------------------
 template <typename T>
-BinTree::~BinTree() {
+BinTree<T>::~BinTree() {
 	makeEmpty();
 	root = NULL;
 }
@@ -116,7 +107,7 @@ BinTree::~BinTree() {
 // Precondition: toInsert is not NULL.
 //----------------------------------------------------------------------------
 template <typename T>
-bool BinTree::insert(T* toInsert) {
+bool BinTree<T>::insert(T* toInsert) {
 	bool success = true;
 	root = insertHelper(root, toInsert, success);
 	return success;
@@ -132,7 +123,7 @@ bool BinTree::insert(T* toInsert) {
 // Precondition: See insert.
 //----------------------------------------------------------------------------
 template <typename T>
-BinTree::Node* BinTree::insertHelper(Node* node, T* toInsert, bool& 
+BinTree<T>::Node* BinTree<T>::insertHelper(Node* node, T* toInsert, bool&
 	success) {
 	//if node is null, add the object
 	if (node == NULL) {
@@ -160,7 +151,7 @@ BinTree::Node* BinTree::insertHelper(Node* node, T* toInsert, bool&
 // Precondition: Assumes toGet is initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-bool BinTree::retrieve(const T& toGet, T*& toSet) const {
+bool BinTree<T>::retrieve(const T& toGet, T*& toSet) const {
 	bool success = false;
 	retrieveHelper(toGet, toSet, root, success);
 	return success;
@@ -173,7 +164,7 @@ bool BinTree::retrieve(const T& toGet, T*& toSet) const {
 // Precondition: 
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::retrieveHelper(const T& toGet, T*& toSet,
+void BinTree<T>::retrieveHelper(const T& toGet, T*& toSet,
 	Node* node, bool& success) const {
 	if (node != NULL) {
 
@@ -199,7 +190,7 @@ void BinTree::retrieveHelper(const T& toGet, T*& toSet,
 // Precondition: Assumes heightOf is initialized. 
 //----------------------------------------------------------------------------
 template <typename T>
-int BinTree::getHeight(const T& heightOf) const {
+int BinTree<T>::getHeight(const T& heightOf) const {
 	int height = 0;
 	if (root == NULL) return 0;
 	getHeightHelper(root, heightOf, height);
@@ -213,7 +204,7 @@ int BinTree::getHeight(const T& heightOf) const {
 // Precondition: None.
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::getHeightHelper(const Node* node, const T& heightOf,
+void BinTree<T>::getHeightHelper(const Node* node, const T& heightOf,
 	int& height) const {
 	if (node != NULL) {
 		if (*node->data == heightOf) {
@@ -234,7 +225,7 @@ void BinTree::getHeightHelper(const Node* node, const T& heightOf,
 // Precondition: None.
 //----------------------------------------------------------------------------
 template <typename T>
-int BinTree::branchHeight(const Node* node) const {
+int BinTree<T>::branchHeight(const Node* node) const {
 	if (node == NULL)
 		return 0;
 	else
@@ -256,7 +247,7 @@ int BinTree::branchHeight(const Node* node) const {
 // Precondition: None.
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::makeEmpty() {
+void BinTree<T>::makeEmpty() {
 	makeEmptyHelper(root);
 }
 
@@ -267,7 +258,7 @@ void BinTree::makeEmpty() {
 // Precondition: None.
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::makeEmptyHelper(Node*& node) {
+void BinTree<T>::makeEmptyHelper(Node*& node) {
 	//does nothing if node is NULL
 	if (node == NULL) return;
 
@@ -288,10 +279,12 @@ void BinTree::makeEmptyHelper(Node*& node) {
 // Precondition: Assumes that the toCopy parameter is initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-BinTree& BinTree::operator=(const BinTree& toCopy) {
-	makeEmpty();
-	copyHelper(root, toCopy.root);
-	return *this;
+const BinTree<T>& BinTree<T>::operator=(const BinTree& toCopy) {
+    if (&toCopy != this) {
+        makeEmpty();
+        copyHelper(root, toCopy.root); 
+    }
+    return *this;
 }
 
 //------------------------------ copyHelper ----------------------------------
@@ -302,7 +295,7 @@ BinTree& BinTree::operator=(const BinTree& toCopy) {
 // Precondition: Assumes that the toCopy parameter is initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::copyHelper(Node*& thisNode, Node* otherNode) {
+void BinTree<T>::copyHelper(Node*& thisNode, Node* otherNode) {
 	if (otherNode != NULL) {
 		thisNode = new Node;
 		thisNode->data = new T(*otherNode->data);
@@ -324,7 +317,7 @@ void BinTree::copyHelper(Node*& thisNode, Node* otherNode) {
 // Precondition: Assumes that the toCompare parameter is initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-bool BinTree::operator==(const BinTree& toCompare) const {
+bool BinTree<T>::operator==(const BinTree& toCompare) const {
 	bool isEqual = true;
 	isEqualHelper(root, toCompare.root, isEqual);
 	return isEqual;
@@ -337,7 +330,7 @@ bool BinTree::operator==(const BinTree& toCompare) const {
 // Precondition: 
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::isEqualHelper(Node* node, Node* otherNode,
+void BinTree<T>::isEqualHelper(Node* node, Node* otherNode,
 	bool& isEqual) const {
 	// does not recurse further if both are null
 	if (node == NULL && otherNode == NULL) return;
@@ -373,7 +366,7 @@ void BinTree::isEqualHelper(Node* node, Node* otherNode,
 // Precondition: Assumes that the toCompare parameter is initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-bool BinTree::operator!=(const BinTree& toCompare) const {
+bool BinTree<T>::operator!=(const BinTree& toCompare) const {
 	bool isEqual = (*this == toCompare);
 	return (isEqual == false);
 }
@@ -385,7 +378,7 @@ bool BinTree::operator!=(const BinTree& toCompare) const {
 // Precondition: Assumes ostream output and toOutput are initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::displayTree() const {
+void BinTree<T>::displayTree() const {
 	displayTreeHelper(root);
 }
 
@@ -395,7 +388,7 @@ void BinTree::displayTree() const {
 // Precondition: Assumes ostream output and toOutput are initialized.
 //----------------------------------------------------------------------------
 template <typename T>
-void BinTree::displayTreeHelper(Node* node) const {
+void BinTree<T>::displayTreeHelper(Node* node) const {
 	if (node != NULL) {
 		displayTreeHelper(node->left);
         node->data.display();

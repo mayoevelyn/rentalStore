@@ -115,6 +115,7 @@
     <ClCompile Include="drama.cpp" />
     <ClCompile Include="dvd.cpp" />
     <ClCompile Include="dvdfactory.cpp" />
+    <ClCompile Include="history.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="store.cpp" />
     <ClCompile Include="transactionfactory.cpp" />

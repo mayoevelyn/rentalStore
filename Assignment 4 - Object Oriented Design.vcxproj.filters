@@ -42,6 +42,9 @@
     <ClCompile Include="transactionfactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="history.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borrow.h">

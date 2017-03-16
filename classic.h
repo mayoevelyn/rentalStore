@@ -31,6 +31,11 @@ public:
 	virtual bool operator<(const DVD& rhs) const;
 	virtual bool operator>(const DVD& rhs) const;
 
+    // borrow and return
+    virtual bool borrowing();
+    virtual bool returning();
+
+
 private:
 	string majorActor;  // the movie's major actor
 	int releaseMonth;   // release month of the movie
