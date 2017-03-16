@@ -12,6 +12,7 @@
 class Store;
 class User;
 class DVD;
+template<User>
 
 using namespace std;
 
