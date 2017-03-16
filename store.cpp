@@ -105,7 +105,7 @@ void Store::applyTransactions(ifstream& infile) {
 			break;
 		}
 		stream >> searchTerm;
-		d->setTransData(searchTerm);
+		dummyDVD->setTransData(searchTerm);
 		// search the dvd from the correct tree
 		switch (dvdType) {
 		case 'F': comedyInven->retrieve(*dummyDVD, dvd);
