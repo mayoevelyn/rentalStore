@@ -7,16 +7,17 @@
 
 #ifndef DRAMA_H
 #define DRAMA_H
-#include <sstream>
-#include <string>
-#include "dvd.h"
 
+#include "dvd.h"
+#include <fstream>
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Drama : public DVD {
 public:
-	// processes extra info into release year
-	void processInfo(string extraInfo);
+	// sets the data for the DVD
+	void setData(ifstream& infile);
 
     // getters
     virtual char getDvdType() const;

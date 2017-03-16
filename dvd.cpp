@@ -7,15 +7,6 @@
 
 #include "dvd.h"
 
-DVD::DVD(char dvdType, int stock, string director, string title, string extraInfo)
-{
-	this->dvdType = dvdType;
-	this->stock = stock;
-	this->director = director;
-	this->title = title;
-	this->extraInfo = extraInfo;
-}
-
 DVD::~DVD()
 {
 }

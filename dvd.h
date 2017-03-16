@@ -10,13 +10,11 @@
 
 #include <string>
 #include <iostream>
-
 using namespace std;
 
 class DVD {
 public:
 	// virtual destructor to deal with strings
-    DVD(char dvdType);
 	virtual ~DVD();
 
 	// display function
@@ -39,7 +37,6 @@ protected:
 	int stock;			// number of DVDs available for borrowing
 	string director;	// director of the DVD
 	string title;		// title of the DVD
-	string extraInfo;	// trailing information from an DVD input line
 };
 #endif
 

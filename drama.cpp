@@ -9,13 +9,21 @@
 //-------------------------------processInfo-----------------------------------
 // Takes in a string and sets it as the release year.
 //-----------------------------------------------------------------------------
-void Drama::processInfo(string extraInfo)
-{
-	// turn extraInfo into a sstream
-	stringstream stream(extraInfo);
+void Drama::setData(ifstream& infile) {
+	// container to be reused for holding data
+	string str;
 
-	// sets the data into release year
-	stream >> releaseYear;
+	// set stock
+	getline(infile, str, ',');
+	stock = stoi(str);
+	// set director
+	getline(infile, str, ',');
+	director = str;
+	// set title
+	getline(infile, str, ',');
+	title = str;
+	// sets the release year
+	infile >> releaseYear;
 }
 
 //----------------------------------getDvdType---------------------------------
@@ -79,8 +87,7 @@ void Drama::display() const {
 //-------------------------------operator==------------------------------------
 // Returns true if rhs has the same director and title.
 //-----------------------------------------------------------------------------
-bool Drama::operator==(const DVD & rhs) const
-{
+bool Drama::operator==(const DVD & rhs) const {
 	// dynamic cast parent class to child class
 	const Drama* rhsCasted = dynamic_cast<const Drama*>(&rhs);
 	// true if the movie's director and title is the same
@@ -91,8 +98,7 @@ bool Drama::operator==(const DVD & rhs) const
 //-------------------------------operator==------------------------------------
 // Returns true if rhs do not have the same director or title.
 //-----------------------------------------------------------------------------
-bool Drama::operator!=(const DVD & rhs) const
-{
+bool Drama::operator!=(const DVD & rhs) const {
 	// true if lhs is not equal to rhs
 	return !(*this == rhs);
 }
@@ -120,8 +126,7 @@ bool Drama::operator<(const DVD & rhs) const
 // Returns true if director is alphanumerically greater than rhs' director.  If
 // they have the same director, then true if title is alphanumerically greater.
 //-----------------------------------------------------------------------------
-bool Drama::operator>(const DVD & rhs) const
-{
+bool Drama::operator>(const DVD & rhs) const {
 	// true if lhs is not equal nor smaller than rhs
 	return !(*this == rhs || *this < rhs);
 }

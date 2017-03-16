@@ -10,15 +10,17 @@
 
 #ifndef CLASSIC_H
 #define CLASSIC_H
-#include <sstream>
-#include <string>
+
 #include "dvd.h"
+#include <fstream>
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Classic : public DVD {
 public:
-	// processes extra info into release year
-	void processInfo();
+	// sets the data for the DVD
+	void setData(ifstream& infile);
 
 	// display
 	virtual void display();

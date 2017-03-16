@@ -10,13 +10,21 @@
 //-------------------------------processInfo-----------------------------------
 // Takes in a string and sets it as the release year.
 //-----------------------------------------------------------------------------
-void Comedy::processInfo(string extraInfo)
-{
-	// turn extraInfo into a sstream
-	stringstream stream(extraInfo);
+void Comedy::setData(ifstream& infile) {
+	// container to be reused for holding data
+	string str;
 
-	// sets the data into release year
-	stream >> releaseYear;
+	// set stock
+	getline(infile, str, ',');
+	stock = stoi(str);
+	// set director
+	getline(infile, str, ',');
+	director = str;
+	// set title
+	getline(infile, str, ',');
+	title = str;
+	// sets the release year
+	infile >> releaseYear;
 }
 
 //----------------------------------getDvdType---------------------------------
