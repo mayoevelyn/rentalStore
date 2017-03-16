@@ -18,6 +18,7 @@ public:
     virtual void execute();          // displays user's transaction history
     bool setCustomer(Store*);
     virtual void display();
+	virtual void setData(string data);
 
 private:
     int id;

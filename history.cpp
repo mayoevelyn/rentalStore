@@ -26,3 +26,7 @@ bool History::setCustomer() {
 void History::display() {
     cout << "H " << id;
 }
+
+void History::setData(string data)
+{
+}

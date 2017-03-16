@@ -8,6 +8,7 @@
 #ifndef BORROW_H
 #define BORROW_H
 
+#include <sstream>
 #include "transaction.h"
 #include "dvdfactory.h"
 
@@ -19,7 +20,7 @@ private:
    void updateInventory() const;    // updates store inventory
    void updateBorrowedList() const; // updates user's borrowed list
    void updateUserHistory() const;  // updates user's transaction history
-   void setData();
+   virtual void setData(string data);
 
    int id;                  // customer ID
    DVDFactory dvdfactory;   // to create dummy media files

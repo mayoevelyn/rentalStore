@@ -20,9 +20,10 @@ public:
 	virtual ~Transaction();
 	virtual void execute() = 0;
     virtual void display() = 0;
+	virtual void setData(string data) = 0;
 	
 protected:
-	char transactType;
+	char transType;
 	Store* store;
 };
 

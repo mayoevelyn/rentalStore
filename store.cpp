@@ -41,7 +41,7 @@ void Store::buildInventory(ifstream& infile) {
 		case 'C': classicInven->insert(ptr);
 			break;
 		default:
-			cout << "Invalid movie type" << endl;
+			cout << "Invalid movie type " << dvdType << endl;
 		}
 	}
 	ptr = NULL;
@@ -67,16 +67,16 @@ void Store::buildUsers(ifstream& infile) {
 }
 
 void Store::applyTransactions(ifstream& infile) {
-	char transType;
-	string transData;
 	Transaction* t;
+	char transType;
+	string str;
 
 	while(!infile.eof()) {
-		infile >> transType;
-		getline(infile, transData);
+		getline(infile, str);
+		transType = str[0];
 		t = transFactory.makeTransaction(transType);
 		if (t) {
-			t->setData(transData, users*, );
+			t->setData(str);
 		}
 	}
 }

@@ -17,5 +17,6 @@ class Inventory : public Transaction {
 public:
     virtual void execute();       // displays store's inventory
     virtual void display();
+	virtual void setData(string data);
 };
 #endif

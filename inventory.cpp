@@ -14,3 +14,7 @@ void Inventory::execute() {
 void Inventory::display() {
     cout << "I";
 }
+
+void Inventory::setData(string data)
+{
+}
