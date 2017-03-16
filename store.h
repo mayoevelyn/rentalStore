@@ -25,9 +25,8 @@ public:
 	~Store();				// destructor
 
 	// store building functions
-	void buildInventory(ifstream&);
-	void buildUsers(ifstream&);
-	void addMedia(Media*);
+	void buildInventory(ifstream& infile);
+	void buildUsers(ifstream& infile);
 
 	// other functions
 	void applyTransactions(ifstream& infile);	// applied from queue

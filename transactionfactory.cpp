@@ -5,8 +5,7 @@ Transaction* TransactionFactory::makeTransaction(char action) {
 	Transaction* trans = NULL;
 
 	// switch case to create appropriate Transaction based on type
-	switch (action)
-	{
+	switch (action) {
 	case 'B':
 		trans = new Borrow;
 		break;

@@ -68,16 +68,37 @@ void Store::buildUsers(ifstream& infile) {
 
 void Store::applyTransactions(ifstream& infile) {
 	Transaction* t;
+	User* u;
 	char transType;
+	int userID;
+	char mediaType;
+	char dvdType;
+	string searchTerm;
 	string str;
 
 	while(!infile.eof()) {
 		getline(infile, str);
-		transType = str[0];
+		stringstream stream(str);
+		stream >> transType;
 		t = transFactory.makeTransaction(transType);
-		if (t) {
-			t->setData(str);
+		if (t == NULL) {
+			cout << "Invalid transaction type" << transType << endl;
+			break;
 		}
+		stream >> userID;
+		users->retrieve(u, userID);
+		if (u == NULL) {
+			cout << "User " << userID << " does not exist" << endl;
+			break;
+		}
+		stream >> mediaType;
+		if (mediaType != 'D') {
+			cout << "Invalid media type" << mediaType << endl;
+			break;
+		}
+		stream >> searchTerm;
+		// then omg what
+		t->setData(users, classicInven, comedyInven, dramaInven)
 	}
 }
 
