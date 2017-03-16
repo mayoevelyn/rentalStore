@@ -8,14 +8,21 @@
 #ifndef BORROW_H
 #define BORROW_H
 
+#include "transaction.h"
+#include "dvdfactory.h"
+
 class Borrow : public Transaction {
 public:
-   bool executeTransaction();       // updates all info
+   void executeTransaction();       // updates all info
    
 private:
    void updateInventory() const;    // updates store inventory
    void updateBorrowedList() const; // updates user's borrowed list
    void updateUserHistory() const;  // updates user's transaction history
+   void setData();
+
+   int id;                  // customer ID
+   DVDFactory dvdfactory;   // to create dummy media files
 };
 
 #endif

@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="borrow.cpp" />
     <ClCompile Include="classic.cpp" />
     <ClCompile Include="comedy.cpp" />
     <ClCompile Include="drama.cpp" />
