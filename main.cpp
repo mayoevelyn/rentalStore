@@ -9,6 +9,12 @@
 int main() {
 	// creates the Store object by passing user, movie, and transaction files
 	Store store;
-	ifstream infile("data4movies.txt");
-	store.buildInventory(infile);
+
+	ifstream infile1("data4movies.txt");
+	ifstream infile2("data4customers.txt");
+	ifstream infile3("data4commands.txt");
+
+	store.buildInventory(infile1);
+	store.buildUsers(infile2);
+	//store.applyTransactions(infile3);
 }

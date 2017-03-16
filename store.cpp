@@ -125,7 +125,6 @@ void Store::applyTransactions(ifstream& infile) {
 				}
 			}
 		}
-
 		t->setData(u, dvd);
 	}
 }
