@@ -1,0 +1,216 @@
+﻿  user.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): error C2259: 'Transaction': cannot instantiate abstract class
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: due to following members:
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::execute(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(21): note: see declaration of 'Transaction::execute'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::display(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(22): note: see declaration of 'Transaction::display'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(70): error C2259: 'Transaction': cannot instantiate abstract class
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(70): note: due to following members:
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(70): note: 'void Transaction::execute(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(21): note: see declaration of 'Transaction::execute'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(70): note: 'void Transaction::display(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(22): note: see declaration of 'Transaction::display'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(79): error C2664: 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<DVD>>> std::vector<DVD,std::allocator<_Ty>>::erase(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<DVD>>>,std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<DVD>>>)': cannot convert argument 1 from 'DVD' to 'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<DVD>>>'
+          with
+          [
+              _Ty=DVD
+          ]
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(79): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(96): error C3867: 'std::vector<Transaction,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=Transaction
+          ]
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(96): error C2446: '<': no conversion from 'unsigned __int64 (__cdecl std::vector<Transaction,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
+          with
+          [
+              _Ty=Transaction
+          ]
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(96): note: There is no context in which this conversion is possible
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(97): error C2662: 'void Transaction::display(void)': cannot convert 'this' pointer from 'const Transaction' to 'Transaction &'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(97): note: Conversion loses qualifiers
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(103): error C3867: 'std::vector<DVD,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=DVD
+          ]
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(103): error C2446: '<': no conversion from 'unsigned __int64 (__cdecl std::vector<DVD,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
+          with
+          [
+              _Ty=DVD
+          ]
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(103): note: There is no context in which this conversion is possible
+  transactionfactory.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(11): error C2061: syntax error: identifier 'Borrow'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(14): error C2061: syntax error: identifier 'Return'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(17): error C2061: syntax error: identifier 'Inventory'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(20): error C2061: syntax error: identifier 'History'
+  transaction.cpp
+  store.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): error C2259: 'Transaction': cannot instantiate abstract class
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: due to following members:
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::execute(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(21): note: see declaration of 'Transaction::execute'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::display(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(22): note: see declaration of 'Transaction::display'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.h(21): error C2011: 'Store': 'class' type redefinition
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2059: syntax error: ')'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2059: syntax error: 'const'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2059: syntax error: ')'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(17): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(31): error C2065: 'dvdFactory': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(31): error C2228: left of '.makeDVD' must have class/struct/union
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(31): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(37): error C2065: 'comedyInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(37): error C2227: left of '->insert' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(37): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(39): error C2065: 'dramaInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(39): error C2227: left of '->insert' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(39): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(41): error C2065: 'classicInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(41): error C2227: left of '->insert' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(41): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(50): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(53): error C3867: 'std::ios_base::eof': non-standard syntax; use '&' to create a pointer to member
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(56): error C2065: 'users': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(56): error C2227: left of '->insert' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(56): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(56): error C3867: 'User::getID': non-standard syntax; use '&' to create a pointer to member
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(61): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(69): error C2065: 'transFactory': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(69): error C2228: left of '.makeTransaction' must have class/struct/union
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(69): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(71): error C2039: 'setData': is not a member of 'Transaction'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): note: see declaration of 'Transaction'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(71): error C2065: 'users': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(71): error C2059: syntax error: ','
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(76): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(77): error C2065: 'comedyInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(77): error C2227: left of '->displayTree' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(77): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(78): error C2065: 'dramaInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(78): error C2227: left of '->displayTree' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(78): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(79): error C2065: 'classicInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(79): error C2227: left of '->displayTree' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(79): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(82): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(83): error C2065: 'users': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(83): error C2227: left of '->retrieve' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(83): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(87): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(89): error C3867: 'DVD::getDvdType': non-standard syntax; use '&' to create a pointer to member
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(92): error C2065: 'comedyInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(92): error C2227: left of '->retrieve' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(92): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(94): error C2065: 'dramaInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(94): error C2227: left of '->retrieve' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(94): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(96): error C2065: 'classicInven': undeclared identifier
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(96): error C2227: left of '->retrieve' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(96): note: type is 'unknown-type'
+  main.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): error C2259: 'Transaction': cannot instantiate abstract class
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: due to following members:
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::execute(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(21): note: see declaration of 'Transaction::execute'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::display(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(22): note: see declaration of 'Transaction::display'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.h(21): error C2011: 'Store': 'class' type redefinition
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(11): error C2079: 'store' uses undefined class 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(13): error C2228: left of '.buildInventory' must have class/struct/union
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(13): note: type is 'int'
+  inventory.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): error C2259: 'Transaction': cannot instantiate abstract class
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: due to following members:
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::execute(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(21): note: see declaration of 'Transaction::execute'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::display(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(22): note: see declaration of 'Transaction::display'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.h(21): error C2011: 'Store': 'class' type redefinition
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(11): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(11): error C2227: left of '->displayInventory' must point to class/struct/union/generic type
+  history.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): error C2259: 'Transaction': cannot instantiate abstract class
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: due to following members:
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::execute(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(21): note: see declaration of 'Transaction::execute'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(46): note: 'void Transaction::display(void)': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(22): note: see declaration of 'Transaction::display'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.h(21): error C2011: 'Store': 'class' type redefinition
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(13): error C2027: use of undefined type 'Store'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(12): note: see declaration of 'Store'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(13): error C2227: left of '->getUser' must point to class/struct/union/generic type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(21): error C2511: 'bool History::setCustomer(void)': overloaded member function not found in 'History'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(23): error C2227: left of '->getUser' must point to class/struct/union/generic type
+  dvdfactory.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvdfactory.cpp(16): error C2259: 'Classic': cannot instantiate abstract class
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvdfactory.cpp(16): note: due to following members:
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvdfactory.cpp(16): note: 'void DVD::display(void) const': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvd.h(23): note: see declaration of 'DVD::display'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvdfactory.cpp(16): note: 'char DVD::getDvdType(void) const': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvd.h(26): note: see declaration of 'DVD::getDvdType'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvdfactory.cpp(16): note: 'int DVD::getStock(void) const': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvd.h(27): note: see declaration of 'DVD::getStock'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvdfactory.cpp(16): note: 'std::string DVD::getDirector(void) const': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvd.h(28): note: see declaration of 'DVD::getDirector'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvdfactory.cpp(16): note: 'std::string DVD::getTitle(void) const': is abstract
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvd.h(29): note: see declaration of 'DVD::getTitle'
+  dvd.cpp
+  drama.cpp
+  comedy.cpp
+  classic.cpp
+  Generating Code...

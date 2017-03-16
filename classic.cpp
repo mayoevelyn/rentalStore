@@ -30,7 +30,6 @@ void Classic::setData(string data) {
 	majorActor = firstName + " " + lastName;
 }
 
-<<<<<<< HEAD
 //----------------------------------getDvdType---------------------------------
 // Returns the DVD type.
 //-----------------------------------------------------------------------------
@@ -99,13 +98,8 @@ void Classic::setMajorActor(string newMajorActor) {
 // Dvd type, stock, director, title, release year
 //-----------------------------------------------------------------------------
 void Classic::display() const {
-    cout << dvdType << ", " << stock << ", " << director << ", " << title
-        << ", " << majorActor << " " << releaseMonth << " " << releaseYear;
-=======
-void Classic::display()
-{
-	cout << dvdType << stock << director << title << majorActor << releaseMonth << releaseYear << endl;
->>>>>>> a19171376175ec33f2f547b2f18236d09d02fed6
+	cout << dvdType << ", " << stock << ", " << director << ", " << title
+		<< ", " << majorActor << " " << releaseMonth << " " << releaseYear;
 }
 
 bool Classic::operator==(const DVD & rhs) const {

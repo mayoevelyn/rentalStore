@@ -28,7 +28,7 @@ public:
    User(const User&);   // copy constructor
    ~User();             // destructor
 
-   void setData(ifstream&);
+   void setData(string data);
 
    // get functions
    int getID() const;

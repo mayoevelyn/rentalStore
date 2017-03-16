@@ -49,11 +49,19 @@ void Store::buildInventory(ifstream& infile) {
 
 void Store::buildUsers(ifstream& infile) {
 	User* ptr;
-	for (;;) {
-		if (infile.eof) break;	// stop reading if end of file
+	string str;
+
+	// while there is still data
+	while (!infile.eof) {
+		// create new user
 		ptr = new User;
-		ptr->setData(infile);
+		// read one line
+		getline(infile, str);
+		// pass the line into setData
+		ptr->setData(str);
+		// try to insert user
 		bool success = users->insert(ptr, ptr->getID);
+		// if insert unsuccessful, delete the ptr
 		if (!success) delete ptr;
 	}
 }
