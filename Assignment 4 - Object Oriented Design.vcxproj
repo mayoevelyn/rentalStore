@@ -116,8 +116,10 @@
     <ClCompile Include="dvd.cpp" />
     <ClCompile Include="dvdfactory.cpp" />
     <ClCompile Include="history.cpp" />
+    <ClCompile Include="inventory.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="store.cpp" />
+    <ClCompile Include="transaction.cpp" />
     <ClCompile Include="transactionfactory.cpp" />
     <ClCompile Include="user.cpp" />
   </ItemGroup>
@@ -132,8 +134,6 @@
     <ClInclude Include="hashtable.h" />
     <ClInclude Include="history.h" />
     <ClInclude Include="inventory.h" />
-    <ClInclude Include="media.h" />
-    <ClInclude Include="mediafactory.h" />
     <ClInclude Include="return.h" />
     <ClInclude Include="store.h" />
     <ClInclude Include="transaction.h" />

@@ -5,29 +5,24 @@
 //-----------------------------------------------------------------------------
 
 #include "history.h"
+#include "user.h"
+#include "store.h"
 
-History::History() {
-    customer = NULL;
-}
-
-History::~History() {
-    customer = NULL;
-}
-
-bool History::execute() {
-    if (customer == NULL) return false;
-    customer->displayHistory();
-    return true;
-}
-
-bool History::setCustomer(User* custom) {
-    if (custom == NULL) return false;
-    else {
-        customer = custom;
-        return true;
+void History::execute() {
+    User* customer;
+    bool userExists = store->getUser(customer, id);
+    if (!userExists) {
+        cout << "Invalid ID number: " << id;
+        return;
     }
+    else customer->displayHistory();
 }
 
-bool History::display() {
-    cout << "H ";
+bool History::setCustomer() {
+    User* customer;
+    bool customerExists = store->getUser();
+}
+
+void History::display() {
+    cout << "H " << id;
 }

@@ -5,17 +5,10 @@
 //-----------------------------------------------------------------------------
 
 #include "inventory.h"
+#include "store.h"
 
-Inventory::Inventory() {
-
-}
-
-Inventory::~Inventory() {
-
-}
-
-bool Inventory::execute() {
-
+void Inventory::execute() {
+    store->displayInventory();
 }
 
 void Inventory::display() {

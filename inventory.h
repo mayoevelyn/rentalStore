@@ -9,10 +9,13 @@
 
 #include "transaction.h"
 
+class Store {
+    void displayInventory();
+};
+
 class Inventory : public Transaction {
 public:
-    virtual bool execute();       // displays store's inventory
-    
+    virtual void execute();       // displays store's inventory
     virtual void display();
 };
 #endif

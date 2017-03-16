@@ -15,9 +15,12 @@ class History : public Transaction {
 public:
     History();
     ~History();
-    virtual bool execute();          // displays user's transaction history
+    virtual void execute();          // displays user's transaction history
     bool setCustomer(Store*);
     virtual void display();
+
+private:
+    int id;
 };
 
 #endif 

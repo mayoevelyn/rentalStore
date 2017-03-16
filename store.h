@@ -32,12 +32,12 @@ public:
 	void displayUsers() const;	// users only
 	void displayInventory();	// inventory only
 
-	User* getUser(const User*&) const;		// pointer to a user
+	bool getUser(User*& toSet, int key);		// pointer to a user
 	Media* getMedia(const Media*&) const;	// pointer to a media
 
 private:
 	string storeName;
-	HashTable<User*>* users;
+	HashTable<User>* users;
 	BinTree<DVD>* classicInven;
 	BinTree<DVD>* comedyInven;
 	BinTree<DVD>* dramaInven;

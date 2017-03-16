@@ -82,9 +82,13 @@ void Store::addMedia(Media* toAdd) {
 void Store::display() const {
 
 }
-void Store::displayUsers() const; // users only
 void Store::displayInventory();   // inventory only
 
-User* Store::getUser(const User*&) const;
+
+bool Store::getUser(User*& customer, int key) {
+    bool retrieved = (users->retrieve(customer, key));
+    return retrieved;
+}
+
 Media* Store::getMedia(const Media*&) const;
 

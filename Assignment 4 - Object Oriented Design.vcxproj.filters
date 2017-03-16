@@ -45,6 +45,12 @@
     <ClCompile Include="history.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="inventory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borrow.h">
@@ -68,9 +74,6 @@
     <ClInclude Include="inventory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="media.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="return.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -90,9 +93,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="bintree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mediafactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="transactionfactory.h">

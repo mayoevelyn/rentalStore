@@ -3,31 +3,26 @@
 // stores the information of a transaction read from a transaction data file. 
 //-----------------------------------------------------------------------------
 
-#ifndef TRANSACTION_H
-#define TRANSACTION_H
+#ifndef _TRANSACTION_H
+#define _TRANSACTION_H
 
-#include "user.h"
-#include "media.h"
-#include "hashtable.h"
-#include "bintree.h"
 #include <string>
+#include <iostream>
 
 class Store;
+class User;
 
 using namespace std;
 
 class Transaction {
-public:
-	// constructor
-	Transaction();
-	
+public:	
 	// destructor
 	virtual ~Transaction();
-	void setData(string transData);
-	virtual bool execute();
+	virtual void execute() = 0;
+    virtual void display() = 0;
 	
-private:
-	string transData;
+protected:
+	char transactType;
 	Store* store;
 };
 
