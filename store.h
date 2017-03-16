@@ -3,6 +3,10 @@
 
 #include "transaction.h"
 #include "transactionfactory.h"
+#include "borrow.h"
+#include "inventory.h"
+#include "return.h"
+#include "history.h"
 #include "hashtable.h"
 #include "user.h"
 #include "bintree.h"
@@ -29,11 +33,11 @@ public:
 	void applyTransactions(ifstream& infile);	// applied from queue
 
 	void display() const;		// both users and inventory
-	void displayUsers() const;	// users only
 	void displayInventory();	// inventory only
 
 	bool getUser(User*& toSet, int key);		// pointer to a user
-	Media* getMedia(const Media*&) const;	// pointer to a media
+
+    bool getDVD(char mediaType, const DVD& toBorrow, DVD*& toSet);
 
 private:
 	string storeName;

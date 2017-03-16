@@ -49,12 +49,11 @@ void Store::buildInventory(ifstream& infile) {
 
 void Store::buildUsers(ifstream& infile) {
 	User* ptr;
-
 	for (;;) {
 		if (infile.eof) break;	// stop reading if end of file
 		ptr = new User;
 		ptr->setData(infile);
-		bool success = users->insert(ptr);
+		bool success = users->insert(ptr, ptr->getID);
 		if (!success) delete ptr;
 	}
 }
@@ -74,20 +73,33 @@ void Store::applyTransactions(ifstream& infile) {
 	}
 }
 
-void Store::addMedia(Media* toAdd) {
-
+void Store::displayInventory() {
+    comedyInven->displayTree();
+    dramaInven->displayTree();
+    classicInven->displayTree();
 }
-
-void Store::display() const {
-
-}
-void Store::displayInventory();   // inventory only
-
 
 bool Store::getUser(User*& customer, int key) {
     bool retrieved = (users->retrieve(customer, key));
     return retrieved;
 }
 
-Media* Store::getMedia(const Media*&) const;
+bool Store::getDVD(char mediaType, const DVD& toGet, DVD*& toSet) {
+    if (mediaType != 'D') return false;
+    char dvdType = toGet.getDvdType;
+    bool retrieved;
+    switch (dvdType) {
+    case 'F': retrieved = comedyInven->retrieve(toGet, toSet);
+        break;
+    case 'D': retrieved = dramaInven->retrieve(toGet, toSet);
+        break;
+    case 'C': retrieved = classicInven->retrieve(toGet, toSet);
+        break;
+    default:
+        cout << "Invalid movie type" << endl;
+        return false;
+    }
+    return retrieved;
+}
+
 
