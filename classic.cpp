@@ -9,6 +9,9 @@ void Classic::setData(string data) {
 	// container to be reused for holding data
 	string str;
 
+	// set dvdType
+	getline(stream, str, ',');
+	dvdType = str[0];
 	// set stock
 	getline(stream, str, ',');
 	stock = stoi(str);
@@ -27,6 +30,7 @@ void Classic::setData(string data) {
 	majorActor = firstName + " " + lastName;
 }
 
+<<<<<<< HEAD
 //----------------------------------getDvdType---------------------------------
 // Returns the DVD type.
 //-----------------------------------------------------------------------------
@@ -97,6 +101,11 @@ void Classic::setMajorActor(string newMajorActor) {
 void Classic::display() const {
     cout << dvdType << ", " << stock << ", " << director << ", " << title
         << ", " << majorActor << " " << releaseMonth << " " << releaseYear;
+=======
+void Classic::display()
+{
+	cout << dvdType << stock << director << title << majorActor << releaseMonth << releaseYear << endl;
+>>>>>>> a19171376175ec33f2f547b2f18236d09d02fed6
 }
 
 bool Classic::operator==(const DVD & rhs) const {
