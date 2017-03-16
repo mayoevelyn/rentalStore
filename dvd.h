@@ -18,7 +18,7 @@ public:
 	virtual ~DVD();
 
 	// set data function
-	virtual void setData(ifstream& infile) = 0;
+	virtual void setData(string data) = 0;
 	// display function
 	virtual void display() const = 0;
 

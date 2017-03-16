@@ -11,13 +11,14 @@
 #include "dvd.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include <string>
 using namespace std;
 
 class Drama : public DVD {
 public:
 	// sets the data for the DVD
-	void setData(ifstream& infile);
+	virtual void setData(string data);
 
     // getters
     virtual char getDvdType() const;

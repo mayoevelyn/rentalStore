@@ -1,22 +1,24 @@
 #include "classic.h"
 
-void Classic::setData(ifstream& infile) {
+void Classic::setData(string data) {
+	// change param string into sstream
+	stringstream stream(data);
 	// container to be reused for holding data
 	string str;
 
 	// set stock
-	getline(infile, str, ',');
+	getline(stream, str, ',');
 	stock = stoi(str);
 	// set director
-	getline(infile, str, ',');
+	getline(stream, str, ',');
 	director = str;
 	// set title
-	getline(infile, str, ',');
+	getline(stream, str, ',');
 	title = str;
 
 	// process the stream into containers and release date
 	string firstName, lastName;
-	infile >> firstName >> lastName >> releaseMonth >> releaseYear;
+	stream >> firstName >> lastName >> releaseMonth >> releaseYear;
 
 	// set major actor's name
 	majorActor = firstName + " " + lastName;

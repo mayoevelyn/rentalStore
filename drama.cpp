@@ -9,21 +9,23 @@
 //-------------------------------processInfo-----------------------------------
 // Takes in a string and sets it as the release year.
 //-----------------------------------------------------------------------------
-void Drama::setData(ifstream& infile) {
+void Drama::setData(string data) {
+	// change param string into sstream
+	stringstream stream(data);
 	// container to be reused for holding data
 	string str;
 
 	// set stock
-	getline(infile, str, ',');
+	getline(stream, str, ',');
 	stock = stoi(str);
 	// set director
-	getline(infile, str, ',');
+	getline(stream, str, ',');
 	director = str;
 	// set title
-	getline(infile, str, ',');
+	getline(stream, str, ',');
 	title = str;
 	// sets the release year
-	infile >> releaseYear;
+	stream >> releaseYear;
 }
 
 //----------------------------------getDvdType---------------------------------
