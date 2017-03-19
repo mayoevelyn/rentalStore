@@ -89,16 +89,6 @@ bool User::borrowDVD(DVD* toAdd) {
 // Removes DVD from inventory. Only removes if it is actually borrowed.
 //----------------------------------------------------------------------------
 bool User::returnDVD(DVD* toRemove) {
-<<<<<<< HEAD
-    vector<DVD*>::iterator iter;
-    if (retrieveDVD(toRemove, iter)) {
-        delete *iter;
-        borrowed.erase(iter);
-        return true;
-    }
-    else
-        return false;
-=======
 	vector<DVD*>::iterator iter;
 	if (retrieveDVD(toRemove, iter)) {
 		borrowed.erase(iter);
@@ -107,7 +97,6 @@ bool User::returnDVD(DVD* toRemove) {
 	}
 	else
 		return false;
->>>>>>> 0d9f36d01dc443fcf2a2ff7aedb54bd1557cf22f
 }
 
 //-------------------------------displayHistory-------------------------------
