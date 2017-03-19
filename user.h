@@ -6,15 +6,13 @@
 #ifndef _USER_H
 #define _USER_H
 
-#include <fstream>   // file reading
-#include <iostream>  // file reading
-#include <vector>      // list of borrowed items
-#include <string>    // any strings used
+#include <fstream>		// file reading
+#include <iostream>		// file reading
+#include <vector>		// list of borrowed items
+#include <string>		// any strings used
+#include <algorithm>	// for finding
 
 #include "dvd.h"
-#include "comedy.h"
-#include "drama.h"
-#include "classic.h"
 #include "transaction.h"
 #include "borrow.h"
 #include "return.h"
@@ -39,17 +37,17 @@ public:
    void setID(int idToSet);
 
    // adding and removing DVD by quantity
-   void removeFromInventory(DVD* toRemvove);
-   void addToInventory(DVD* toAdd); 
+   void borrowDVD(DVD* toAdd);
+   void returnDVD(DVD* toRemove);
 
    // changing history
-   void addToHistory(Transaction transact);
+   void addToHistory(Transaction* transact);
 
    // display
    void displayHistory() const;
 
-   // if has DVD or not
-   bool hasDVD(DVD* toFind) const;
+   // if has DVD or not, helper for remove
+   bool retrieveDVD(DVD* toFind, vector<DVD*>::iterator found);
 
    // boolean operators
    bool operator==(const User& rhs) const;
@@ -58,11 +56,11 @@ public:
    bool operator<(const User& rhs) const;
 
 private:
-   int id;                      // user id
-   string lastname;             // last name
-   string firstname;            // first name
-   vector<DVD> borrowed;        // all borrowed materials
-   vector<Transaction> history; // all transactions of the user
+   int id;						// user id
+   string lastname;				// last name
+   string firstname;			// first name
+   vector<DVD*> borrowed;		// all borrowed materials
+   vector<Transaction*> history;	// all transactions of the user
 };
 
 #endif

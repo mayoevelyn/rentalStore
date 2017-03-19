@@ -52,7 +52,7 @@ void Store::buildUsers(ifstream& infile) {
 	string str;
 
 	// while there is still data
-	while (!infile.eof) {
+	while (!infile.eof()) {
 		// create new user
 		ptr = new User;
 		// read one line

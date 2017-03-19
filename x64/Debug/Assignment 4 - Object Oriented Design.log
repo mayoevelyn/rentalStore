@@ -2,62 +2,38 @@
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): error C2989: 'Store': class template has already been declared as a non-class template
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(66): error C2989: 'User': class template has already been declared as a non-class template
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(13): note: see declaration of 'User'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(11): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(11): error C2059: syntax error: ')'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(11): error C2143: syntax error: missing ';' before '{'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(11): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(20): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(20): error C2059: syntax error: 'const'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(20): error C2143: syntax error: missing ';' before '{'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(20): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(29): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(29): error C2059: syntax error: ')'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(29): error C2143: syntax error: missing ';' before '{'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(29): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): error C2065: 'lastname': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): error C2065: 'firstname': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(46): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(52): error C2270: 'getID': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(53): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(59): error C2270: 'getFirstName': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(60): error C2065: 'firstname': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(66): error C2270: 'getLastName': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(67): error C2065: 'lastname': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(74): error C2065: 'history': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(81): error C3861: 'hasDVD': identifier not found
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(82): error C2065: 'borrowed': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(90): error C2065: 'borrowed': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(93): error C2270: 'displayHistory': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(95): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(96): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(97): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(98): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(98): error C2065: 'lastname': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(98): error C2065: 'firstname': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(99): error C2065: 'history': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(100): error C2065: 'history': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(104): error C2270: 'hasDVD': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(106): error C2065: 'borrowed': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(107): error C2065: 'borrowed': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(112): error C2270: '==': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(113): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(113): error C2027: use of undefined type 'User'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(25): note: see declaration of 'User'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(117): error C2270: '!=': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(118): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(121): error C2270: '>': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(122): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(122): error C2027: use of undefined type 'User'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(25): note: see declaration of 'User'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(126): error C2270: '<': modifiers not allowed on nonmember functions
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(127): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(127): error C2027: use of undefined type 'User'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(25): note: see declaration of 'User'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.h(15): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\return.h(10): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(11): error C2512: 'std::vector': no appropriate default constructor available
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): note: see declaration of 'std::vector'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(20): error C2512: 'std::vector': no appropriate default constructor available
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): note: see declaration of 'std::vector'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(36): error C2663: 'std::vector<_Ty,_Alloc>::begin': 2 overloads have no legal conversion for 'this' pointer
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(36): error C3536: 'it': cannot be used before it is initialized
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(36): error C2663: 'std::vector<_Ty,_Alloc>::end': 2 overloads have no legal conversion for 'this' pointer
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(37): error C2100: illegal indirection
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(37): error C2541: 'delete': cannot delete objects that are not pointers
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): error C2662: 'void std::vector<_Ty,_Alloc>::clear(void) noexcept': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): note: Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(84): error C2663: 'std::vector<_Ty,_Alloc>::push_back': 2 overloads have no legal conversion for 'this' pointer
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(105): error C2084: function 'void User::addToHistory(Transaction *)' already has a body
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(83): note: see previous definition of 'addToHistory'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(106): error C2663: 'std::vector<_Ty,_Alloc>::push_back': 2 overloads have no legal conversion for 'this' pointer
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(117): error C2663: 'std::vector<_Ty,_Alloc>::begin': 2 overloads have no legal conversion for 'this' pointer
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(117): error C3536: 'it': cannot be used before it is initialized
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(117): error C2663: 'std::vector<_Ty,_Alloc>::end': 2 overloads have no legal conversion for 'this' pointer
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(118): error C2100: illegal indirection
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(118): error C2227: left of '->display' must point to class/struct/union/generic type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(118): note: type is 'int'
   transactionfactory.cpp
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
@@ -88,7 +64,10 @@ c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object orient
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(65): error C3203: 'Transaction': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
@@ -129,7 +108,6 @@ c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object orient
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(41): note: type is 'unknown-type'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(50): error C2027: use of undefined type 'Store'
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(55): error C2276: '!': illegal operation on bound member function expression
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(63): error C2065: 'users': undeclared identifier
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(63): error C2227: left of '->insert' must point to class/struct/union/generic type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(63): note: type is 'unknown-type'
@@ -197,7 +175,10 @@ c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object orient
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(65): error C3203: 'Transaction': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
@@ -224,7 +205,10 @@ c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object orient
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(65): error C3203: 'Transaction': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
@@ -257,7 +241,10 @@ c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object orient
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\return.h(10): error C2955: 'Transaction': use of class template requires template argument list
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(65): error C3203: 'Transaction': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): error C2955: 'Transaction': use of class template requires template argument list
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
@@ -292,10 +279,6 @@ c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object orient
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(30): error C2027: use of undefined type 'History'
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-  dvdfactory.cpp
-  drama.cpp
-  comedy.cpp
-  classic.cpp
   borrow.cpp
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
@@ -309,7 +292,4 @@ c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object orient
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.cpp(11): error C2065: 'transType': undeclared identifier
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.cpp(12): error C2059: syntax error: '}'
-  Generating Code...
-  Compiling...
-  dvd.cpp
   Generating Code...

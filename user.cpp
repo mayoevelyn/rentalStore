@@ -27,6 +27,16 @@ User::User(const User& other) {
 // Destruts user.
 //----------------------------------------------------------------------------
 User::~User() {
+	// clean out borrowed
+	for (auto it = borrowed.begin(); it != borrowed.end(); ++it) {
+		delete (*it);
+	}
+	borrowed.clear();
+	// clean out transaction
+	for (auto it = history.begin(); it != history.end(); ++it) {
+		delete (*it);
+	}
+	history.clear();
 }
 
 //----------------------------------setdata-----------------------------------
@@ -70,43 +80,53 @@ string User::getLastName() const {
 //--------------------------------addToHistory--------------------------------
 // Adds transaction to history.
 //----------------------------------------------------------------------------
-void User::addToHistory(Transaction transact) {
+void User::addToHistory(Transaction* transact) {
     history.push_back(transact);
-}
-
-//----------------------------removeFromInventory-----------------------------
-// Removes DVD from inventory. Only removes if it is actually borrowed.
-//----------------------------------------------------------------------------
-void User::removeFromInventory(DVD* toRemove) {
-    if (hasDVD(toRemove)) {
-        borrowed.erase(*toRemove);
-    }
 }
 
 //----------------------------removeFromInventory-----------------------------
 // Adds DVD to inventory.
 //----------------------------------------------------------------------------
-void User::addToInventory(DVD* toAdd) {
-    borrowed.push_back(*toAdd);
+void User::borrowDVD(DVD* toAdd) {
+    borrowed.push_back(toAdd);
+}
+
+//----------------------------removeFromInventory-----------------------------
+// Removes DVD from inventory. Only removes if it is actually borrowed.
+//----------------------------------------------------------------------------
+void User::returnDVD(DVD* toRemove) {
+	vector<DVD*>::iterator iter;
+	retrieveDVD(toRemove, iter);
+	delete *iter;
+	borrowed.erase(iter);
+}
+
+void User::addToHistory(Transaction * transact)
+{
+	history.push_back(transact);
 }
 
 void User::displayHistory() const {
-    cout << "History for User ";
-    if (id < 10) cout << 000;
-    else if (id < 100 && id >= 10) cout << 00;
-    else if (id < 1000 && id >= 100) cout << 0;
-    cout << id << ", " << lastname << " " << firstname << ":" << endl;
-    for (int i = 0; i < history.size; i++) {
-        history[i].display();
-    }
+	// prints out customer info
+	cout << "History for user ";
+	if (id < 10) cout << 000;
+	else if (id < 100 && id >= 10) cout << 00;
+	else if (id < 1000 && id >= 100) cout << 0;
+	cout << id << ", " << firstname << " " << lastname << ":" << endl;
+	// prints out history
+	for (auto it = history.begin(); it != history.end(); ++it) {
+		(*it)->display();
+	}
 }
 
-bool User::hasDVD(DVD* toFind) const {
-    bool contains = false;
-    for (int i = 0; i < borrowed.size; i++) {
-        if (borrowed[i] == *toFind) contains = true;
-    }
-    return contains;
+bool User::retrieveDVD(DVD* toFind, vector<DVD*>::iterator found) {
+	vector<DVD*>::iterator iter;
+	iter = find(borrowed.begin(), borrowed.end(), toFind);
+	found = iter;
+	if (iter != borrowed.end())
+		return true;
+	else
+		return false;
 }
 
 bool User::operator==(const User& rhs) const {
@@ -115,7 +135,7 @@ bool User::operator==(const User& rhs) const {
 }
 
 bool User::operator!=(const User& rhs) const {
-    return (*this == rhs) == false;
+    return !(*this == rhs);
 }
 
 bool User::operator>(const User& rhs) const {
