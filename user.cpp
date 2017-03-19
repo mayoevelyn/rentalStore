@@ -89,8 +89,8 @@ bool User::borrowDVD(DVD* toAdd) {
 bool User::returnDVD(DVD* toRemove) {
 	vector<DVD*>::iterator iter;
 	if (retrieveDVD(toRemove, iter)) {
-		delete *iter;
 		borrowed.erase(iter);
+		delete *iter;
 		return true;
 	}
 	else
