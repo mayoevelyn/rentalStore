@@ -3,32 +3,34 @@
 // stores the information of a transaction read from a transaction data file. 
 //-----------------------------------------------------------------------------
 
-#ifndef _TRANSACTION_H
-#define _TRANSACTION_H
+#ifndef TRANSACTION_H
+#define TRANSACTION_H
 
 #include <string>
 #include <iostream>
+#include "hashtable.h"
+#include "bintree.h"
 
-class Store;
 class User;
 class DVD;
-template<User>
 
 using namespace std;
 
 class Transaction {
 public:	
-	// destructor
+	// virtual destructor to deal with strings
 	virtual ~Transaction();
-	virtual void execute() = 0;
+	virtual bool execute() = 0;
     virtual void display() = 0;
-	void setData(User* user, DVD* dvd);
+	virtual void setData(string data) = 0;
 	
 protected:
 	char transType;
-	User* user;
-	DVD* dvd;
-	Store* store;
+	char mediaType;
+	HashTable<User>* users;
+	BinTree<DVD>* classicInven;
+	BinTree<DVD>* comedyInven;
+	BinTree<DVD>* dramaInven;
 };
 
 #endif

@@ -119,6 +119,7 @@
     <ClCompile Include="history.cpp" />
     <ClCompile Include="inventory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="return.cpp" />
     <ClCompile Include="store.cpp" />
     <ClCompile Include="transaction.cpp" />
     <ClCompile Include="transactionfactory.cpp" />

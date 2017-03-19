@@ -5,26 +5,17 @@
 
 #include "user.h"
 
-//--------------------------------Constructor---------------------------------
-// Creates a user. Sets default valules. 
-//----------------------------------------------------------------------------
-User::User() {
-    id = -1;
-    lastname = "";
-    firstname = "";
-}
-
-//----------------------------Copy Constructor--------------------------------
-// Creates a user. Sets default valules. 
-//----------------------------------------------------------------------------
-User::User(const User& other) {
-    id = other.id;
-    lastname = other.lastname;
-    firstname = other.firstname;
-}
+////--------------------------------Constructor---------------------------------
+//// Creates a user. Sets default valules. 
+////----------------------------------------------------------------------------
+//User::User() {
+//    id = -1;
+//    lastname = "";
+//    firstname = "";
+//}
 
 //---------------------------------Destructor---------------------------------
-// Destruts user.
+// Destructs user
 //----------------------------------------------------------------------------
 User::~User() {
 	// clean out borrowed
@@ -33,8 +24,8 @@ User::~User() {
 	}
 	borrowed.clear();
 	// clean out transaction
-	for (auto it = history.begin(); it != history.end(); ++it) {
-		delete (*it);
+	for (auto it2 = history.begin(); it2 != history.end(); ++it2) {
+		delete (*it2);
 	}
 	history.clear();
 }
@@ -87,23 +78,23 @@ void User::addToHistory(Transaction* transact) {
 //----------------------------removeFromInventory-----------------------------
 // Adds DVD to inventory.
 //----------------------------------------------------------------------------
-void User::borrowDVD(DVD* toAdd) {
+bool User::borrowDVD(DVD* toAdd) {
     borrowed.push_back(toAdd);
+	return true;
 }
 
 //----------------------------removeFromInventory-----------------------------
 // Removes DVD from inventory. Only removes if it is actually borrowed.
 //----------------------------------------------------------------------------
-void User::returnDVD(DVD* toRemove) {
+bool User::returnDVD(DVD* toRemove) {
 	vector<DVD*>::iterator iter;
-	retrieveDVD(toRemove, iter);
-	delete *iter;
-	borrowed.erase(iter);
-}
-
-void User::addToHistory(Transaction * transact)
-{
-	history.push_back(transact);
+	if (retrieveDVD(toRemove, iter)) {
+		delete *iter;
+		borrowed.erase(iter);
+		return true;
+	}
+	else
+		return false;
 }
 
 void User::displayHistory() const {

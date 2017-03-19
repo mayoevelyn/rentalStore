@@ -3,27 +3,23 @@
 // a last name. 
 //-----------------------------------------------------------------------------
 
-#ifndef _USER_H
-#define _USER_H
+#ifndef USER_H
+#define USER_H
 
 #include <fstream>		// file reading
 #include <iostream>		// file reading
+#include <sstream>		// file reading
 #include <vector>		// list of borrowed items
 #include <string>		// any strings used
 #include <algorithm>	// for finding
-
-#include "dvd.h"
 #include "transaction.h"
-#include "borrow.h"
-#include "return.h"
-#include "history.h"
+#include "dvd.h"
 
 using namespace std;
 
 class User {
 public:
-   User();              // constructor
-   User(const User&);   // copy constructor
+   //User();              // constructor
    ~User();             // destructor
 
    void setData(string data);
@@ -37,8 +33,8 @@ public:
    void setID(int idToSet);
 
    // adding and removing DVD by quantity
-   void borrowDVD(DVD* toAdd);
-   void returnDVD(DVD* toRemove);
+   bool borrowDVD(DVD* toAdd);
+   bool returnDVD(DVD* toRemove);
 
    // changing history
    void addToHistory(Transaction* transact);

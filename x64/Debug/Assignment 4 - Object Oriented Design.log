@@ -1,295 +1,251 @@
 ﻿  user.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.h(15): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\return.h(10): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(11): error C2512: 'std::vector': no appropriate default constructor available
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): note: see declaration of 'std::vector'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(20): error C2512: 'std::vector': no appropriate default constructor available
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(679): note: see declaration of 'std::vector'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(36): error C2663: 'std::vector<_Ty,_Alloc>::begin': 2 overloads have no legal conversion for 'this' pointer
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(36): error C3536: 'it': cannot be used before it is initialized
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(36): error C2663: 'std::vector<_Ty,_Alloc>::end': 2 overloads have no legal conversion for 'this' pointer
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(37): error C2100: illegal indirection
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(37): error C2541: 'delete': cannot delete objects that are not pointers
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): error C2662: 'void std::vector<_Ty,_Alloc>::clear(void) noexcept': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): note: Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(39): note: Conversion requires a second user-defined-conversion operator or constructor
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(84): error C2663: 'std::vector<_Ty,_Alloc>::push_back': 2 overloads have no legal conversion for 'this' pointer
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(105): error C2084: function 'void User::addToHistory(Transaction *)' already has a body
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(83): note: see previous definition of 'addToHistory'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(106): error C2663: 'std::vector<_Ty,_Alloc>::push_back': 2 overloads have no legal conversion for 'this' pointer
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(117): error C2663: 'std::vector<_Ty,_Alloc>::begin': 2 overloads have no legal conversion for 'this' pointer
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(117): error C3536: 'it': cannot be used before it is initialized
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(117): error C2663: 'std::vector<_Ty,_Alloc>::end': 2 overloads have no legal conversion for 'this' pointer
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(118): error C2100: illegal indirection
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(118): error C2227: left of '->display' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.cpp(118): note: type is 'int'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
   transactionfactory.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(10): error C2061: syntax error: identifier 'Borrow'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(13): error C2061: syntax error: identifier 'Return'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(16): error C2061: syntax error: identifier 'Inventory'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transactionfactory.cpp(19): error C2061: syntax error: identifier 'History'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
   transaction.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.cpp(3): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.cpp(3): error C2059: syntax error: ')'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.cpp(4): error C2143: syntax error: missing ';' before '{'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.cpp(4): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.cpp(9): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.cpp(10): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
   store.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.h(15): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\return.h(10): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.h(21): error C2011: 'Store': 'class' type redefinition
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2059: syntax error: ')'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2143: syntax error: missing ';' before '{'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(4): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2059: syntax error: 'const'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2143: syntax error: missing ';' before '{'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(9): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2059: syntax error: ')'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2143: syntax error: missing ';' before '{'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(13): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(17): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(31): error C2065: 'dvdFactory': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(31): error C2228: left of '.makeDVD' must have class/struct/union
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(31): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(37): error C2065: 'comedyInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(37): error C2227: left of '->insert' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(37): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(39): error C2065: 'dramaInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(39): error C2227: left of '->insert' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(39): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(41): error C2065: 'classicInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(41): error C2227: left of '->insert' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(41): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(50): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(63): error C2065: 'users': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(63): error C2227: left of '->insert' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(63): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(63): error C3867: 'User::getID': non-standard syntax; use '&' to create a pointer to member
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(69): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(85): error C2065: 'transFactory': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(85): error C2228: left of '.makeTransaction' must have class/struct/union
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(85): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(92): error C2065: 'users': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(92): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(92): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(104): error C2065: 'dvdFactory': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(104): error C2228: left of '.makeDVD' must have class/struct/union
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(104): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(113): error C2065: 'comedyInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(113): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(113): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(115): error C2065: 'dramaInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(115): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(115): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(117): error C2065: 'classicInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(117): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(117): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(128): error C2027: use of undefined type 'Transaction'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(128): error C2227: left of '->setData' must point to class/struct/union/generic type
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(132): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(133): error C2065: 'comedyInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(133): error C2227: left of '->displayTree' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(133): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(134): error C2065: 'dramaInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(134): error C2227: left of '->displayTree' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(134): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(135): error C2065: 'classicInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(135): error C2227: left of '->displayTree' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(135): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(138): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(139): error C2065: 'users': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(139): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(139): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(143): error C2027: use of undefined type 'Store'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(145): error C3867: 'DVD::getDvdType': non-standard syntax; use '&' to create a pointer to member
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(148): error C2065: 'comedyInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(148): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(148): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(150): error C2065: 'dramaInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(150): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(150): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(152): error C2065: 'classicInven': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(152): error C2227: left of '->retrieve' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.cpp(152): note: type is 'unknown-type'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(47): error C2995: 'HashTable<T>::HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(29): note: see declaration of 'HashTable<T>::HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(63): error C2995: 'HashTable<T>::~HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(30): note: see declaration of 'HashTable<T>::~HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(83): error C2995: 'bool HashTable<T>::insert(T *,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(33): note: see declaration of 'HashTable<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(99): error C2995: 'void HashTable<T>::remove(int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(34): note: see declaration of 'HashTable<T>::remove'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(117): error C2995: 'bool HashTable<T>::retrieve(T *&,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(35): note: see declaration of 'HashTable<T>::retrieve'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(78): error C2995: 'BinTree<T>::BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(25): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(89): error C2995: 'BinTree<T>::BinTree(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(26): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(100): error C2995: 'BinTree<T>::~BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(27): note: see declaration of 'BinTree<T>::~BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(114): error C2995: 'bool BinTree<T>::insert(T *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(30): note: see declaration of 'BinTree<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(183): error C2995: 'void BinTree<T>::retrieveHelper(const T &,T *&,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(59): note: see declaration of 'BinTree<T>::retrieveHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(198): error C2995: 'int BinTree<T>::getHeight(const T &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(32): note: see declaration of 'BinTree<T>::getHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(219): error C2995: 'void BinTree<T>::getHeightHelper(const BinTree<T>::Node *,const T &,int &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(60): note: see declaration of 'BinTree<T>::getHeightHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(242): error C2995: 'int BinTree<T>::branchHeight(const BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(63): note: see declaration of 'BinTree<T>::branchHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(252): error C2995: 'void BinTree<T>::makeEmpty(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(34): note: see declaration of 'BinTree<T>::makeEmpty'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(273): error C2995: 'void BinTree<T>::makeEmptyHelper(BinTree<T>::Node *&)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(57): note: see declaration of 'BinTree<T>::makeEmptyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(288): error C2995: 'const BinTree<T> &BinTree<T>::operator =(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(37): note: see declaration of 'BinTree<T>::operator ='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(307): error C2995: 'void BinTree<T>::copyHelper(BinTree<T>::Node *&,BinTree<T>::Node *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(61): note: see declaration of 'BinTree<T>::copyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(324): error C2995: 'bool BinTree<T>::operator ==(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(38): note: see declaration of 'BinTree<T>::operator =='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(356): error C2995: 'void BinTree<T>::isEqualHelper(BinTree<T>::Node *,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(62): note: see declaration of 'BinTree<T>::isEqualHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(372): error C2995: 'bool BinTree<T>::operator !=(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(39): note: see declaration of 'BinTree<T>::operator !='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(383): error C2995: 'void BinTree<T>::displayTree(void) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(42): note: see declaration of 'BinTree<T>::displayTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(398): error C2995: 'void BinTree<T>::displayTreeHelper(BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(64): note: see declaration of 'BinTree<T>::displayTreeHelper'
+  return.cpp
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
   main.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.h(15): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\return.h(10): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\store.h(21): error C2011: 'Store': 'class' type redefinition
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(11): error C2079: 'store' uses undefined class 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(17): error C2228: left of '.buildInventory' must have class/struct/union
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(17): note: type is 'int'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(18): error C2228: left of '.buildUsers' must have class/struct/union
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\main.cpp(18): note: type is 'int'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(47): error C2995: 'HashTable<T>::HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(29): note: see declaration of 'HashTable<T>::HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(63): error C2995: 'HashTable<T>::~HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(30): note: see declaration of 'HashTable<T>::~HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(83): error C2995: 'bool HashTable<T>::insert(T *,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(33): note: see declaration of 'HashTable<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(99): error C2995: 'void HashTable<T>::remove(int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(34): note: see declaration of 'HashTable<T>::remove'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(117): error C2995: 'bool HashTable<T>::retrieve(T *&,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(35): note: see declaration of 'HashTable<T>::retrieve'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(78): error C2995: 'BinTree<T>::BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(25): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(89): error C2995: 'BinTree<T>::BinTree(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(26): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(100): error C2995: 'BinTree<T>::~BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(27): note: see declaration of 'BinTree<T>::~BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(114): error C2995: 'bool BinTree<T>::insert(T *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(30): note: see declaration of 'BinTree<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(183): error C2995: 'void BinTree<T>::retrieveHelper(const T &,T *&,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(59): note: see declaration of 'BinTree<T>::retrieveHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(198): error C2995: 'int BinTree<T>::getHeight(const T &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(32): note: see declaration of 'BinTree<T>::getHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(219): error C2995: 'void BinTree<T>::getHeightHelper(const BinTree<T>::Node *,const T &,int &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(60): note: see declaration of 'BinTree<T>::getHeightHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(242): error C2995: 'int BinTree<T>::branchHeight(const BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(63): note: see declaration of 'BinTree<T>::branchHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(252): error C2995: 'void BinTree<T>::makeEmpty(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(34): note: see declaration of 'BinTree<T>::makeEmpty'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(273): error C2995: 'void BinTree<T>::makeEmptyHelper(BinTree<T>::Node *&)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(57): note: see declaration of 'BinTree<T>::makeEmptyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(288): error C2995: 'const BinTree<T> &BinTree<T>::operator =(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(37): note: see declaration of 'BinTree<T>::operator ='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(307): error C2995: 'void BinTree<T>::copyHelper(BinTree<T>::Node *&,BinTree<T>::Node *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(61): note: see declaration of 'BinTree<T>::copyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(324): error C2995: 'bool BinTree<T>::operator ==(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(38): note: see declaration of 'BinTree<T>::operator =='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(356): error C2995: 'void BinTree<T>::isEqualHelper(BinTree<T>::Node *,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(62): note: see declaration of 'BinTree<T>::isEqualHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(372): error C2995: 'bool BinTree<T>::operator !=(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(39): note: see declaration of 'BinTree<T>::operator !='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(383): error C2995: 'void BinTree<T>::displayTree(void) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(42): note: see declaration of 'BinTree<T>::displayTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(398): error C2995: 'void BinTree<T>::displayTreeHelper(BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(64): note: see declaration of 'BinTree<T>::displayTreeHelper'
   inventory.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(14): error C2989: 'Store': class template has already been declared as a non-class template
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.h(15): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\return.h(10): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(10): error C2955: 'Inventory': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): note: see declaration of 'Inventory'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(10): error C2027: use of undefined type 'Inventory'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): note: see declaration of 'Inventory'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(11): error C2065: 'store': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(11): error C2227: left of '->displayInventory' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(11): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(14): error C2955: 'Inventory': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): note: see declaration of 'Inventory'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(14): error C2027: use of undefined type 'Inventory'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): note: see declaration of 'Inventory'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(18): error C2955: 'Inventory': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): note: see declaration of 'Inventory'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.cpp(18): error C2027: use of undefined type 'Inventory'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): note: see declaration of 'Inventory'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(47): error C2995: 'HashTable<T>::HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(29): note: see declaration of 'HashTable<T>::HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(63): error C2995: 'HashTable<T>::~HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(30): note: see declaration of 'HashTable<T>::~HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(83): error C2995: 'bool HashTable<T>::insert(T *,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(33): note: see declaration of 'HashTable<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(99): error C2995: 'void HashTable<T>::remove(int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(34): note: see declaration of 'HashTable<T>::remove'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(117): error C2995: 'bool HashTable<T>::retrieve(T *&,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(35): note: see declaration of 'HashTable<T>::retrieve'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(78): error C2995: 'BinTree<T>::BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(25): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(89): error C2995: 'BinTree<T>::BinTree(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(26): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(100): error C2995: 'BinTree<T>::~BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(27): note: see declaration of 'BinTree<T>::~BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(114): error C2995: 'bool BinTree<T>::insert(T *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(30): note: see declaration of 'BinTree<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(183): error C2995: 'void BinTree<T>::retrieveHelper(const T &,T *&,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(59): note: see declaration of 'BinTree<T>::retrieveHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(198): error C2995: 'int BinTree<T>::getHeight(const T &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(32): note: see declaration of 'BinTree<T>::getHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(219): error C2995: 'void BinTree<T>::getHeightHelper(const BinTree<T>::Node *,const T &,int &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(60): note: see declaration of 'BinTree<T>::getHeightHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(242): error C2995: 'int BinTree<T>::branchHeight(const BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(63): note: see declaration of 'BinTree<T>::branchHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(252): error C2995: 'void BinTree<T>::makeEmpty(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(34): note: see declaration of 'BinTree<T>::makeEmpty'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(273): error C2995: 'void BinTree<T>::makeEmptyHelper(BinTree<T>::Node *&)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(57): note: see declaration of 'BinTree<T>::makeEmptyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(288): error C2995: 'const BinTree<T> &BinTree<T>::operator =(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(37): note: see declaration of 'BinTree<T>::operator ='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(307): error C2995: 'void BinTree<T>::copyHelper(BinTree<T>::Node *&,BinTree<T>::Node *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(61): note: see declaration of 'BinTree<T>::copyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(324): error C2995: 'bool BinTree<T>::operator ==(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(38): note: see declaration of 'BinTree<T>::operator =='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(356): error C2995: 'void BinTree<T>::isEqualHelper(BinTree<T>::Node *,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(62): note: see declaration of 'BinTree<T>::isEqualHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(372): error C2995: 'bool BinTree<T>::operator !=(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(39): note: see declaration of 'BinTree<T>::operator !='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(383): error C2995: 'void BinTree<T>::displayTree(void) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(42): note: see declaration of 'BinTree<T>::displayTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(398): error C2995: 'void BinTree<T>::displayTreeHelper(BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(64): note: see declaration of 'BinTree<T>::displayTreeHelper'
   history.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(12): error C2989: 'Store': class template has already been declared as a non-class template
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(12): note: see declaration of 'Store'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.h(15): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\return.h(10): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\user.h(63): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(677): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\inventory.h(16): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
   c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
 c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): error C2440: 'default argument': cannot convert from 'const char [1]' to 'char'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\media.h(14): note: There is no context in which this conversion is possible
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(11): error C2955: 'History': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(11): error C2027: use of undefined type 'History'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(13): error C2065: 'store': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(13): error C2227: left of '->getUser' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(13): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(13): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(15): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(21): error C2955: 'History': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(21): error C2027: use of undefined type 'History'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(23): error C2065: 'store': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(23): error C2227: left of '->getUser' must point to class/struct/union/generic type
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(23): note: type is 'unknown-type'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(26): error C2955: 'History': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(26): error C2027: use of undefined type 'History'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(27): error C2065: 'id': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(30): error C2955: 'History': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.cpp(30): error C2027: use of undefined type 'History'
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\history.h(14): note: see declaration of 'History'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(47): error C2995: 'HashTable<T>::HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(29): note: see declaration of 'HashTable<T>::HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(63): error C2995: 'HashTable<T>::~HashTable(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(30): note: see declaration of 'HashTable<T>::~HashTable'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(83): error C2995: 'bool HashTable<T>::insert(T *,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(33): note: see declaration of 'HashTable<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(99): error C2995: 'void HashTable<T>::remove(int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(34): note: see declaration of 'HashTable<T>::remove'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(117): error C2995: 'bool HashTable<T>::retrieve(T *&,int)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\hashtable.h(35): note: see declaration of 'HashTable<T>::retrieve'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(78): error C2995: 'BinTree<T>::BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(25): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(89): error C2995: 'BinTree<T>::BinTree(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(26): note: see declaration of 'BinTree<T>::BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(100): error C2995: 'BinTree<T>::~BinTree(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(27): note: see declaration of 'BinTree<T>::~BinTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(114): error C2995: 'bool BinTree<T>::insert(T *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(30): note: see declaration of 'BinTree<T>::insert'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(183): error C2995: 'void BinTree<T>::retrieveHelper(const T &,T *&,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(59): note: see declaration of 'BinTree<T>::retrieveHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(198): error C2995: 'int BinTree<T>::getHeight(const T &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(32): note: see declaration of 'BinTree<T>::getHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(219): error C2995: 'void BinTree<T>::getHeightHelper(const BinTree<T>::Node *,const T &,int &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(60): note: see declaration of 'BinTree<T>::getHeightHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(242): error C2995: 'int BinTree<T>::branchHeight(const BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(63): note: see declaration of 'BinTree<T>::branchHeight'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(252): error C2995: 'void BinTree<T>::makeEmpty(void)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(34): note: see declaration of 'BinTree<T>::makeEmpty'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(273): error C2995: 'void BinTree<T>::makeEmptyHelper(BinTree<T>::Node *&)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(57): note: see declaration of 'BinTree<T>::makeEmptyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(288): error C2995: 'const BinTree<T> &BinTree<T>::operator =(const BinTree<T> &)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(37): note: see declaration of 'BinTree<T>::operator ='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(307): error C2995: 'void BinTree<T>::copyHelper(BinTree<T>::Node *&,BinTree<T>::Node *)': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(61): note: see declaration of 'BinTree<T>::copyHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(324): error C2995: 'bool BinTree<T>::operator ==(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(38): note: see declaration of 'BinTree<T>::operator =='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(356): error C2995: 'void BinTree<T>::isEqualHelper(BinTree<T>::Node *,BinTree<T>::Node *,bool &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(62): note: see declaration of 'BinTree<T>::isEqualHelper'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(372): error C2995: 'bool BinTree<T>::operator !=(const BinTree<T> &) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(39): note: see declaration of 'BinTree<T>::operator !='
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(383): error C2995: 'void BinTree<T>::displayTree(void) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(42): note: see declaration of 'BinTree<T>::displayTree'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(398): error C2995: 'void BinTree<T>::displayTreeHelper(BinTree<T>::Node *) const': function template has already been defined
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(64): note: see declaration of 'BinTree<T>::displayTreeHelper'
   borrow.cpp
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2993: 'User': illegal type for non-type template parameter '__formal'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2988: unrecognizable template declaration/definition
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(17): error C2059: syntax error: 'using namespace'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\dvd.h(48): error C2989: 'DVD': class template has already been declared as a non-class template
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(14): note: see declaration of 'DVD'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\classic.h(21): error C2504: 'DVD': base class undefined
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\comedy.h(18): error C2504: 'DVD': base class undefined
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\drama.h(18): error C2504: 'DVD': base class undefined
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.h(15): error C2955: 'Transaction': use of class template requires template argument list
-  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\transaction.h(19): note: see declaration of 'Transaction'
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.cpp(11): error C2065: 'transType': undeclared identifier
-c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\borrow.cpp(12): error C2059: syntax error: '}'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): warning C4346: 'Node': dependent name is not a type
+  c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): note: prefix with 'typename' to indicate a type
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(126): error C2061: syntax error: identifier 'Node'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2143: syntax error: missing ';' before '{'
+c:\users\evelyn\documents\uwb stuff\css 343\css 343\assignment 4 - object oriented design\bintree.h(154): error C2447: '{': missing function header (old-style formal list?)
   Generating Code...

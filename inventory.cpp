@@ -7,14 +7,16 @@
 #include "inventory.h"
 #include "store.h"
 
-void Inventory::execute() {
-    store->displayInventory();
+bool Inventory::execute() {
+	comedyInven->displayTree();
+	dramaInven->displayTree();
+	comedyInven->displayTree();
+	return true;
 }
 
 void Inventory::display() {
-    cout << "I";
+	cout << transType << endl;
 }
 
-void Inventory::setData(string data)
-{
+void Inventory::setData(string data) {
 }

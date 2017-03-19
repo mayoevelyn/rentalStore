@@ -10,7 +10,6 @@
 #include "hashtable.h"
 #include "user.h"
 #include "bintree.h"
-#include "media.h"
 #include "dvd.h"
 #include "dvdfactory.h"
 #include <iostream>
@@ -27,16 +26,7 @@ public:
 	// store building functions
 	void buildInventory(ifstream& infile);
 	void buildUsers(ifstream& infile);
-
-	// other functions
 	void applyTransactions(ifstream& infile);	// applied from queue
-
-	void display() const;		// both users and inventory
-	void displayInventory();	// inventory only
-
-	bool getUser(User*& toSet, int key);		// pointer to a user
-
-    bool getDVD(char mediaType, const DVD& toBorrow, DVD*& toSet);
 
 private:
 	string storeName;

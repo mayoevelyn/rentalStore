@@ -154,20 +154,3 @@ bool Classic::operator>(const DVD & rhs) const {
 	// true if lhs is not equal nor smaller than rhs
 	return !(*this == rhs || *this < rhs);
 }
-
-//-------------------------------borrowing-------------------------------------
-// Returns false if stock is 0. Returns true and decreases stock by 1 if not.
-//-----------------------------------------------------------------------------
-bool Classic::borrowing() {
-    if (stock == 0) return false;
-    stock--;
-    return true;
-}
-
-//-------------------------------returning-------------------------------------
-// Returns true and increases stock by 1.
-//-----------------------------------------------------------------------------
-bool Classic::returning() {
-    stock++;
-    return true;
-}

@@ -11,19 +11,23 @@
 #include <sstream>
 #include "transaction.h"
 #include "dvdfactory.h"
+#include "user.h"
+
+class DVD;
 
 class Borrow : public Transaction {
 public:
-   void executeTransaction();       // updates all info
-   
-private:
-   void updateInventory() const;    // updates store inventory
-   void updateBorrowedList() const; // updates user's borrowed list
-   void updateUserHistory() const;  // updates user's transaction history
-   virtual void setData(string data);
+	virtual bool execute();
+	virtual void display();
+	virtual void setData(string data);
 
-   int id;                  // customer ID
-   DVDFactory dvdfactory;   // to create dummy media files
+private:
+	int userID;
+	char dvdType;
+	string searchTerm;
+	User* user;
+	DVD* dvd;
+	DVDFactory dvdFactory;
 };
 
 #endif

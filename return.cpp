@@ -1,34 +1,34 @@
-#include "borrow.h"
+#include "return.h"
 
-bool Borrow::execute() {
+bool Return::execute() {
 	// if data is good
 	if (user != NULL && dvd != NULL) {
-		// check if movie is in stock & update stock if it is
-		if (dvd->borrowDVD()) {
-			// add the dvd to the user's borrowed list
-			user->borrowDVD(dvd);
+		// check if user is borrowing the movie
+		if (user->returnDVD(dvd)) {
+			// update dvd stock
+			dvd->returnDVD();
 			// add this transaction to history
 			user->addToHistory(this);
 			return true;
 		}
 		else {
-			cout << "Movie is out of stock" << dvdType << endl;
+			cout << "User is not borrowing this movie" << endl;
 			return false;
 		}
 	}
 	else return false;
 }
 
-void Borrow::display() {
+void Return::display() {
 	cout << transType << userID << mediaType << dvdType << searchTerm << endl;
 }
 
-void Borrow::setData(string data) {
+void Return::setData(string data) {
 	// convert data to stream
 	stringstream stream(data);
 	// set data from input
 	stream >> userID >> mediaType >> dvdType >> searchTerm;
-	
+
 	// filters input data
 	// user check
 	users->retrieve(user, userID);

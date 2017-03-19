@@ -10,6 +10,7 @@
 
 #include <string>
 #include <iostream>
+
 using namespace std;
 
 class DVD {
@@ -37,8 +38,8 @@ public:
 	virtual bool operator>(const DVD& rhs) const = 0;
 
     // borrow and return
-    virtual bool borrowing() = 0;
-    virtual bool returning() = 0;
+    bool borrowDVD();
+    bool returnDVD();
 
 protected:
 	char dvdType;		// char indicating DVD type

@@ -11,7 +11,6 @@ Store::Store(const Store& rhs) {
 }
 
 Store::~Store() {
-	
 }
 
 void Store::buildInventory(ifstream& infile) {
@@ -60,7 +59,7 @@ void Store::buildUsers(ifstream& infile) {
 		// pass the line into setData
 		ptr->setData(str);
 		// try to insert user
-		bool success = users->insert(ptr, ptr->getID);
+		bool success = users->insert(ptr, ptr->getID());
 		// if insert unsuccessful, delete the ptr
 		if (!success) delete ptr;
 	}
@@ -68,94 +67,20 @@ void Store::buildUsers(ifstream& infile) {
 
 void Store::applyTransactions(ifstream& infile) {
 	Transaction* t = NULL;
-	User* u = NULL;
-	DVD* dummyDVD = NULL;
-	DVD* dvd = NULL;
 	char transType = ' ';
-	int userID = 0;
-	char mediaType = ' ';
-	char dvdType = ' ';
-	string searchTerm = "";
 	string str = "";
 
 	while(!infile.eof()) {
+		infile >> transType;
 		getline(infile, str);
-		stringstream stream(str);
-		stream >> transType;
 		t = transFactory.makeTransaction(transType);
 		if (t == NULL) {
-			cout << "Invalid transaction type" << transType << endl;
+			cout << "Invalid transaction type " << transType << endl;
 			break;
 		}
-		if (transType != 'I') {
-			stream >> userID;
-			users->retrieve(u, userID);
-			if (u == NULL) {
-				cout << "User " << userID << " does not exist" << endl;
-				break;
-			}
-			if (transType != 'H') {
-				stream >> mediaType;
-				if (mediaType != 'D') {
-					cout << "Invalid media type" << mediaType << endl;
-					break;
-				}
-				stream >> dvdType;
-				dummyDVD = dvdFactory.makeDVD(dvdType);
-				if (dummyDVD == NULL) {
-					cout << "Invalid movie type" << dvdType << endl;
-					break;
-				}
-				stream >> searchTerm;
-				dummyDVD->setTransData(searchTerm);
-				// search the dvd from the correct tree
-				switch (dvdType) {
-				case 'F': comedyInven->retrieve(*dummyDVD, dvd);
-					break;
-				case 'D': dramaInven->retrieve(*dummyDVD, dvd);
-					break;
-				case 'C': classicInven->retrieve(*dummyDVD, dvd);
-					break;
-				default:
-					cout << "Invalid movie type " << dvdType << endl;
-				}
-				if (dvd == NULL) {
-					cout << "Movie does not exist" << dvdType << endl;
-					break;
-				}
-			}
+		else {
+			t->setData(str);
+			t->execute();
 		}
-		t->setData(u, dvd);
 	}
 }
-
-void Store::displayInventory() {
-    comedyInven->displayTree();
-    dramaInven->displayTree();
-    classicInven->displayTree();
-}
-
-bool Store::getUser(User*& customer, int key) {
-    bool retrieved = (users->retrieve(customer, key));
-    return retrieved;
-}
-
-bool Store::getDVD(char mediaType, const DVD& toGet, DVD*& toSet) {
-    if (mediaType != 'D') return false;
-    char dvdType = toGet.getDvdType;
-    bool retrieved;
-    switch (dvdType) {
-    case 'F': retrieved = comedyInven->retrieve(toGet, toSet);
-        break;
-    case 'D': retrieved = dramaInven->retrieve(toGet, toSet);
-        break;
-    case 'C': retrieved = classicInven->retrieve(toGet, toSet);
-        break;
-    default:
-        cout << "Invalid movie type" << endl;
-        return false;
-    }
-    return retrieved;
-}
-
-

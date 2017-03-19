@@ -42,10 +42,6 @@ public:
 	bool operator<(const DVD& rhs) const;
 	bool operator>(const DVD& rhs) const;
 
-    // borrow and return
-    virtual bool borrowing();
-    virtual bool returning();
-
 private:
 	// release year of the movie
 	int releaseYear;

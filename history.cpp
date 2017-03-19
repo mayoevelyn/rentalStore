@@ -8,25 +8,22 @@
 #include "user.h"
 #include "store.h"
 
-void History::execute() {
-    User* customer;
-    bool userExists = store->getUser(customer, id);
-    if (!userExists) {
-        cout << "Invalid ID number: " << id;
-        return;
-    }
-    else customer->displayHistory();
-}
-
-bool History::setCustomer() {
-    User* customer;
-    bool customerExists = store->getUser();
+bool History::execute() {
+	users->retrieve(user, userID);
+	if (user == NULL) {
+		cout << "User " << userID << " does not exist" << endl;
+		return false;
+	}
+	else {
+		user->displayHistory();
+		return true;
+	}
 }
 
 void History::display() {
-    cout << "H " << id;
+	cout << transType << userID << endl;
 }
 
-void History::setData(string data)
-{
+void History::setData(string data) {
+	userID = stoi(data);
 }

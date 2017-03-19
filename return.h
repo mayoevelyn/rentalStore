@@ -7,14 +7,26 @@
 #ifndef RETURN_H
 #define RETURN_H
 
+#include <sstream>
+#include "transaction.h"
+#include "dvdfactory.h"
+#include "user.h"
+
+class DVD;
+
 class Return : public Transaction {
 public:
-   bool executeTransaction();       // updates all info
-   
+	virtual bool execute();
+	virtual void display();
+	virtual void setData(string data);
+
 private:
-   void updateInventory() const;    // updates store inventory
-   void updateBorrowedList() const; // updates user's borrowed list
-   void updateUserHistory() const;  // updates user's transaction history
+	int userID;
+	char dvdType;
+	string searchTerm;
+	User* user;
+	DVD* dvd;
+	DVDFactory dvdFactory;
 };
 
 #endif
