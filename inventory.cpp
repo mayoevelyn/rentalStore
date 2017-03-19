@@ -6,17 +6,22 @@
 
 #include "inventory.h"
 #include "store.h"
-
-bool Inventory::execute() {
-	comedyInven->displayTree();
-	dramaInven->displayTree();
-	comedyInven->displayTree();
-	return true;
+void Inventory::execute(Store* store) {
+    BinTree<DVD>* printptr;
+    // prints comedies, then classics, then dramas
+    printptr = store->getComedyInven();
+    printptr->displayTree();
+    printptr = store->getClassicInven();
+    printptr->displayTree();
+    printptr = store->getDramaInven();
+    printptr->displayTree();
 }
 
 void Inventory::display() {
-	cout << transType << endl;
+	cout << data << endl;
 }
 
-void Inventory::setData(string data) {
+void Inventory::setData(string dat) {
+    data = dat;
+    transType = dat[0];
 }

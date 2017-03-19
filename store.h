@@ -1,3 +1,8 @@
+//----------------------------------store.h------------------------------------
+// Store class: This is the class for a store of DVD itmes. It has three kinds
+// of DVDs, classic, drama, and comedy. It also has a list of customers/users
+// who may borrow and return these DVDs. 
+//-----------------------------------------------------------------------------
 #ifndef STORE_H
 #define STORE_H
 
@@ -20,7 +25,6 @@ using namespace std;
 class Store {
 public:
 	Store();				// constructor
-	Store(const Store&);	// copy constructor
 	~Store();				// destructor
 
 	// store building functions
@@ -28,13 +32,20 @@ public:
 	void buildUsers(ifstream& infile);
 	void applyTransactions(ifstream& infile);	// applied from queue
 
+    // getters
+    HashTable<User>* getUsers() const;
+    BinTree<DVD>* getComedyInven() const;
+    BinTree<DVD>* getClassicInven() const;
+    BinTree<DVD>* getDramaInven() const;
+    string getStorename() const;
+
 private:
-	string storeName;
-	HashTable<User>* users;
-	BinTree<DVD>* classicInven;
-	BinTree<DVD>* comedyInven;
-	BinTree<DVD>* dramaInven;
-	DVDFactory dvdFactory;
-	TransactionFactory transFactory;
+	string storeName;               // store name
+	HashTable<User>* users;         // all users, sorted by ID
+	BinTree<DVD>* classicInven;     // classic movies
+	BinTree<DVD>* comedyInven;      // comedy movies
+	BinTree<DVD>* dramaInven;       // drama movies
+	DVDFactory dvdFactory;          // makes dvds
+	TransactionFactory transFactory;// makes transactions
 };
 #endif

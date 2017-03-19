@@ -17,16 +17,15 @@ class DVD;
 
 class Borrow : public Transaction {
 public:
-	virtual bool execute();
+	virtual void execute(Store* store);
 	virtual void display();
 	virtual void setData(string data);
 
 private:
 	int userID;
 	char dvdType;
+    char mediaType;
 	string searchTerm;
-	User* user;
-	DVD* dvd;
 	DVDFactory dvdFactory;
 };
 

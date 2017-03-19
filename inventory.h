@@ -11,7 +11,7 @@
 
 class Inventory : public Transaction {
 public:
-	virtual bool execute();
+	virtual void execute(Store* store);
 	virtual void display();
 	virtual void setData(string data);
 };

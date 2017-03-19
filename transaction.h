@@ -12,7 +12,7 @@
 #include "bintree.h"
 
 class User;
-class DVD;
+class Store;
 
 using namespace std;
 
@@ -20,17 +20,13 @@ class Transaction {
 public:	
 	// virtual destructor to deal with strings
 	virtual ~Transaction();
-	virtual bool execute() = 0;
+	virtual void execute(Store* store) = 0;
     virtual void display() = 0;
 	virtual void setData(string data) = 0;
 	
 protected:
 	char transType;
-	char mediaType;
-	HashTable<User>* users;
-	BinTree<DVD>* classicInven;
-	BinTree<DVD>* comedyInven;
-	BinTree<DVD>* dramaInven;
+    string data;
 };
 
 #endif

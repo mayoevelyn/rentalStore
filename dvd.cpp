@@ -1,14 +1,11 @@
-//-----------------------------------------------------------------------------
-// Title:            DVD class
-// Files:            dvd.h
-//-----------------------------------------------------------------------------
-// DVD class: A DVD type of media. Inherits from media.
+//-----------------------------------dvd.cpp-----------------------------------
+// DVD class: A DVD type class. Has a DVD type, stock, director, and title.
+// Functions are to be inherited from derived classes.
 //-----------------------------------------------------------------------------
 
 #include "dvd.h"
 
-DVD::~DVD()
-{
+DVD::~DVD() {
 }
 
 //-------------------------------borrowing-------------------------------------
@@ -26,4 +23,9 @@ bool DVD::borrowDVD() {
 bool DVD::returnDVD() {
 	stock++;
 	return true;
+}
+
+ostream& operator<<(ostream& output, const DVD& toPrint) {
+    toPrint.print(output);
+    return output;
 }

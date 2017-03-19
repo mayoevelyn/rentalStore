@@ -1,14 +1,13 @@
-//---------------------------------comedy.h------------------------------------
+//---------------------------------comedy.cpp----------------------------------
 // Comedy class: Implements a DVD that is comedy type movie. 
 //  Inherits from DVD
-//  Includes the following functions:
-//  -- process extra info from DVD into release year
+//  Sorted first by title, then by release year.
 //-----------------------------------------------------------------------------
 
 #include "comedy.h"
 
 //---------------------------------setData-------------------------------------
-// Takes in a string and sets data.
+// Takes in a string and sets all data.
 //-----------------------------------------------------------------------------
 void Comedy::setData(string data) {
 	// change param string into sstream
@@ -32,8 +31,10 @@ void Comedy::setData(string data) {
 	stream >> releaseYear;
 }
 
-void Comedy::setTransData(string data)
-{
+//-------------------------------setTransData----------------------------------
+// Takes in a string and sets title and release year.
+//-----------------------------------------------------------------------------
+void Comedy::setTransData(string data) {
 	// change param string into sstream
 	stringstream stream(data);
 	// container to be reused for holding data
@@ -102,6 +103,15 @@ void Comedy::setReleaseYear(int newReleaseYear) {
 void Comedy::display() const {
     cout << dvdType << ", " << stock << ", " << director << ", " << title
         << ", " << releaseYear;
+}
+
+//-----------------------------------print-------------------------------------
+// Outputs the following, each separated by commas:
+// Dvd type, stock, director, title, release year
+//-----------------------------------------------------------------------------
+void Comedy::print(ostream& output) const {
+    output << dvdType << ", " << stock << ", " << director << ", " << title
+        << ", " << releaseYear << endl;
 }
 
 //-------------------------------operator==------------------------------------

@@ -1,8 +1,7 @@
 //------------------------------drama.cpp--------------------------------------
 // Drama class: Implements a DVD that is drama type movie.
 //  Inherits from DVD
-//  Includes the following functions:
-//  -- process extra info from DVD into release year
+//  Sorted by direector, then title.
 //-----------------------------------------------------------------------------
 #include "drama.h"
 
@@ -31,6 +30,9 @@ void Drama::setData(string data) {
 	stream >> releaseYear;
 }
 
+//-------------------------------setTransData----------------------------------
+// Takes in a string and sets director, then title.
+//-----------------------------------------------------------------------------
 void Drama::setTransData(string data)
 {
 	// change param string into sstream
@@ -101,7 +103,16 @@ void Drama::setTitle(string newTitle) {
 //-----------------------------------------------------------------------------
 void Drama::display() const {
     cout << dvdType << ", " << stock << ", " << director << ", " << title
-        << ", " << releaseYear;
+        << ", " << releaseYear << endl;
+}
+
+//-----------------------------------print-------------------------------------
+// Outputs the following, each separated by commas:
+// Dvd type, stock, director, title, release year
+//-----------------------------------------------------------------------------
+void Drama::print(ostream& output) const {
+    output << dvdType << ", " << stock << ", " << director << ", " << title
+        << ", " << releaseYear << endl;
 }
 
 //-------------------------------operator==------------------------------------

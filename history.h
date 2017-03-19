@@ -9,17 +9,14 @@
 
 #include "transaction.h"
 
-class User;
-
 class History : public Transaction {
 public:
-	virtual bool execute();
+    virtual void execute(Store* store);
 	virtual void display();
 	virtual void setData(string data);
 
 private:
 	int userID;
-	User* user;
 };
 
 #endif

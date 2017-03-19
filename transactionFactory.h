@@ -6,6 +6,10 @@
 #define TRANSACTIONFACTORY_H
 
 #include "transaction.h"
+#include "borrow.h"
+#include "history.h"
+#include "return.h"
+#include "inventory.h"
 
 class TransactionFactory {
 public:

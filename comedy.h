@@ -16,11 +16,14 @@
 using namespace std;
 
 class Comedy : public DVD {
+
 public:
     // sets the data for the DVD
 	virtual void setData(string data);
 	// set trans data function
 	virtual void setTransData(string data);
+    // output function
+    virtual void print(ostream& output) const;
 
     // getters
     virtual char getDvdType() const;
@@ -41,10 +44,6 @@ public:
     virtual bool operator!=(const DVD& rhs) const;
     virtual bool operator<(const DVD& rhs) const;
     virtual bool operator>(const DVD& rhs) const;
-
-private:
-    // release year of the movie
-    int releaseYear;
 };
 
 #endif

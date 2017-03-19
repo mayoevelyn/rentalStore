@@ -1,8 +1,7 @@
-//-----------------------------------drama.h-----------------------------------
+//--------------------------------drama.h--------------------------------------
 // Drama class: Implements a DVD that is drama type movie.
 //  Inherits from DVD
-//  Includes the following functions:
-//  -- process extra info from DVD into release year
+//  Sorted by direector, then title.
 //-----------------------------------------------------------------------------
 
 #ifndef DRAMA_H
@@ -16,11 +15,14 @@
 using namespace std;
 
 class Drama : public DVD {
+
 public:
 	// sets the data for the DVD
 	virtual void setData(string data);
 	// set trans data function
 	virtual void setTransData(string data);
+    // output function
+    virtual void print(ostream& output) const;
 
     // getters
     virtual char getDvdType() const;
@@ -41,10 +43,6 @@ public:
 	bool operator!=(const DVD& rhs) const;
 	bool operator<(const DVD& rhs) const;
 	bool operator>(const DVD& rhs) const;
-
-private:
-	// release year of the movie
-	int releaseYear;
 };
 
 #endif

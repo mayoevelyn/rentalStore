@@ -1,71 +1,97 @@
+//---------------------------------return.h------------------------------------
+// This is a subclass of the Transaction class. It stores information for a
+// return transaction and handles the transaction. When an item is returned,
+// the inventory of the store and user history are updated accordingly.
+//-----------------------------------------------------------------------------
 #include "return.h"
+#include "store.h"
 
-bool Return::execute() {
+//---------------------------------execute-------------------------------------
+// Executes a return. Three conditions are check for complete execution:
+// 1) user exists 2) users have borrowed the media 3) media exists in the store
+// If any are not met, then doesn't carry out transaction. That is:
+//      - Removes the item from user's inventory, 
+//      - Increases the DVD stock in the store by 1
+//      - Adds itself to the user's history
+//-----------------------------------------------------------------------------
+void Return::execute(Store* store) {
+    User* user = NULL;
+    DVD* dvd = NULL;
+    HashTable<User>* users = store->getUsers();
+    DVD* dummyDVD = NULL;
+
+    // user check
+    users->retrieve(user, userID);
+    if (user == NULL)
+        cout << "User " << userID << " does not exist" << endl;
+
+    // media type check
+    else if (mediaType != 'D')
+        cout << "Invalid media type " << mediaType << endl;
+
+    // dvd type check
+    else {
+        dummyDVD = dvdFactory.makeDVD(dvdType);
+        if (dummyDVD == NULL)
+            cout << "Invalid movie type " << dvdType << endl;
+
+        // check if dvd exist in inventories
+        else {
+            // set dummy dvd
+            dummyDVD->setTransData(searchTerm);
+            BinTree<DVD>* inven = NULL;
+            // search the dvd from the correct tree
+            switch (dvdType) {
+            case 'F': 
+                inven = store->getComedyInven();
+                inven->retrieve(*dummyDVD, dvd);
+                break;
+            case 'D':
+                inven = store->getDramaInven();
+                inven->retrieve(*dummyDVD, dvd);
+                break;
+            case 'C': 
+                inven = store->getClassicInven();
+                inven->retrieve(*dummyDVD, dvd);
+                break;
+            default:
+                cout << "Invalid movie type: " << dvdType << endl;
+            }
+        }
+        // dvd doesn't exist in inventories
+        if (dvd == NULL) {
+            cout << "Movie does not exist: " << searchTerm << endl;
+        }
+    }
+
 	// if data is good
-	if (user != NULL && dvd != NULL) {
+	if (user != NULL && dvd != NULL && dummyDVD != NULL) {
 		// check if user is borrowing the movie
-		if (user->returnDVD(dvd)) {
+		if (user->returnDVD(dummyDVD)) {
 			// update dvd stock
 			dvd->returnDVD();
 			// add this transaction to history
 			user->addToHistory(this);
-			return true;
 		}
 		else {
 			cout << "User is not borrowing this movie" << endl;
-			return false;
 		}
 	}
-	else return false;
 }
 
+//---------------------------------display-------------------------------------
+// Uses a cout to display the transaction data as the following:
+// <transactiont type> <user id> <media type> <dvd type> <two search terms>
+//-----------------------------------------------------------------------------
 void Return::display() {
-	cout << transType << userID << mediaType << dvdType << searchTerm << endl;
+	cout << data << endl;
 }
 
-void Return::setData(string data) {
+void Return::setData(string dat) {
+    data = dat;
 	// convert data to stream
-	stringstream stream(data);
+	stringstream stream(dat);
 	// set data from input
-	stream >> userID >> mediaType >> dvdType >> searchTerm;
-
-	// filters input data
-	// user check
-	users->retrieve(user, userID);
-	if (user == NULL)
-		cout << "User " << userID << " does not exist" << endl;
-
-	// media type check
-	else if (mediaType != 'D')
-		cout << "Invalid media type " << mediaType << endl;
-
-	// dvd type check
-	else {
-		DVD* dummyDVD = dvdFactory.makeDVD(dvdType);
-		if (dummyDVD == NULL)
-			cout << "Invalid movie type " << dvdType << endl;
-
-		// check if dvd exist in inventories
-		else {
-			// set dummy dvd
-			dummyDVD->setTransData(searchTerm);
-			// search the dvd from the correct tree
-			switch (dvdType) {
-			case 'F': comedyInven->retrieve(*dummyDVD, dvd);
-				break;
-			case 'D': dramaInven->retrieve(*dummyDVD, dvd);
-				break;
-			case 'C': classicInven->retrieve(*dummyDVD, dvd);
-				break;
-			default:
-				cout << "Invalid movie type " << dvdType << endl;
-			}
-		}
-		// delete dummy dvd
-		delete dummyDVD;
-		// dvd doesn't exist in inventories
-		if (dvd == NULL) {
-			cout << "Movie does not exist" << dvdType << endl;
-		}
-	}
+	stream >> transType >> userID >> mediaType >> dvdType;
+    getline(stream, searchTerm);
 }

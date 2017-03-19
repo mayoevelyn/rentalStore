@@ -8,22 +8,42 @@
 #include "user.h"
 #include "store.h"
 
-bool History::execute() {
-	users->retrieve(user, userID);
-	if (user == NULL) {
+//---------------------------------execute-------------------------------------
+// Takes in a store. If the store has the user with the given ID, then it
+// displays the user's transaction history before adding itself.
+// If not, does not execute and prints an error message.
+//-----------------------------------------------------------------------------
+void History::execute(Store* store) {
+    HashTable<User>* customers = store->getUsers();
+    User* user = NULL;
+	bool userExists = customers->retrieve(user, userID);
+
+    // do nothing if user isn't found, display error message
+	if (!userExists) {
 		cout << "User " << userID << " does not exist" << endl;
-		return false;
+		return;
 	}
+    
+    // if user exists, display history and add to user history
 	else {
 		user->displayHistory();
-		return true;
+        user->addToHistory(this);
 	}
 }
 
+//---------------------------------display-------------------------------------
+// Displays transaction type and user id of the transaction.
+//-----------------------------------------------------------------------------
 void History::display() {
-	cout << transType << userID << endl;
+    cout << data << endl;
 }
 
-void History::setData(string data) {
-	userID = stoi(data);
+//---------------------------------setData-------------------------------------
+// Takes in a string and sets transaction type H and user ID. Assumes data
+// passed in is valid for a history transaction.
+//-----------------------------------------------------------------------------
+void History::setData(string dat) {
+    data = dat;
+    stringstream stream(dat);
+    stream >> transType >> userID;
 }

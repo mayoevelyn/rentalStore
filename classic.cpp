@@ -1,3 +1,8 @@
+//---------------------------------classic.cpp----------------------------------
+// Classic class: Implements a DVD that is classic type movie. 
+//  Inherits from DVD
+//  Sorted first by release date, then major actor.
+//-----------------------------------------------------------------------------
 #include "classic.h"
 
 //---------------------------------setData-------------------------------------
@@ -30,6 +35,9 @@ void Classic::setData(string data) {
 	majorActor = firstName + " " + lastName;
 }
 
+//-------------------------------setTransData----------------------------------
+// Takes in a string and sets release date then major actor
+//-----------------------------------------------------------------------------
 void Classic::setTransData(string data)
 {
 	// change param string into sstream
@@ -37,7 +45,7 @@ void Classic::setTransData(string data)
 
 	// process the stream into containers and release date
 	string firstName, lastName;
-	stream >> firstName >> lastName >> releaseMonth >> releaseYear;
+	stream >> releaseMonth >> releaseYear >> firstName >> lastName;
 
 	// set major actor's name
 	majorActor = firstName + " " + lastName;
@@ -108,30 +116,45 @@ void Classic::setMajorActor(string newMajorActor) {
 
 //----------------------------------display------------------------------------
 // Displays the following, each separated by commas:
-// Dvd type, stock, director, title, release year
+// Dvd type, stock, director, title, major actor, release month, release year
 //-----------------------------------------------------------------------------
 void Classic::display() const {
     cout << dvdType << ", " << stock << ", " << director << ", " << title
         << ", " << majorActor << " " << releaseMonth << " " << releaseYear;
 }
 
-//----------------------------------display------------------------------------
-// Displays the following, each separated by commas:
-// Dvd type, stock, director, title, release year
+//------------------------------------print------------------------------------
+// Outputs the following, each separated by commas:
+// Dvd type, stock, director, title, major actor, release month, release year
+//-----------------------------------------------------------------------------
+void Classic::print(ostream& output) const {
+    output << dvdType << ", " << stock << ", " << director << ", " << title <<
+        ", " << majorActor << " " << releaseMonth << " " << releaseYear << endl;
+}
+
+//-------------------------------operator==------------------------------------
+// Returns true if rhs has the same major actor and release date.
 //-----------------------------------------------------------------------------
 bool Classic::operator==(const DVD & rhs) const {
 	// dynamic cast parent class to child class
 	const Classic* rhsCasted = dynamic_cast<const Classic*>(&rhs);
-	// true if the movie's director and title is the same
+	// true if the movie's major actor and release date is the same
 	return (majorActor == rhsCasted->majorActor && releaseMonth 
 		== rhsCasted->releaseMonth && releaseYear == rhsCasted->releaseYear);
 }
 
+//-------------------------------operator!=------------------------------------
+// Returns true if rhs does not have the same major actor and release date.
+//-----------------------------------------------------------------------------
 bool Classic::operator!=(const DVD & rhs) const {
 	// true if lhs is not equal to rhs
 	return !(*this == rhs);
 }
 
+//-------------------------------operator<-------------------------------------
+// Returns true if rhs's release year is later. If same release year, true
+// if major actor's name is alphanumerically greater.
+//-----------------------------------------------------------------------------
 bool Classic::operator<(const DVD & rhs) const {
 	// dynamic cast parent class to child class
 	const Classic* rhsCasted = dynamic_cast<const Classic*>(&rhs);
@@ -150,6 +173,10 @@ bool Classic::operator<(const DVD & rhs) const {
 	return false;
 }
 
+//-------------------------------operator>-------------------------------------
+// Returns true if rhs's release year is earlier. If same release year, true
+// if major actor's name is alphanumerically smaller.
+//-----------------------------------------------------------------------------
 bool Classic::operator>(const DVD & rhs) const {
 	// true if lhs is not equal nor smaller than rhs
 	return !(*this == rhs || *this < rhs);

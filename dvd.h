@@ -1,10 +1,7 @@
+//-----------------------------------dvd.h-------------------------------------
+// DVD class: A DVD type class. Has a DVD type, stock, director, and title.
+// Functions are to be inherited from derived classes.
 //-----------------------------------------------------------------------------
-// Title:            DVD class
-// Files:            dvd.h
-//-----------------------------------------------------------------------------
-// DVD class: A DVD type of media. Inherits from media.
-//-----------------------------------------------------------------------------
-
 #ifndef DVD_H
 #define DVD_H
 
@@ -14,9 +11,14 @@
 using namespace std;
 
 class DVD {
+
 public:
 	// virtual destructor to deal with strings
 	virtual ~DVD();
+
+    virtual void print(ostream& output) const = 0;
+
+    friend ostream& operator<<(ostream& output, const DVD& toPrint);
 
 	// set data function
 	virtual void setData(string data) = 0;
@@ -42,10 +44,11 @@ public:
     bool returnDVD();
 
 protected:
-	char dvdType;		// char indicating DVD type
-	int stock;			// number of DVDs available for borrowing
-	string director;	// director of the DVD
-	string title;		// title of the DVD
+	char dvdType = '0';		// char indicating DVD type
+	int stock = '0';		// number of DVDs available for borrowing
+	string director = "";	// director of the DVD
+	string title = "";		// title of the DVD
+    int releaseYear = -1;   // release year of movie
 };
 #endif
 
