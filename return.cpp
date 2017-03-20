@@ -72,6 +72,8 @@ bool Return::execute(Store* store) {
             dvd->returnDVD();
             // add this transaction to history
             user->addToHistory(this);
+            delete dummyDVD;
+            dummyDVD = NULL;
             return true;
         }
         else {
