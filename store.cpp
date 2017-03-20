@@ -98,6 +98,8 @@ void Store::buildUsers(ifstream& infile) {
 		// if insert unsuccessful, delete the ptr
 		if (!success) delete ptr;
 	}
+
+	ptr = NULL;
 }
 
 //-----------------------------applyTrasactions--------------------------------
