@@ -60,6 +60,7 @@ public:
         objectsArray[index]->data = toInsert;
         objectsArray[index]->deleted = false;
         objectsArray[index]->objectKey = key;
+        return true;
     }
 
 

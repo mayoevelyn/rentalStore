@@ -37,7 +37,7 @@ public:
 // Constructor
 //----------------------------------------------------------------------------
 // Points head to NULL because no data to begin with
-BinTree(){
+BinTree() {
     // no data
     root = NULL;
 }

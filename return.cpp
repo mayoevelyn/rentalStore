@@ -57,13 +57,11 @@ void Return::execute(Store* store) {
             default:
                 cout << "Invalid movie type: " << dvdType << endl;
             }
-			// dvd doesn't exist in inventories
-			if (dvd == NULL) {
-				cout << "Movie to return does not exist: " << searchTerm << endl;
-			}
-			// delete dummy dvd
-			delete dummyDVD;
-		}
+        }
+        // dvd doesn't exist in inventories
+        if (dvd == NULL) {
+            cout << "Movie does not exist: " << searchTerm << endl;
+        }
     }
 
 	// if data is good
@@ -74,11 +72,13 @@ void Return::execute(Store* store) {
 			dvd->returnDVD();
 			// add this transaction to history
 			user->addToHistory(this);
+            return;
 		}
 		else {
-			cout << "User is not borrowing this movie:" << searchTerm << endl;
+			cout << "User is not borrowing this movie" << endl;
 		}
 	}
+    delete dummyDVD;
 }
 
 //---------------------------------display-------------------------------------

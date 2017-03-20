@@ -15,7 +15,6 @@ void Inventory::execute(Store* store) {
     printptr->displayTree();
     printptr = store->getDramaInven();
     printptr->displayTree();
-	cout << endl;
 }
 
 void Inventory::display() {

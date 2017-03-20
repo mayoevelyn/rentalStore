@@ -18,6 +18,7 @@ void Borrow::execute(Store* store) {
     User* user = NULL;
     DVD* dvd = NULL;
     HashTable<User>* users = store->getUsers();
+    DVD* dummyDVD = NULL;
 
     // user check
     users->retrieve(user, userID);
@@ -30,7 +31,7 @@ void Borrow::execute(Store* store) {
 
     // dvd type check
     else {
-        DVD* dummyDVD = dvdFactory.makeDVD(dvdType);
+        dummyDVD = dvdFactory.makeDVD(dvdType);
         if (dummyDVD == NULL)
             cout << "Invalid movie type " << dvdType << endl;
 
@@ -56,28 +57,28 @@ void Borrow::execute(Store* store) {
             default:
                 cout << "Invalid movie type: " << dvdType << endl;
             }
-			// dvd doesn't exist in inventories
-			if (dvd == NULL) {
-				cout << "Movie to borrow does not exist: " << searchTerm << endl;
-			}
-			// delete dummy dvd
-			delete dummyDVD;
+        }
+        // dvd doesn't exist in inventories
+        if (dvd == NULL) {
+            cout << "Movie does not exist: " << searchTerm << endl;
         }
     }
 
 	// if data is good
-	if (user != NULL && dvd != NULL) {
+	if (user != NULL && dvd != NULL && dummyDVD != NULL) {
 		// check if movie is in stock & update stock if it is
 		if (dvd->borrowDVD()) {
 			// add the dvd to the user's borrowed list
-			user->borrowDVD(dvd);
+			user->borrowDVD(dummyDVD);
 			// add this transaction to history
 			user->addToHistory(this);
+            return;
 		}
 		else {
-			cout << "Movie is out of stock:" << searchTerm << endl;
+			cout << "Movie is out of stock: " << searchTerm << endl;
 		}
 	}
+    delete dummyDVD;
 }
 
 //---------------------------------display-------------------------------------

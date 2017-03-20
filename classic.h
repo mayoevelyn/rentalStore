@@ -46,8 +46,8 @@ public:
 	virtual bool operator>(const DVD& rhs) const;
 
 private:
-	string majorActor;	// the movie's major actor
-	int releaseMonth;	// release month of the movie
+	string majorActor = "";  // the movie's major actor
+	int releaseMonth = -1;   // release month of the movie
 };
 
 #endif

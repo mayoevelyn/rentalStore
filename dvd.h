@@ -40,15 +40,15 @@ public:
 	virtual bool operator>(const DVD& rhs) const = 0;
 
     // borrow and return
-    bool borrowDVD();
-    bool returnDVD();
+    virtual bool borrowDVD();
+    virtual bool returnDVD();
 
 protected:
-	char dvdType;		// char indicating DVD type
-	int stock;			// number of DVDs available for borrowing
-	string director;	// director of the DVD
-	string title;		// title of the DVD
-    int releaseYear;	// release year of movie
+	char dvdType = '0';		// char indicating DVD type
+	int stock = '0';		// number of DVDs available for borrowing
+	string director = "";	// director of the DVD
+	string title = "";		// title of the DVD
+    int releaseYear = -1;   // release year of movie
 };
 #endif
 

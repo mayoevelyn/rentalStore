@@ -52,14 +52,10 @@ void Store::buildInventory(ifstream& infile) {
 		ptr = dvdFactory.makeDVD(dvdType);
 
         // don't add to inventory if no DVD is made
-		if (ptr == NULL) {
-			cout << "invalid movie type " << dvdType << endl;
-			continue;
-		}
+        if (ptr == NULL) continue;
 
 		// set the DVD data
 		ptr->setData(str);
-
 		// sort the dvd into the correct tree
 		switch (dvdType) {
 		case 'F': comedyInven->insert(ptr);
@@ -86,11 +82,12 @@ void Store::buildUsers(ifstream& infile) {
 
 	// while there is still data
     for (;;) {
-        if (infile.eof()) break;
-		// create new user
-		ptr = new User;
 		// read one line
 		getline(infile, str);
+
+        if (infile.eof()) return;
+
+        ptr = new User;
 		// pass the line into setData
 		ptr->setData(str);
 		// try to insert user
@@ -98,8 +95,6 @@ void Store::buildUsers(ifstream& infile) {
 		// if insert unsuccessful, delete the ptr
 		if (!success) delete ptr;
 	}
-
-	ptr = NULL;
 }
 
 //-----------------------------applyTrasactions--------------------------------
@@ -112,10 +107,10 @@ void Store::applyTransactions(ifstream& infile) {
 	string str = "";
 
 	for (;;) {
+        getline(infile, str);
         // do not continue if eof
         if (infile.eof()) break;
 
-		getline(infile, str);
         transType = str[0];
 		t = transFactory.makeTransaction(transType);
 
