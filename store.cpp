@@ -52,10 +52,14 @@ void Store::buildInventory(ifstream& infile) {
 		ptr = dvdFactory.makeDVD(dvdType);
 
         // don't add to inventory if no DVD is made
-        if (ptr == NULL) continue;
+		if (ptr == NULL) {
+			cout << "invalid movie type " << dvdType << endl;
+			continue;
+		}
 
 		// set the DVD data
 		ptr->setData(str);
+
 		// sort the dvd into the correct tree
 		switch (dvdType) {
 		case 'F': comedyInven->insert(ptr);

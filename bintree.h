@@ -37,7 +37,7 @@ public:
 // Constructor
 //----------------------------------------------------------------------------
 // Points head to NULL because no data to begin with
-BinTree() {
+BinTree(){
     // no data
     root = NULL;
 }
@@ -81,7 +81,6 @@ bool remove(const T& toRemove, T*& toSet) {
     return removeHelper(toRemove, toSet, root);
 }
 
-template <typename T>
 Node* findLargestObject(Node* node) {
     if (node->right == NULL) return node;
     else return findLargestObject(node->right);

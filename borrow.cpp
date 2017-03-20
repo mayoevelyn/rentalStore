@@ -56,12 +56,12 @@ void Borrow::execute(Store* store) {
             default:
                 cout << "Invalid movie type: " << dvdType << endl;
             }
-        }
-        // delete dummy dvd
-        delete dummyDVD;
-        // dvd doesn't exist in inventories
-        if (dvd == NULL) {
-            cout << "Movie does not exist: " << searchTerm << endl;
+			// dvd doesn't exist in inventories
+			if (dvd == NULL) {
+				cout << "Movie to borrow does not exist: " << searchTerm << endl;
+			}
+			// delete dummy dvd
+			delete dummyDVD;
         }
     }
 
@@ -75,7 +75,7 @@ void Borrow::execute(Store* store) {
 			user->addToHistory(this);
 		}
 		else {
-			cout << "Movie is out of stock: " << searchTerm << endl;
+			cout << "Movie is out of stock:" << searchTerm << endl;
 		}
 	}
 }

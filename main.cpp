@@ -17,4 +17,6 @@ int main() {
 	store.buildInventory(infile1);
 	store.buildUsers(infile2);
 	store.applyTransactions(infile3);
+
+	return 1;
 }

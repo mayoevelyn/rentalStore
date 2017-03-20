@@ -101,8 +101,8 @@ void Comedy::setReleaseYear(int newReleaseYear) {
 // Dvd type, stock, director, title, release year
 //-----------------------------------------------------------------------------
 void Comedy::display() const {
-    cout << dvdType << ", " << stock << ", " << director << ", " << title
-        << ", " << releaseYear;
+	cout << dvdType << ", " << stock << "," << director << "," << title
+		<< ", " << releaseYear << endl;
 }
 
 //-----------------------------------print-------------------------------------
@@ -110,7 +110,7 @@ void Comedy::display() const {
 // Dvd type, stock, director, title, release year
 //-----------------------------------------------------------------------------
 void Comedy::print(ostream& output) const {
-    output << dvdType << ", " << stock << ", " << director << ", " << title
+    output << dvdType << ", " << stock << "," << director << "," << title
         << ", " << releaseYear << endl;
 }
 

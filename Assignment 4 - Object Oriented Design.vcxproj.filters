@@ -98,10 +98,10 @@
     <ClInclude Include="user.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="bintree.h">
+    <ClInclude Include="transactionfactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="transactionfactory.h">
+    <ClInclude Include="bintree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

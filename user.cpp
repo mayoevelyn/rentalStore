@@ -18,17 +18,6 @@
 // Destructs user
 //----------------------------------------------------------------------------
 User::~User() {
-    // clean out borrowed
-    for (DVD* dvd : borrowed) {
-        dvd;
-        delete dvd;
-    }
-    borrowed.clear();
-    // clean out transaction
-    for (auto it2 = history.begin(); it2 != history.end(); ++it2) {
-        delete (*it2);
-    }
-    history.clear();
 }
 
 //----------------------------------setdata-----------------------------------
@@ -81,7 +70,6 @@ void User::addToHistory(Transaction* transact) {
 //----------------------------------------------------------------------------
 bool User::borrowDVD(DVD* toAdd) {
     borrowed.push_back(toAdd);
-    cout << *borrowed.end();
     return true;
 }
 
@@ -92,7 +80,6 @@ bool User::returnDVD(DVD* toRemove) {
 	vector<DVD*>::iterator iter;
 	if (retrieveDVD(toRemove, iter)) {
 		borrowed.erase(iter);
-		delete *iter;
 		return true;
 	}
 	else
@@ -110,7 +97,8 @@ void User::displayHistory() const {
     else if (id < 1000 && id >= 100) cout << 0;
     cout << id << ", " << firstname << " " << lastname << ":" << endl;
     // prints out history
-    for (auto it = history.begin(); it != history.end(); ++it) {
+	vector<Transaction*>::const_iterator it;
+    for (it = history.begin(); it != history.end(); ++it) {
         (*it)->display();
     }
 }
@@ -136,7 +124,7 @@ bool User::operator==(const User& rhs) const {
     return false;
 }
 
-//---------------------------------operato!=---------------------------------
+//---------------------------------operator!=---------------------------------
 // True if id is not equal to rhs' id.
 //----------------------------------------------------------------------------
 bool User::operator!=(const User& rhs) const {

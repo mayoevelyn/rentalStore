@@ -119,8 +119,9 @@ void Classic::setMajorActor(string newMajorActor) {
 // Dvd type, stock, director, title, major actor, release month, release year
 //-----------------------------------------------------------------------------
 void Classic::display() const {
-    cout << dvdType << ", " << stock << ", " << director << ", " << title
-        << ", " << majorActor << " " << releaseMonth << " " << releaseYear;
+	cout << dvdType << ", " << stock << "," << director << "," << title
+		<< ", " << majorActor << " " << releaseMonth << " " << releaseYear
+		<< endl;
 }
 
 //------------------------------------print------------------------------------
@@ -128,8 +129,9 @@ void Classic::display() const {
 // Dvd type, stock, director, title, major actor, release month, release year
 //-----------------------------------------------------------------------------
 void Classic::print(ostream& output) const {
-    output << dvdType << ", " << stock << ", " << director << ", " << title <<
-        ", " << majorActor << " " << releaseMonth << " " << releaseYear << endl;
+    output << dvdType << ", " << stock << "," << director << "," << title <<
+        ", " << majorActor << " " << releaseMonth << " " << releaseYear 
+		<< endl;
 }
 
 //-------------------------------operator==------------------------------------

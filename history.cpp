@@ -27,7 +27,7 @@ void History::execute(Store* store) {
     // if user exists, display history and add to user history
 	else {
 		user->displayHistory();
-        user->addToHistory(this);
+		cout << endl;
 	}
 }
 
