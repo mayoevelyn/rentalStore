@@ -60,7 +60,7 @@ bool Borrow::execute(Store* store) {
         }
         // dvd doesn't exist in inventories
         if (dvd == NULL) {
-            cout << "Movie does not exist: " << searchTerm << endl;
+            cout << "Movie does not exist:" << searchTerm << endl;
         }
     }
 
@@ -75,7 +75,7 @@ bool Borrow::execute(Store* store) {
             return true;
 		}
 		else {
-			cout << "Movie is out of stock: " << searchTerm << endl;
+			cout << "Movie is out of stock:" << searchTerm << endl;
 		}
 	}
     if (dummyDVD != NULL) delete dummyDVD;

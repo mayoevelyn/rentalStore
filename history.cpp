@@ -21,6 +21,7 @@ bool History::execute(Store* store) {
     // do nothing if user isn't found, display error message
 	if (!userExists) {
 		cout << "User " << userID << " does not exist" << endl;
+		cout << endl;
 		return false;
 	}
     
@@ -28,6 +29,7 @@ bool History::execute(Store* store) {
 	else {
 		user->displayHistory();
         user->addToHistory(this);
+		cout << endl;
         return true;
 	}
 }

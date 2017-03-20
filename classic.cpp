@@ -122,7 +122,7 @@ void Classic::setMajorActor(string newMajorActor) {
 //-----------------------------------------------------------------------------
 void Classic::display() const {
     for (string actor : majorActor) {
-        cout << dvdType << ", " << stock << ", " << director << ", " << title
+        cout << dvdType << ", " << stock << "," << director << "," << title
             << ", " << actor << " " << releaseMonth << " " << releaseYear 
             << endl;
     }
@@ -134,7 +134,7 @@ void Classic::display() const {
 //-----------------------------------------------------------------------------
 void Classic::print(ostream& output) const {
     for (string actor : majorActor) {
-        output << dvdType << ", " << stock << ", " << director << ", " << title
+        output << dvdType << ", " << stock << "," << director << "," << title
             << ", " << actor << " " << releaseMonth << " " << releaseYear
             << endl;
     }

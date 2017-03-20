@@ -102,7 +102,7 @@ void Drama::setTitle(string newTitle) {
 // Dvd type, stock, director, title, release year
 //-----------------------------------------------------------------------------
 void Drama::display() const {
-    cout << dvdType << ", " << stock << ", " << director << ", " << title
+    cout << dvdType << ", " << stock << "," << director << "," << title
         << ", " << releaseYear << endl;
 }
 
@@ -111,7 +111,7 @@ void Drama::display() const {
 // Dvd type, stock, director, title, release year
 //-----------------------------------------------------------------------------
 void Drama::print(ostream& output) const {
-    output << dvdType << ", " << stock << ", " << director << ", " << title
+    output << dvdType << ", " << stock << "," << director << "," << title
         << ", " << releaseYear << endl;
 }
 

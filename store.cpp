@@ -35,7 +35,8 @@ Store::~Store() {
 // reading format, though not necessarily valid content.
 //-----------------------------------------------------------------------------
 void Store::buildInventory(ifstream& infile) {
-    DVD* ptr;
+	cout << "Building inventory..." << endl;
+	DVD* ptr;
     char dvdType;
     string str;
 
@@ -85,6 +86,7 @@ void Store::buildInventory(ifstream& infile) {
             inventory->insert(ptr);
         }
     }
+	cout << "Inventory built!" << endl << endl;
 }
 
 //----------------------------------buildUsers---------------------------------
@@ -92,6 +94,7 @@ void Store::buildInventory(ifstream& infile) {
 // last name, then first name. Example: "3333 Mouse Minnie"
 //-----------------------------------------------------------------------------
 void Store::buildUsers(ifstream& infile) {
+	cout << "Building user database..." << endl;
 	User* ptr;
 	string str;
 
@@ -100,8 +103,10 @@ void Store::buildUsers(ifstream& infile) {
 		// read one line
 		getline(infile, str);
 
-        if (infile.eof()) return;
-
+		if (infile.eof()) {
+			cout << "User database built!" << endl << endl;
+			return;
+		}
         ptr = new User;
 		// pass the line into setData
 		ptr->setData(str);
@@ -117,6 +122,7 @@ void Store::buildUsers(ifstream& infile) {
 // format. Currently only takes in D (DVD) type transactions.
 //-----------------------------------------------------------------------------
 void Store::applyTransactions(ifstream& infile) {
+	cout << "Applying transactions..." << endl;
 	Transaction* t = NULL;
 	char transType = ' ';
 	string str = "";
@@ -124,8 +130,10 @@ void Store::applyTransactions(ifstream& infile) {
 	for (;;) {
         getline(infile, str);
         // do not continue if eof
-        if (infile.eof()) break;
-
+		if (infile.eof()) {
+			cout << "Applied all transactions!" << endl << endl;
+			break;
+		}
         transType = str[0];
 		t = transFactory.makeTransaction(transType);
 
