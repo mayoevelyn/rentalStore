@@ -25,6 +25,8 @@ public:
     // output function
     virtual void print(ostream& output) const;
 
+    virtual void addStock(DVD* toAdd);
+
     // getters
     virtual char getDvdType() const;
     virtual int getStock() const;

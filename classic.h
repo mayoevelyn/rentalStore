@@ -11,6 +11,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class Classic : public DVD {
@@ -22,6 +23,8 @@ public:
 	virtual void setTransData(string data);
     // output function
     virtual void print(ostream& output) const;
+
+    virtual void addStock(DVD* toAdd);
 
     // getters
     virtual char getDvdType() const;
@@ -46,7 +49,7 @@ public:
 	virtual bool operator>(const DVD& rhs) const;
 
 private:
-	string majorActor = "";  // the movie's major actor
+	vector<string> majorActor;  // the movie's major actor
 	int releaseMonth = -1;   // release month of the movie
 };
 

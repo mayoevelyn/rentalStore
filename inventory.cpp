@@ -6,7 +6,7 @@
 
 #include "inventory.h"
 #include "store.h"
-void Inventory::execute(Store* store) {
+bool Inventory::execute(Store* store) {
     BinTree<DVD>* printptr;
     // prints comedies, then classics, then dramas
     printptr = store->getComedyInven();
@@ -15,6 +15,7 @@ void Inventory::execute(Store* store) {
     printptr->displayTree();
     printptr = store->getDramaInven();
     printptr->displayTree();
+    return true;
 }
 
 void Inventory::display() {

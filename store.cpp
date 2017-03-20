@@ -35,41 +35,56 @@ Store::~Store() {
 // reading format, though not necessarily valid content.
 //-----------------------------------------------------------------------------
 void Store::buildInventory(ifstream& infile) {
-	DVD* ptr;
-	char dvdType;
-	string str;
+    DVD* ptr;
+    char dvdType;
+    string str;
 
-	// while there is still data
-	for (;;) {
+    // while there is still data
+    for (;;) {
+        // reads one line
+        getline(infile, str);
+
         if (infile.eof()) break;
-		// reads one line
-		getline(infile, str);
 
-		// extracts the first char for dvdType
-		dvdType = str[0];
+        // extracts the first char for dvdType
+        dvdType = str[0];
 
-		// use factory to create appropriate DVD type
-		ptr = dvdFactory.makeDVD(dvdType);
+        // use factory to create appropriate DVD type
+        ptr = dvdFactory.makeDVD(dvdType);
 
         // don't add to inventory if no DVD is made
         if (ptr == NULL) continue;
 
-		// set the DVD data
-		ptr->setData(str);
-		// sort the dvd into the correct tree
-		switch (dvdType) {
-		case 'F': comedyInven->insert(ptr);
-			break;
-		case 'D': dramaInven->insert(ptr);
+        // set the DVD data
+        ptr->setData(str);
+        
+        BinTree<DVD>* inventory = NULL;
+        // get the correct tree to add to
+        switch (dvdType) {
+        case 'F': inventory = comedyInven;
             break;
-		case 'C': classicInven->insert(ptr);
-			break;
-		default:
-			cout << "Invalid movie type " << dvdType << endl;
-		}
-	}
-	ptr = NULL;
-    return;
+        case 'D': inventory = dramaInven;
+            break;
+        case 'C': inventory = classicInven;
+            break;
+        default:
+            // if incorrect movie type, continue
+            cout << "Invalid movie type " << dvdType << endl;
+            delete ptr;
+            ptr = NULL;
+            continue;
+        }
+        
+        DVD* addTo = NULL;
+        bool dvdExists = inventory->retrieve(*ptr, addTo);
+        if (dvdExists) {
+            addTo->addStock(ptr);
+            delete ptr;
+        }
+        else {
+            inventory->insert(ptr);
+        }
+    }
 }
 
 //----------------------------------buildUsers---------------------------------
@@ -121,7 +136,8 @@ void Store::applyTransactions(ifstream& infile) {
 		}
 		else {
 			t->setData(str);
-			t->execute(dynamic_cast<Store*>(this));
+			bool executed = t->execute(dynamic_cast<Store*>(this));
+            if (transType == 'I' || !executed) delete t;
 		}
 	}
 }

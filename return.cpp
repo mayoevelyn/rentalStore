@@ -14,7 +14,7 @@
 //      - Increases the DVD stock in the store by 1
 //      - Adds itself to the user's history
 //-----------------------------------------------------------------------------
-void Return::execute(Store* store) {
+bool Return::execute(Store* store) {
     User* user = NULL;
     DVD* dvd = NULL;
     HashTable<User>* users = store->getUsers();
@@ -27,7 +27,7 @@ void Return::execute(Store* store) {
 
     // media type check
     else if (mediaType != 'D')
-        cout << "Invalid media type " << mediaType << endl;
+        cout << "Invalid media type: " << mediaType << endl;
 
     // dvd type check
     else {
@@ -42,7 +42,7 @@ void Return::execute(Store* store) {
             BinTree<DVD>* inven = NULL;
             // search the dvd from the correct tree
             switch (dvdType) {
-            case 'F': 
+            case 'F':
                 inven = store->getComedyInven();
                 inven->retrieve(*dummyDVD, dvd);
                 break;
@@ -50,7 +50,7 @@ void Return::execute(Store* store) {
                 inven = store->getDramaInven();
                 inven->retrieve(*dummyDVD, dvd);
                 break;
-            case 'C': 
+            case 'C':
                 inven = store->getClassicInven();
                 inven->retrieve(*dummyDVD, dvd);
                 break;
@@ -64,21 +64,22 @@ void Return::execute(Store* store) {
         }
     }
 
-	// if data is good
-	if (user != NULL && dvd != NULL && dummyDVD != NULL) {
-		// check if user is borrowing the movie
-		if (user->returnDVD(dummyDVD)) {
-			// update dvd stock
-			dvd->returnDVD();
-			// add this transaction to history
-			user->addToHistory(this);
-            return;
-		}
-		else {
-			cout << "User is not borrowing this movie" << endl;
-		}
-	}
-    delete dummyDVD;
+    // if data is good
+    if (user != NULL && dvd != NULL && dummyDVD != NULL) {
+        // check if user is borrowing dvd and if so, remove from borrowed
+        if (user->returnDVD(dummyDVD)) {
+            // increase DVD stock by 1
+            dvd->returnDVD();
+            // add this transaction to history
+            user->addToHistory(this);
+            return true;
+        }
+        else {
+            cout << "User is not currently borrowing " << searchTerm << endl;
+        }
+    }
+    if (dummyDVD != NULL) delete dummyDVD;
+    return false;
 }
 
 //---------------------------------display-------------------------------------

@@ -20,7 +20,7 @@ class Transaction {
 public:	
 	// virtual destructor to deal with strings
 	virtual ~Transaction();
-	virtual void execute(Store* store) = 0;
+	virtual bool execute(Store* store) = 0;
     virtual void display() = 0;
 	virtual void setData(string data) = 0;
 	

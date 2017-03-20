@@ -158,3 +158,10 @@ bool Comedy::operator>(const DVD & rhs) const {
 	// true if lhs is not equal nor smaller than rhs
 	return !(*this == rhs || *this < rhs);
 }
+
+void Comedy::addStock(DVD* toAdd) {
+    if (*this == *toAdd) {
+        const Comedy* toAddCasted = dynamic_cast<const Comedy*>(&*toAdd);
+        stock += toAddCasted->stock;
+    }
+}

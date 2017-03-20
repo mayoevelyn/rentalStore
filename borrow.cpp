@@ -14,7 +14,7 @@
 //      - Decreases the DVD stock in the store by 1
 //      - Adds itself to the user's history
 //-----------------------------------------------------------------------------
-void Borrow::execute(Store* store) {
+bool Borrow::execute(Store* store) {
     User* user = NULL;
     DVD* dvd = NULL;
     HashTable<User>* users = store->getUsers();
@@ -72,13 +72,14 @@ void Borrow::execute(Store* store) {
 			user->borrowDVD(dummyDVD);
 			// add this transaction to history
 			user->addToHistory(this);
-            return;
+            return true;
 		}
 		else {
 			cout << "Movie is out of stock: " << searchTerm << endl;
 		}
 	}
-    delete dummyDVD;
+    if (dummyDVD != NULL) delete dummyDVD;
+    return false;
 }
 
 //---------------------------------display-------------------------------------

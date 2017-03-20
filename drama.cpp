@@ -161,3 +161,10 @@ bool Drama::operator>(const DVD & rhs) const {
 	// true if lhs is not equal nor smaller than rhs
 	return !(*this == rhs || *this < rhs);
 }
+
+void Drama::addStock(DVD* toAdd) {
+    if (*this == *toAdd) {
+        const Drama* toAddCasted = dynamic_cast<const Drama*>(&*toAdd);
+        stock += toAddCasted->stock;
+    }
+}

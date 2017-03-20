@@ -33,6 +33,7 @@ public:
     virtual string getDirector() const = 0;
     virtual string getTitle() const = 0;
 
+    virtual void addStock(DVD* toAdd) = 0;
 	// operator overloads
 	virtual bool operator==(const DVD& rhs) const = 0;
 	virtual bool operator!=(const DVD& rhs) const = 0;

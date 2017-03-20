@@ -32,7 +32,8 @@ void Classic::setData(string data) {
 	stream >> firstName >> lastName >> releaseMonth >> releaseYear;
 
 	// set major actor's name
-	majorActor = firstName + " " + lastName;
+	string actor = firstName + " " + lastName;
+    majorActor.push_back(actor);
 }
 
 //-------------------------------setTransData----------------------------------
@@ -48,7 +49,8 @@ void Classic::setTransData(string data)
 	stream >> releaseMonth >> releaseYear >> firstName >> lastName;
 
 	// set major actor's name
-	majorActor = firstName + " " + lastName;
+    string actor = firstName + " " + lastName;
+    majorActor.push_back(actor);
 }
 
 //----------------------------------getDvdType---------------------------------
@@ -111,7 +113,7 @@ void Classic::setReleaseYear(int newReleaseYear) {
 // Sets the majorActor to the parameter.
 //-----------------------------------------------------------------------------
 void Classic::setMajorActor(string newMajorActor) {
-    majorActor = newMajorActor;
+    majorActor.push_back(newMajorActor);
 }
 
 //----------------------------------display------------------------------------
@@ -119,8 +121,11 @@ void Classic::setMajorActor(string newMajorActor) {
 // Dvd type, stock, director, title, major actor, release month, release year
 //-----------------------------------------------------------------------------
 void Classic::display() const {
-    cout << dvdType << ", " << stock << ", " << director << ", " << title
-        << ", " << majorActor << " " << releaseMonth << " " << releaseYear;
+    for (string actor : majorActor) {
+        cout << dvdType << ", " << stock << ", " << director << ", " << title
+            << ", " << actor << " " << releaseMonth << " " << releaseYear 
+            << endl;
+    }
 }
 
 //------------------------------------print------------------------------------
@@ -128,8 +133,11 @@ void Classic::display() const {
 // Dvd type, stock, director, title, major actor, release month, release year
 //-----------------------------------------------------------------------------
 void Classic::print(ostream& output) const {
-    output << dvdType << ", " << stock << ", " << director << ", " << title <<
-        ", " << majorActor << " " << releaseMonth << " " << releaseYear << endl;
+    for (string actor : majorActor) {
+        output << dvdType << ", " << stock << ", " << director << ", " << title
+            << ", " << actor << " " << releaseMonth << " " << releaseYear
+            << endl;
+    }
 }
 
 //-------------------------------operator==------------------------------------
@@ -139,8 +147,23 @@ bool Classic::operator==(const DVD & rhs) const {
 	// dynamic cast parent class to child class
 	const Classic* rhsCasted = dynamic_cast<const Classic*>(&rhs);
 	// true if the movie's major actor and release date is the same
-	return (majorActor == rhsCasted->majorActor && releaseMonth 
-		== rhsCasted->releaseMonth && releaseYear == rhsCasted->releaseYear);
+
+    //check if same major actors
+    bool sameActor = false;
+    auto rhsIter = majorActor;
+    for (auto i = begin(rhsIter); i != end(rhsIter); ++i) {
+        for (string actor : rhsCasted->majorActor) {
+            if (actor == (*i)) sameActor = true;
+        }
+    }
+    
+    // check date first, if not the same, return false
+    if (releaseMonth == rhsCasted->releaseMonth
+        && releaseYear == rhsCasted->releaseYear) {
+    // if shares a common major actor or title
+        if (sameActor || title == rhsCasted->title) return true;
+    }
+    return false;
 }
 
 //-------------------------------operator!=------------------------------------
@@ -167,7 +190,7 @@ bool Classic::operator<(const DVD & rhs) const {
 			return true;
 	// if same month, check with major actor
 	if (releaseMonth == rhsCasted->releaseMonth)
-		if(majorActor < rhsCasted->majorActor)
+		if(majorActor.front() < rhsCasted->majorActor.front())
 			return true;
 	// else, then false
 	return false;
@@ -180,4 +203,22 @@ bool Classic::operator<(const DVD & rhs) const {
 bool Classic::operator>(const DVD & rhs) const {
 	// true if lhs is not equal nor smaller than rhs
 	return !(*this == rhs || *this < rhs);
+}
+
+void Classic::addStock(DVD* toAdd) {
+    if (*this == *toAdd) {
+        //cast to classic
+        const Classic* toAddCasted = dynamic_cast<const Classic*>(&*toAdd);
+
+        // add unique actors
+        auto toAddIter = toAddCasted->majorActor;
+        for (auto i = begin(toAddIter); i != end(toAddIter); ++i) {
+            bool alreadyContains = false;
+            for (string actor : majorActor) {
+                if (actor == (*i)) alreadyContains = true;
+            }
+            if (!alreadyContains) majorActor.push_back(*i);
+        }
+        stock += toAddCasted->stock;
+    }
 }

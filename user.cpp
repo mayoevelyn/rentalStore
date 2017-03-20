@@ -87,14 +87,12 @@ bool User::borrowDVD(DVD* toAdd) {
 // Removes DVD from inventory. Only removes if it is actually borrowed.
 //----------------------------------------------------------------------------
 bool User::returnDVD(DVD* toRemove) {
-    vector<DVD*>::iterator iter;
-    if (retrieveDVD(toRemove, iter)) {
-        delete *iter;
-        borrowed.erase(iter);
+    int index = 0;
+    if (retrieveDVD(toRemove, index)) {
+        borrowed.erase(borrowed.begin() + index);
         return true;
     }
-    else
-       return false;
+    return false;
 }
 
 //-------------------------------displayHistory-------------------------------
@@ -116,14 +114,16 @@ void User::displayHistory() const {
 //----------------------------------retrieve----------------------------------
 // Returns true if DVD passed in is found.
 //----------------------------------------------------------------------------
-bool User::retrieveDVD(DVD* toFind, vector<DVD*>::iterator found) {
-    vector<DVD*>::iterator iter;
-    iter = find(borrowed.begin(), borrowed.end(), toFind);
-    found = iter;
-    if (iter != borrowed.end())
-        return true;
-    else
-        return false;
+bool User::retrieveDVD(DVD* toFind, int& index) {
+    for (DVD* find : borrowed) {
+        if (*find == *toFind) {
+            delete find;
+            find = NULL;
+            return true;
+        }
+        index++;
+    }
+    return false;
 }
 
 //---------------------------------operator==---------------------------------

@@ -13,7 +13,7 @@
 // displays the user's transaction history before adding itself.
 // If not, does not execute and prints an error message.
 //-----------------------------------------------------------------------------
-void History::execute(Store* store) {
+bool History::execute(Store* store) {
     HashTable<User>* customers = store->getUsers();
     User* user = NULL;
 	bool userExists = customers->retrieve(user, userID);
@@ -21,13 +21,14 @@ void History::execute(Store* store) {
     // do nothing if user isn't found, display error message
 	if (!userExists) {
 		cout << "User " << userID << " does not exist" << endl;
-		return;
+		return false;
 	}
     
     // if user exists, display history and add to user history
 	else {
 		user->displayHistory();
         user->addToHistory(this);
+        return true;
 	}
 }
 

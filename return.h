@@ -16,7 +16,7 @@ class DVD;
 
 class Return : public Transaction {
 public:
-	virtual void execute(Store* store);
+	virtual bool execute(Store* store);
 	virtual void display();
 	virtual void setData(string data);
 

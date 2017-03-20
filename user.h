@@ -43,7 +43,7 @@ public:
    void displayHistory() const;
 
    // if has DVD or not, helper for remove
-   bool retrieveDVD(DVD* toFind, vector<DVD*>::iterator found);
+   bool retrieveDVD(DVD* toFind, int& index);
 
    // boolean operators
    bool operator==(const User& rhs) const;
