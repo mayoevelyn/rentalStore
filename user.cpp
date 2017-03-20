@@ -104,7 +104,8 @@ void User::displayHistory() const {
     if (id < 10) cout << 000;
     else if (id < 100 && id >= 10) cout << 00;
     else if (id < 1000 && id >= 100) cout << 0;
-    cout << id << ", " << firstname << " " << lastname << ":" << endl;
+    cout << id << ", " << firstname << " " << lastname << 
+		" (from latest to earliest):" << endl;
     // prints out history
 	// latest to earliest
 	vector<Transaction*>::const_reverse_iterator iter;
